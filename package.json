@@ -2,11 +2,14 @@
   "name": "jie-docs",
   "version": "1.0.0",
   "description": "",
+  "packageManager": "pnpm@7.3.0",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +17,17 @@
   "dependencies": {
     "vitepress": "1.0.0-alpha.4",
     "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@djie/eslint-config": "^1.0.7",
+    "eslint": "^8.18.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "esbuild",
+        "typescript"
+      ]
+    }
   }
 }
