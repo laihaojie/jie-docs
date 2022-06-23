@@ -1,0 +1,40 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.3.0
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm docs:build
+
+      - uses: manyuanrong/setup-ossutil@v2.0
+        with:
+          endpoint: oss-cn-shanghai.aliyuncs.com
+          access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
+      - run: ossutil cp -rf ./docs/.vitepress/dist/ oss://docs-laihaojie-top/
+
+      - name: Send success message
+        if: success()
+        run: curl -G "https://api.huihuizi.top/api/tools/releaseSuccess" --data-urlencode "id=文档"
+
+      - name: Send failed message
+        if: failure()
+        run: curl -G "https://api.huihuizi.top/api/tools/releaseFailed" --data-urlencode "id=文档"
