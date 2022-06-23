@@ -1,8 +1,11 @@
 {
   "name": "jie-docs",
   "version": "1.0.0",
-  "description": "",
   "packageManager": "pnpm@7.3.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "docs:dev": "vitepress dev docs",
@@ -11,9 +14,6 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "vitepress": "1.0.0-alpha.4",
     "vue": "^3.2.37"
