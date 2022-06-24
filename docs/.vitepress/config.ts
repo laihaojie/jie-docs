@@ -13,17 +13,19 @@ export default defineConfigWithTheme({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/laihaojie' },
     ],
-    // sidebar: {
-    //   '/utils/': {
-    //     text: '工具软件',
-    //     items: [
-    //       { text: 'Index', link: '/utils/' },
-    //       { text: 'A', link: '/utils/a' },
-    //       { text: 'B', link: '/utils/b' },
-    //     ],
-    //   },
-    // },
-
+    sidebar: {
+      '/utils/': [
+        {
+          text: '工具软件',
+          collapsible: true,
+          items: [
+            // { text: 'Index', link: '/utils/' },
+            { text: 'A', link: '/utils/a' },
+            { text: 'B', link: '/utils/b' },
+          ],
+        },
+      ],
+    },
   },
 
 })
