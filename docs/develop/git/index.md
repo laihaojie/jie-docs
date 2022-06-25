@@ -195,3 +195,12 @@ $ git revert <commit_id>
 # 生成一个撤销指定提交版本的新提交，执行时不打开默认编辑器，直接使用 Git 自动生成的提交信息
 $ git revert <commit_id> --no-edit
 ```
+
+## 删除文件
+
+```text
+# 删除暂存区和工作区的文件
+$ git rm filename  
+# 只删除暂存区的文件，不会删除工作区的文件
+$ git rm --cached filename 
+```
