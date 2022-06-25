@@ -14,10 +14,8 @@ export default defineConfigWithTheme({
         text: '开发环境',
         items: [
           {
-            text: 'Git 相关',
             items: [
-              { text: '常用命令', link: '/develop/git/' },
-              { text: 'tag操作', link: '/develop/git/tag' },
+              { text: 'Git 相关', link: '/develop/git/' },
             ],
           },
           { text: 'Item B', link: '/item-2' },
@@ -36,6 +34,7 @@ export default defineConfigWithTheme({
           collapsible: true,
           items: [
             { text: '常用命令', link: '/develop/git/' },
+            { text: '配置', link: '/develop/git/config' },
             { text: 'tag', link: '/develop/git/tag' },
           ],
         },
