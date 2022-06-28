@@ -15,6 +15,7 @@ export default defineConfigWithTheme({
         items: [
           {
             items: [
+              { text: '安装node', link: '/develop/node/' },
               { text: 'Git 相关', link: '/develop/git/' },
             ],
           },
