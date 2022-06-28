@@ -15,7 +15,7 @@ export default defineConfigWithTheme({
         items: [
           {
             items: [
-              { text: '安装node', link: '/develop/node/' },
+              { text: 'Node 相关', link: '/develop/node/' },
               { text: 'Git 相关', link: '/develop/git/' },
             ],
           },
@@ -30,6 +30,14 @@ export default defineConfigWithTheme({
     ],
     sidebar: {
       '/develop/': [
+        {
+          text: 'Node 相关',
+          collapsible: true,
+          items: [
+            { text: '安装', link: '/develop/node/' },
+            { text: '部署', link: '/develop/node/deploy' },
+          ],
+        },
         {
           text: 'Git 相关',
           collapsible: true,
