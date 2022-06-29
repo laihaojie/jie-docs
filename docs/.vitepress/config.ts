@@ -17,6 +17,7 @@ export default defineConfigWithTheme({
             items: [
               { text: 'Node 相关', link: '/develop/node/' },
               { text: 'Git 相关', link: '/develop/git/' },
+              { text: 'Github Actions', link: '/develop/git/' },
             ],
           },
           { text: 'Item B', link: '/item-2' },
@@ -45,6 +46,14 @@ export default defineConfigWithTheme({
             { text: '常用命令', link: '/develop/git/' },
             { text: '配置', link: '/develop/git/config' },
             { text: 'tag', link: '/develop/git/tag' },
+          ],
+        },
+        {
+          text: 'Github Actions',
+          collapsible: true,
+          items: [
+            { text: '部署web项目', link: '/develop/github-actions/' },
+            { text: '部署node服务', link: '/develop/github-actions/node' },
           ],
         },
       ],
