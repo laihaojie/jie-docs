@@ -18,6 +18,7 @@ export default defineConfigWithTheme({
               { text: 'Node 相关', link: '/develop/node/' },
               { text: 'Git 相关', link: '/develop/git/' },
               { text: 'Github Actions', link: '/develop/git/' },
+              { text: 'Vim', link: '/develop/vim/' },
             ],
           },
           { text: 'Item B', link: '/item-2' },
@@ -52,8 +53,16 @@ export default defineConfigWithTheme({
           text: 'Github Actions',
           collapsible: true,
           items: [
-            { text: '部署web项目', link: '/develop/github-actions/' },
+            { text: '部署web', link: '/develop/github-actions/' },
             { text: '部署node服务', link: '/develop/github-actions/node' },
+          ],
+        },
+        {
+          text: 'Vim',
+          collapsible: true,
+          items: [
+            { text: '快捷键', link: '/develop/vim/' },
+            { text: '游乐场', link: '/develop/vim/playground' },
           ],
         },
       ],
