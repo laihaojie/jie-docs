@@ -50,3 +50,20 @@ function testFunction() {
 const aa = 11
 const bb = 22
 ```
+# 第五天练习
+
+```js
+const a_c = 1
+const b_c = 2
+const c_c = 3
+
+const aa = 11
+const bb = 22
+
+const aa = 11
+const bb = 22
+
+const aa = 11
+const bb = 22
+
+```
