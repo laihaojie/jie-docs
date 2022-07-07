@@ -67,3 +67,14 @@ const aa = 11
 const bb = 22
 
 ```
+
+# 第六天练习
+```js
+function setName(_name, age) {
+  const aa = 11
+  const bb = 22
+
+}
+
+```
+

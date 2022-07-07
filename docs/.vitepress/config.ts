@@ -6,10 +6,28 @@ export default defineConfigWithTheme({
     nav: [
       {
         text: '工具软件',
-        link: '/utils/',
+        items: [
+          {
+            items: [
+              { text: 'VsCode', link: '/utils/vscode/' },
+            ],
+          },
+        ],
       },
-      { text: '框架文档', link: '/framework/' },
-      { text: '插件扩展', link: '/extension/' },
+      {
+        text: '框架文档',
+        items: [
+          {
+            items: [
+              { text: 'Github Actions', link: '/framework/github-actions/' },
+            ],
+          },
+        ],
+      },
+      {
+        text: '插件扩展',
+        link: '/extension/',
+      },
       {
         text: '开发环境',
         items: [
@@ -17,7 +35,6 @@ export default defineConfigWithTheme({
             items: [
               { text: 'Node 相关', link: '/develop/node/' },
               { text: 'Git 相关', link: '/develop/git/' },
-              { text: 'Github Actions', link: '/develop/git/' },
               { text: 'Vim', link: '/develop/vim/' },
             ],
           },
@@ -31,6 +48,26 @@ export default defineConfigWithTheme({
       { icon: 'github', link: 'https://github.com/laihaojie' },
     ],
     sidebar: {
+      '/utils/': [
+        {
+          text: 'VsCode',
+          collapsible: true,
+          items: [
+            { text: '插件', link: '/utils/vscode/' },
+            { text: '配置文件', link: '/utils/vscode/config' },
+          ],
+        },
+      ],
+      '/framework/': [
+        {
+          text: 'Github Actions',
+          collapsible: true,
+          items: [
+            { text: '部署web', link: '/framework/github-actions/' },
+            { text: '部署node服务', link: '/framework/github-actions/node' },
+          ],
+        },
+      ],
       '/develop/': [
         {
           text: 'Node 相关',
@@ -47,14 +84,6 @@ export default defineConfigWithTheme({
             { text: '常用命令', link: '/develop/git/' },
             { text: '配置', link: '/develop/git/config' },
             { text: 'tag', link: '/develop/git/tag' },
-          ],
-        },
-        {
-          text: 'Github Actions',
-          collapsible: true,
-          items: [
-            { text: '部署web', link: '/develop/github-actions/' },
-            { text: '部署node服务', link: '/develop/github-actions/node' },
           ],
         },
         {
