@@ -15,3 +15,5 @@
 ## 第五天
 <img src='/imags/vim5.png' alt='图片替换文本' width='700' />
 
+## 第六天
+<img src='/imags/vim6.png' alt='图片替换文本' width='700' />
