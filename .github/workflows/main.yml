@@ -22,7 +22,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm docs:build
+        run: pnpm build
 
       - uses: manyuanrong/setup-ossutil@v2.0
         with:

@@ -20,8 +20,8 @@ const logout = async () => {
     title: '提示',
     message: '退出登录',
     age: 1,
-    name: 'zhangsan',
     showCancelButton: true,
+    name: 'zhangsan',
   })
 
   // 清除token
