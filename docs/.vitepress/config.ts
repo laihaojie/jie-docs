@@ -25,8 +25,8 @@ export default defineConfigWithTheme({
         ],
       },
       {
-        text: '插件扩展',
-        link: '/extension/',
+        text: '前端工程化',
+        link: '/engineering/',
       },
       {
         text: '开发环境',
@@ -55,6 +55,15 @@ export default defineConfigWithTheme({
           items: [
             { text: '插件', link: '/utils/vscode/' },
             { text: '配置文件', link: '/utils/vscode/config' },
+          ],
+        },
+      ],
+      '/engineering/': [
+        {
+          text: 'Git 提交规范',
+          collapsible: true,
+          items: [
+            { text: '代码格式化', link: '/engineering/' },
           ],
         },
       ],
