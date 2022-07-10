@@ -60,10 +60,11 @@ export default defineConfigWithTheme({
       ],
       '/engineering/': [
         {
-          text: 'Git 提交规范',
+          text: '前端工程化',
           collapsible: true,
           items: [
-            { text: '代码格式化', link: '/engineering/' },
+            { text: 'eslint', link: '/engineering/' },
+            { text: 'pre-commit', link: '/engineering/pre-commit' },
           ],
         },
       ],

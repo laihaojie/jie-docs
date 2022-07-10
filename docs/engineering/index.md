@@ -1,43 +1,28 @@
-# 代码格式化 
+# Eslint
 
-## GitHooks & lint-staged
 
-- 安装 simple-git-hooks 
+
+- 安装 eslint
+
 ```sh
-pnpm i simple-git-hooks lint-staged -D
+pnpm i eslint @djie/eslint-config -D
 ```
-- 在package.json中添加配置
-```json
-{
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+ [*@djie/eslint-config*](https://github.com/laihaojie/eslint-config)这个包是我个人自己使用的eslint配置文件, 在[@antfu](https://github.com/antfu/eslint-config)的基础上改的
 
-    // All unused hooks will be removed automatically by default
-    // but you can use the `preserveUnused` option like following to prevent this behavior
 
-    // if you'd prefer preserve all unused hooks
-    // "preserveUnused": true,
-
-    // if you'd prefer preserve specific unused hooks
-    // "preserveUnused": ["commit-msg"]
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,vue,md}": [
-      "eslint --fix"
-    ]
-  }
+- 新建 .eslintrc.js 文件
+```js
+module.exports = {
+  extends: ['@djie'],
 }
 ```
 
-- 更新githooks
-
-```sh
-# [Optional] These 2 steps can be skipped for non-husky users
-git config core.hooksPath .git/hooks/
-rm -rf .git/hooks
-
-# Update ./git/hooks
-npx simple-git-hooks
+- 在package.json中添加配置
+```json
+{
+  "scripts": {
+    "lint:fix": "eslint . --fix",
+    "lint": "eslint ."
+  }
+}
 ```
-
-设置完成之后 git commit 之前就会触发lint检查, 看是否有错误
