@@ -23,3 +23,6 @@
 
 ## 第八天
 <img src='/imags/vim8.png' alt='图片替换文本' width='700' />
+
+## 第九天
+<img src='/imags/vim9.png' alt='图片替换文本' width='700' />
