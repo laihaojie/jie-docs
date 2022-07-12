@@ -1,7 +1,9 @@
-import { defineConfigWithTheme } from 'vitepress'
+import { defineConfig } from 'vitepress'
 
-export default defineConfigWithTheme({
+export default defineConfig({
   title: '阿杰',
+  lang: 'zh-CN',
+  lastUpdated: true,
   themeConfig: {
     nav: [
       {
@@ -110,8 +112,8 @@ export default defineConfigWithTheme({
       appId: 'MB68ZSCNEB',
       apiKey: '9dec19c7b65aed3f52186ca638798b08',
       indexName: 'docs_laihaojie',
-      debug: false,
+      // debug: false,
     },
+    lastUpdatedText: '上次更新于',
   },
-
 })
