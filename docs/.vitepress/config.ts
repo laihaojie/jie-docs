@@ -106,6 +106,12 @@ export default defineConfigWithTheme({
         },
       ],
     },
+    algolia: {
+      appId: 'MB68ZSCNEB',
+      apiKey: '9dec19c7b65aed3f52186ca638798b08',
+      indexName: 'docs_laihaojie',
+      debug: false,
+    },
   },
 
 })
