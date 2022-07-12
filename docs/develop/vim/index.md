@@ -26,3 +26,6 @@
 
 ## 第九天
 <img src='/imags/vim9.png' alt='图片替换文本' width='700' />
+
+## 第十天
+<img src='/imags/vim10.png' alt='图片替换文本' width='700' />
