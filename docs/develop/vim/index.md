@@ -29,3 +29,6 @@
 
 ## 认识数字和点的威力
 <img src='/imags/vim10.png' alt='图片替换文本' width='700' />
+
+## 掌握多文件之间的跳转
+<img src='/imags/vim11.png' alt='图片替换文本' width='700' />
