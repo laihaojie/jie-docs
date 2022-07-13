@@ -44,7 +44,7 @@ export default defineConfig({
           { text: 'Item C', link: '/item-3' },
         ],
       },
-      { text: '视频教程', link: '/video/' },
+      { text: '随手记', link: '/notes/' },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/laihaojie' },
@@ -104,6 +104,16 @@ export default defineConfig({
           items: [
             { text: '快捷键', link: '/develop/vim/' },
             { text: '游乐场', link: '/develop/vim/playground' },
+          ],
+        },
+      ],
+      '/notes/': [
+        {
+          text: '随手记',
+          collapsible: true,
+          items: [
+            { text: '正则', link: '/notes/rege' },
+            // { text: '正则', link: '/notes/rege' },
           ],
         },
       ],
