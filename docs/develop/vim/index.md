@@ -32,3 +32,6 @@
 
 ## 掌握多文件之间的跳转
 <img src='/imags/vim11.png' alt='图片替换文本' width='700' />
+
+## 处理包裹字符的符号
+<img src='/imags/vim12.png' alt='图片替换文本' width='700' />
