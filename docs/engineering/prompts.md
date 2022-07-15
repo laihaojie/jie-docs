@@ -5,3 +5,9 @@
 ```sh
 pnpm add prompts -D
 ```
+
+- [*inquirer*](https://www.npmjs.com/package/inquirer)
+
+```sh
+pnpm add inquirer -D
+```
