@@ -10,10 +10,10 @@ pnpm i eslint @djie/eslint-config -D
  [*@djie/eslint-config*](https://github.com/laihaojie/eslint-config)这个包是我个人自己使用的eslint配置文件, 在[@antfu](https://github.com/antfu/eslint-config)的基础上改的
 
 
-- 新建 .eslintrc.js 文件
+- 新建 .eslintrc 文件
 ```js
-module.exports = {
-  extends: ['@djie'],
+{
+  "extends": ["@djie"]
 }
 ```
 
