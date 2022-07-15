@@ -67,6 +67,7 @@ export default defineConfig({
           items: [
             { text: 'eslint', link: '/engineering/' },
             { text: 'pre-commit', link: '/engineering/pre-commit' },
+            { text: '命令行交互', link: '/engineering/prompts' },
           ],
         },
       ],
