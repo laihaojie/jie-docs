@@ -35,3 +35,6 @@
 
 ## 处理包裹字符的符号
 <img src='/imags/vim12.png' alt='图片替换文本' width='700' />
+
+## 替换字符
+<img src='/imags/vim13.png' alt='图片替换文本' width='700' />
