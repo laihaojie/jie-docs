@@ -115,8 +115,8 @@ export default defineConfig({
           text: '随手记',
           collapsible: true,
           items: [
-            { text: '正则', link: '/notes/rege' },
-            { text: 'unocss', link: '/notes/unocss' },
+            { text: '正则', link: '/notes/' },
+            { text: 'css', link: '/notes/css' },
           ],
         },
       ],
