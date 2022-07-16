@@ -116,7 +116,7 @@ export default defineConfig({
           collapsible: true,
           items: [
             { text: '正则', link: '/notes/rege' },
-            // { text: '正则', link: '/notes/rege' },
+            { text: 'unocss', link: '/notes/unocss' },
           ],
         },
       ],
