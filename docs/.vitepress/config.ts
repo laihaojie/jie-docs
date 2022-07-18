@@ -22,6 +22,7 @@ export default defineConfig({
           {
             items: [
               { text: 'Github Actions', link: '/framework/github-actions/' },
+              { text: 'uniapp', link: '/framework/uniapp/' },
             ],
           },
         ],
@@ -79,6 +80,13 @@ export default defineConfig({
           items: [
             { text: '部署web', link: '/framework/github-actions/' },
             { text: '部署node服务', link: '/framework/github-actions/node' },
+          ],
+        },
+        {
+          text: 'uniapp',
+          collapsible: true,
+          items: [
+            { text: '升级依赖', link: '/framework/uniapp/' },
           ],
         },
       ],
