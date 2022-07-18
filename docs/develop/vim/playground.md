@@ -74,7 +74,9 @@ function setName(_name, age) {
   const aa = 11
   const bb = 22
 
-}
+  const aa = 1
+  const b = 2
 
+}
 ```
 

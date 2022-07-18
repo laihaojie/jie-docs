@@ -38,3 +38,9 @@
 
 ## 替换字符
 <img src='/imags/vim13.png' alt='图片替换文本' width='700' />
+
+## 掌握悬浮显示&大小写&注释
+<img src='/imags/vim14.png' alt='图片替换文本' width='700' />
+
+## 掌握窗口的管理
+<img src='/imags/vim15.png' alt='图片替换文本' width='700' />
