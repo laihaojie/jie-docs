@@ -44,3 +44,6 @@
 
 ## 掌握窗口的管理
 <img src='/imags/vim15.png' alt='图片替换文本' width='700' />
+
+## 如何删除一个函数
+<img src='/imags/vim16.png' alt='图片替换文本' width='700' />
