@@ -126,6 +126,7 @@ export default defineConfig({
             { text: '正则', link: '/notes/' },
             { text: 'css', link: '/notes/css' },
             { text: '各种命令', link: '/notes/command' },
+            { text: 'npmrc', link: '/notes/npmrc' },
           ],
         },
       ],
