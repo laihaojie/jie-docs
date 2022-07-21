@@ -47,3 +47,6 @@
 
 ## 如何删除一个函数
 <img src='/imags/vim16.png' alt='图片替换文本' width='700' />
+
+## 掌握宏
+<img src='/imags/vim17.png' alt='图片替换文本' width='700' />
