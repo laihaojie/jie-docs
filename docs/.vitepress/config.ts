@@ -127,6 +127,7 @@ export default defineConfig({
             { text: 'css', link: '/notes/css' },
             { text: '各种命令', link: '/notes/command' },
             { text: 'npmrc', link: '/notes/npmrc' },
+            { text: 'ssh-key', link: '/notes/sshkey' },
           ],
         },
       ],
