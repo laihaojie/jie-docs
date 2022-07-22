@@ -38,7 +38,7 @@ export default defineConfig({
             items: [
               { text: 'Node 相关', link: '/develop/node/' },
               { text: 'Git 相关', link: '/develop/git/' },
-              { text: 'Vim', link: '/develop/vim/' },
+              { text: '键盘侠', link: '/develop/vim/' },
             ],
           },
           { text: 'Item B', link: '/item-2' },
@@ -110,10 +110,11 @@ export default defineConfig({
           ],
         },
         {
-          text: 'Vim',
+          text: '键盘侠',
           collapsible: true,
           items: [
-            { text: '快捷键', link: '/develop/vim/' },
+            { text: 'vim', link: '/develop/vim/' },
+            { text: 'vscode', link: '/develop/vim/vscode' },
             { text: '游乐场', link: '/develop/vim/playground' },
           ],
         },
