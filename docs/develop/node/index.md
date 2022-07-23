@@ -1,5 +1,9 @@
 # 在linux上安装node
 
+## 安装node
+
+```shell
+
 - 第一步
 
 ```bash
@@ -17,3 +21,11 @@ sudo yum install -y nodejs
 ```bash
 node -V
 ```
+
+## nvm管理node版本
+
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
+[nvm](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating)
