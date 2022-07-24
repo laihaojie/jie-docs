@@ -98,6 +98,7 @@ export default defineConfig({
             { text: '安装', link: '/develop/node/' },
             { text: '部署', link: '/develop/node/deploy' },
             { text: '发布package', link: '/develop/node/publish' },
+            { text: 'nodemon', link: '/develop/node/nodemon' },
           ],
         },
         {
