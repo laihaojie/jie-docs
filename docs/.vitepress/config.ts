@@ -70,6 +70,7 @@ export default defineConfig({
             { text: 'pre-commit', link: '/engineering/pre-commit' },
             { text: '命令行交互', link: '/engineering/prompts' },
             { text: '脚本', link: '/engineering/scripts' },
+            { text: '包管理器限制', link: '/engineering/package-manager' },
           ],
         },
       ],
