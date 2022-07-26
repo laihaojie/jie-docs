@@ -1,7 +1,5 @@
 # 代码格式化 
-
-## GitHooks & lint-staged
-
+## 使用simple-git-hooks 
 - 安装 simple-git-hooks 
 ```sh
 pnpm i simple-git-hooks lint-staged -D
@@ -46,3 +44,35 @@ npx simple-git-hooks
 ```
 
 设置完成之后 git commit 之前就会触发lint检查, 看是否有错误
+
+
+## 使用husky
+
+- 安装 husky
+```sh
+pnpm i husky lint-staged -D
+```
+
+- 在根目录新建 .husky/pre-commit 文件
+```sh
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+pnpm exec lint-staged
+```
+
+- 在package.json中添加配置
+```json
+{
+  "script": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md,json}": [
+      "eslint --fix"
+    ]
+  }
+}
+```
