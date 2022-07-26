@@ -13,8 +13,8 @@ pnpm i simple-git-hooks lint-staged -D
     "prepare": "simple-git-hooks"
   },
   "simple-git-hooks": {
-    // "pre-commit": "npx lint-staged"
-    "pre-commit": "pnpm exec lint-staged --concurrent false"
+    "pre-commit": "npx.cmd lint-staged"
+    // "pre-commit": "pnpm exec lint-staged --concurrent false"
     // All unused hooks will be removed automatically by default
     // but you can use the `preserveUnused` option like following to prevent this behavior
 
