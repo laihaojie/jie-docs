@@ -9,9 +9,14 @@ pnpm i simple-git-hooks lint-staged -D
 - 在package.json中添加配置
 ```json
 {
+  "script": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "simple-git-hooks"
+  },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
-
+    // "pre-commit": "npx lint-staged"
+    "pre-commit": "pnpm exec lint-staged --concurrent false"
     // All unused hooks will be removed automatically by default
     // but you can use the `preserveUnused` option like following to prevent this behavior
 
@@ -22,7 +27,7 @@ pnpm i simple-git-hooks lint-staged -D
     // "preserveUnused": ["commit-msg"]
   },
   "lint-staged": {
-    "*.{js,ts,tsx,vue,md}": [
+    "*.{js,ts,tsx,vue,md,json}": [
       "eslint --fix"
     ]
   }
