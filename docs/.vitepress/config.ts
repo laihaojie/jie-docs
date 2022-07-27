@@ -136,9 +136,9 @@ export default defineConfig({
       ],
     },
     algolia: {
-      appId: 'MB68ZSCNEB',
-      apiKey: '9dec19c7b65aed3f52186ca638798b08',
-      indexName: 'docs_laihaojie',
+      appId: 'S9J30WHNBE',
+      apiKey: '39b330225e68321010adc394aacf069e',
+      indexName: 'laihaojie',
       // debug: false,
     },
     lastUpdatedText: '上次更新于',
