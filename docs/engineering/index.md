@@ -11,9 +11,13 @@ pnpm i eslint @djie/eslint-config -D
 
 
 - 新建 .eslintrc 文件
-```js
+```json
 {
   "extends": ["@djie"]
+  // "overrides": [{
+  //   "files": ["*.nvue"],
+  //   "extends": ["@djie/eslint-config-vue"]
+  // }]
 }
 ```
 
