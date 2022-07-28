@@ -97,6 +97,8 @@ export default defineConfig({
           items: [
             { text: '添加', link: '/framework/react-native/' },
             { text: '自定义package', link: '/framework/react-native/package' },
+            { text: 'icon图标', link: '/framework/react-native/icons' },
+            { text: 'webview', link: '/framework/react-native/webview' },
           ],
         },
       ],
