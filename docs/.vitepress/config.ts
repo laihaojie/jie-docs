@@ -23,6 +23,7 @@ export default defineConfig({
             items: [
               { text: 'Github Actions', link: '/framework/github-actions/' },
               { text: 'uniapp', link: '/framework/uniapp/' },
+              { text: 'React-Native', link: '/framework/react-native/' },
             ],
           },
         ],
@@ -88,6 +89,14 @@ export default defineConfig({
           collapsible: true,
           items: [
             { text: '升级依赖', link: '/framework/uniapp/' },
+          ],
+        },
+        {
+          text: 'React-Native',
+          collapsible: true,
+          items: [
+            { text: '添加', link: '/framework/react-native/' },
+            { text: '自定义package', link: '/framework/react-native/package' },
           ],
         },
       ],

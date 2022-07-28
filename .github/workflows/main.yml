@@ -33,8 +33,8 @@ jobs:
 
       - name: Send success message
         if: success()
-        run: curl -G "https://api.huihuizi.top/api/tools/releaseSuccess" --data-urlencode "id=文档"
+        run: curl -G "https://wss.laihaojie.com/api/tools/releaseSuccess" --data-urlencode "id=文档"
 
       - name: Send failed message
         if: failure()
-        run: curl -G "https://api.huihuizi.top/api/tools/releaseFailed" --data-urlencode "id=文档"
+        run: curl -G "https://wss.laihaojie.com/api/tools/releaseFailed" --data-urlencode "id=文档"
