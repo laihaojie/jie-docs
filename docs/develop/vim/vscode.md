@@ -11,3 +11,9 @@
 
 # 编码快捷键 
 <img src='/imags/vscode4.png' alt='图片替换文本' width='700' />
+
+#  发现使用快捷键的场景
+<img src='/imags/vscode5.png' alt='图片替换文本' width='700' />
+
+# 搞定Git 
+<img src='/imags/vscode6.png' alt='图片替换文本' width='700' />
