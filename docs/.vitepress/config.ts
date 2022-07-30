@@ -24,6 +24,7 @@ export default defineConfig({
               { text: 'Github Actions', link: '/framework/github-actions/' },
               { text: 'uniapp', link: '/framework/uniapp/' },
               { text: 'React-Native', link: '/framework/react-native/' },
+              { text: 'Android', link: '/framework/android/' },
             ],
           },
         ],
@@ -99,6 +100,13 @@ export default defineConfig({
             { text: '自定义package', link: '/framework/react-native/package' },
             { text: 'icon图标', link: '/framework/react-native/icons' },
             { text: 'webview', link: '/framework/react-native/webview' },
+          ],
+        },
+        {
+          text: 'Android',
+          collapsible: true,
+          items: [
+            { text: '签名文件', link: '/framework/android/' },
           ],
         },
       ],
