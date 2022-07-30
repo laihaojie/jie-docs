@@ -2,6 +2,8 @@
 
 ## JPUSH 消息推送 
 
+[*引用原文*](https://blog.csdn.net/Bombas/article/details/123654883)
+
 注册[*极光推送*](https://www.jiguang.cn/)账号  创建应用
 
 - 安装 jpush-react-native jcore-react-native
