@@ -100,6 +100,7 @@ export default defineConfig({
             { text: '自定义package', link: '/framework/react-native/package' },
             { text: 'icon图标', link: '/framework/react-native/icons' },
             { text: 'webview', link: '/framework/react-native/webview' },
+            { text: '消息推送', link: '/framework/react-native/message-push' },
           ],
         },
         {
