@@ -17,3 +17,7 @@
 
 # 搞定Git 
 <img src='/imags/vscode6.png' alt='图片替换文本' width='700' />
+<img src='/imags/vscode6n.png' alt='图片替换文本' width='700' />
+
+# snippets代码片段 
+<img src='/imags/vscode7.png' alt='图片替换文本' width='700' />
