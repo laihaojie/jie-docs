@@ -151,6 +151,7 @@ export default defineConfig({
             { text: '各种命令', link: '/notes/command' },
             { text: 'npmrc', link: '/notes/npmrc' },
             { text: 'ssh-key', link: '/notes/sshkey' },
+            { text: '位运算', link: '/notes/bti' },
           ],
         },
       ],
