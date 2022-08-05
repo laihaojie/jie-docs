@@ -27,3 +27,9 @@
 
 ## VSpaceCode 
 <img src='/imags/vscode9.png' alt='图片替换文本' width='700' />
+
+##  终端
+<img src='/imags/vscode10.png' alt='图片替换文本' width='700' />
+
+## debugger 
+<img src='/imags/vscode11.png' alt='图片替换文本' width='700' />
