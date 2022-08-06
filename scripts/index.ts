@@ -4,7 +4,7 @@ import path from 'path'
 import fs from 'fs-extra'
 import type { DefaultTheme } from 'vitepress'
 
-const src_path = path.resolve(__dirname, '../docs/src')
+const src_path = path.resolve(__dirname, '../src')
 
 function readFiles(root_path) {
   const dirs = fs.readdirSync(root_path)
@@ -41,4 +41,4 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
     }
   }) as DefaultTheme.SidebarItem[]
 }
-// console.log(getMds('/notes/'))
+console.log(getMds('/notes/'))

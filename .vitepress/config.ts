@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { getMds } from '../../scripts'
+import { getMds } from '../scripts'
 
 export default defineConfig({
   title: '阿杰',

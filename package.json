@@ -8,9 +8,9 @@
   "keywords": [],
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev docs --port 6121",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
+    "dev": "vitepress dev --port 6121",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
