@@ -162,6 +162,7 @@ export default defineConfig({
             { text: 'npmrc', link: '/notes/npmrc' },
             { text: 'ssh-key', link: '/notes/sshkey' },
             { text: '位运算', link: '/notes/bti' },
+            { text: 'markdown语法', link: '/notes/markdown' },
           ],
         },
       ],
