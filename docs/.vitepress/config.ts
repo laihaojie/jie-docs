@@ -22,9 +22,10 @@ export default defineConfig({
           {
             items: [
               { text: 'Github Actions', link: '/framework/github-actions/' },
-              { text: 'uniapp', link: '/framework/uniapp/' },
+              { text: 'Uniapp', link: '/framework/uniapp/' },
               { text: 'React-Native', link: '/framework/react-native/' },
               { text: 'Android', link: '/framework/android/' },
+              { text: 'MongoDB', link: '/framework/mongodb/' },
             ],
           },
         ],
@@ -108,6 +109,15 @@ export default defineConfig({
           collapsible: true,
           items: [
             { text: '签名文件', link: '/framework/android/' },
+          ],
+        },
+        {
+          text: 'MongoDB',
+          collapsible: true,
+          items: [
+            { text: '安装', link: '/framework/mongodb/' },
+            { text: '在nestjs中使用', link: '/framework/mongodb/nestjs' },
+            { text: '增删改查', link: '/framework/mongodb/crud' },
           ],
         },
       ],
