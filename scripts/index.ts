@@ -29,7 +29,6 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
   return dirs.map((file) => {
     const fullPath = path.join(dir_path, file)
     const content = fs.readFileSync(fullPath, 'utf-8')
-    console.log(content.match(/^#\s+(.*)$/m))
     const stats = fs.statSync(fullPath)
     if (!stats.isDirectory()) {
       return {
@@ -42,4 +41,4 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
     }
   }) as DefaultTheme.SidebarItem[]
 }
-console.log(getMds('/notes/'))
+// console.log(getMds('/notes/'))

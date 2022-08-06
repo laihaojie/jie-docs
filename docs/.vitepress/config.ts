@@ -24,7 +24,7 @@ export default defineConfig({
             items: [
               { text: 'Github Actions', link: '/src/framework/github-actions/' },
               { text: 'Uniapp', link: '/src/framework/uniapp/' },
-              { text: 'React-Native', link: '/src/framework/react-native/' },
+              { text: 'React Native', link: '/src/framework/react-native/' },
               { text: 'Android', link: '/src/framework/android/' },
               { text: 'MongoDB', link: '/src/framework/mongodb/' },
             ],
