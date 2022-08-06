@@ -29,7 +29,7 @@ jobs:
           endpoint: oss-cn-shanghai.aliyuncs.com
           access-key-id: ${{ secrets.ACCESS_KEY_ID }}
           access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
-      - run: ossutil cp -rf ./docs/.vitepress/dist/ oss://docs-laihaojie-top/
+      - run: ossutil cp -rf ./.vitepress/dist/ oss://docs-laihaojie-top/
 
       - name: Send success message
         if: success()
