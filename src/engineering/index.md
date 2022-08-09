@@ -1,7 +1,5 @@
 # Eslint
 
-
-
 - 安装 eslint
 
 ```sh

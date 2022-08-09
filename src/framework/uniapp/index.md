@@ -1,4 +1,4 @@
-# uniapp更新package依赖
+# 升级依赖
 
 ```sh
 // 使用 @dcloudio/uvm 管理编译包的版本，命令行如下：

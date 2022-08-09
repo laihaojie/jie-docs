@@ -1,4 +1,4 @@
-# React-native
+# 添加splash 
 
 ## android 添加 react-native-splash-screen 
 
