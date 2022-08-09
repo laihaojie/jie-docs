@@ -26,6 +26,7 @@ export default defineConfig({
               { text: 'Uniapp', link: '/src/framework/uniapp/' },
               { text: 'React Native', link: '/src/framework/react-native/' },
               { text: 'Android', link: '/src/framework/android/' },
+              { text: 'NestJS', link: '/src/framework/nestjs/' },
               { text: 'MongoDB', link: '/src/framework/mongodb/' },
             ],
           },
@@ -89,6 +90,11 @@ export default defineConfig({
           text: 'Android',
           collapsible: true,
           items: getMds('/framework/android/'),
+        },
+        {
+          text: 'NestJs',
+          collapsible: true,
+          items: getMds('/framework/nestjs/'),
         },
         {
           text: 'MongoDB',
