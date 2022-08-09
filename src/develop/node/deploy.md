@@ -87,7 +87,7 @@ pm2 stop app_name
 ## 重启所有进程
 
 ```bash
-pm2 restart all
+pm2 restart all  or  pm2 reload all
 ```
 
 ## 杀死全部进程
