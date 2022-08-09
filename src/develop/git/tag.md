@@ -1,4 +1,4 @@
-# Git tag操作
+# tag操作
 
 ## 查询commit的hash值
 
