@@ -32,7 +32,7 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
     const stats = fs.statSync(fullPath)
     if (!stats.isDirectory()) {
       return {
-        text: content.match(/^#\s+(.*)$/m)?.[1],
+        text: content.match(/#\s+(.*)$/m)?.[1],
         link: `/src${root_path}${file}`,
       }
     }
