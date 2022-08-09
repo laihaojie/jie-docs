@@ -133,6 +133,7 @@ export default defineConfig({
       indexName: 'laihaojie',
       // debug: false,
     },
+    logo: '/logo.png',
     lastUpdatedText: '上次更新于',
   },
 })
