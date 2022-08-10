@@ -41,4 +41,4 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
     }
   }) as DefaultTheme.SidebarItem[]
 }
-console.log(getMds('/notes/'))
+// console.log(getMds('/notes/'))
