@@ -140,9 +140,9 @@ export default defineConfig({
   vue: {
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => customElements.includes(tag)
-      }
-    }
+        isCustomElement: tag => customElements.includes(tag),
+      },
+    },
   },
   markdown: {
     config: (md) => {
@@ -151,7 +151,6 @@ export default defineConfig({
     },
   },
 })
-
 
 const customElements = [
   'math',
@@ -238,5 +237,5 @@ const customElements = [
   'maction',
   'semantics',
   'annotation',
-  'annotation-xml'
+  'annotation-xml',
 ]

@@ -8,3 +8,6 @@
 
 ## 搜索&查找
 <img src='/imags/chrome3.png' alt='图片替换文本' width='700' />
+
+## 标签
+<img src='/imags/chrome4.png' alt='图片替换文本' width='700' />
