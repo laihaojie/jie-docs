@@ -97,3 +97,6 @@ $(document).ready(function () {
 > 菜鸟教程
 > 学的不仅是技术更是梦想
 ```
+
+
+$L(\hat{y},y)=-[y\log\hat{y}+(1-y)\log(1-\hat{y})]$
