@@ -12,4 +12,5 @@ const age: number = name as unknown as number
   
 ```ts
 const a = 1 as const // 这时候 a 的类型就不是number了，而是一个常量一个具体值(1)，不能改变
+const list = [1, '2', 3] as const // 将数组转换为常量 元祖(tuple)，不能改变
 ```
