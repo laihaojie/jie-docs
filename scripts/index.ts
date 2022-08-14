@@ -42,3 +42,17 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
   }) as DefaultTheme.SidebarItem[]
 }
 // console.log(getMds('/notes/'))
+
+interface User {
+  name: string
+  [key: string]: any
+}
+
+const user: User = {
+  name: 'sss',
+  test: 1,
+}
+
+const m: ClassDecorator = (target) => {
+  console.log(target)
+}
