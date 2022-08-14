@@ -45,6 +45,27 @@ console.log(user.getName())
 
 ```
 
+- 方法装饰器
+
+```ts
+const methodDecorator: MethodDecorator = (target: Object, propertyKey: string | symbol, descriptor: PropertyDescriptor) => {
+  const method = descriptor.value
+  descriptor.value = function () {
+    const res = method()
+    console.log(res)
+    return res
+  }
+}
+
+class Cat {
+  @methodDecorator
+  public sayHello() {
+    return 'Hello World'
+  }
+}
+new Cat().sayHello()
+```
+
 - 装饰器工厂
 
 ```ts
