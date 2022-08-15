@@ -17,3 +17,6 @@
 
 ## devTools
 <img src='/imags/chrome6.png' alt='图片替换文本' width='700' />
+
+## debug
+<img src='/imags/chrome7.png' alt='图片替换文本' width='700' />
