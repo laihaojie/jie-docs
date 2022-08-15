@@ -127,7 +127,7 @@ Symbol 类型
 
 ### 3.6 语句
 
-```JavaScript
+```text
 if 语句
 do-while 语句
 while 语句
