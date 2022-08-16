@@ -17,4 +17,7 @@ display:-webkit-box;
 -webkit-box-orient:vertical;
 -webkit-line-clamp:2;
 overflow:hidden;
+
+/* 下滑线 */
+text-decoration:underline;
 ```
