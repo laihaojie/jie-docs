@@ -18,4 +18,8 @@ $ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Cre
 $ git config --global --unset alias.xxx
 $ git config --global --unset user.xxx
 
+# 查看全局配置
+$ git config user.name
+$ git config alias.xxx
+
 ```

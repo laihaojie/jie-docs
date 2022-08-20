@@ -184,6 +184,13 @@ $ git rm filename
 # 只删除暂存区的文件，不会删除工作区的文件
 $ git rm --cached filename 
 ```
+## 修改文件名称
+
+```text
+# 修改暂存区和工作区的文件名称
+# git mv a.txt b.txt
+$ git mv oldName newName
+```
 
 ## 清除git缓存
 
