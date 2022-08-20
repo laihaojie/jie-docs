@@ -212,3 +212,19 @@ git rm --f "文件路径 or ."
 # git archive master --prefix='admin/' --format=zip > master.zip
 $ git archive branchName --prefix='projectName/' --format=zip > projectName.zip
 ```
+
+## 子分支同步到主分支最后一次提交并合并代码
+
+```sh
+# 先切换到子分支
+$ git checkout 子分支名称
+# 子分支同步到主分支最后一次提交
+$ git rebase 主分支名称
+
+# 切换到主分支
+$ git checkout 主分支名称
+# 主分支合并子分支代码
+$ git merge 子分支名称
+```
+
+
