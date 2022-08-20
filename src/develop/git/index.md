@@ -104,6 +104,11 @@ $ git branch -m branchname
 git commit --amend --only -m 'xxxxxxx'
 ```
 
+## 修改最近commit提交信息(描述信息 + 文件)
+```text
+$ git commit --amend
+```
+
 ## 版本切换 & 重设 & 撤销
 
 ### checkout相关
@@ -200,4 +205,10 @@ git rm --cached "文件路径 or ."
 
 # 不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）
 git rm --f "文件路径 or ."
+```
+
+## 打包代码成zip压缩包
+```sh
+# git archive master --prefix='admin/' --format=zip > master.zip
+$ git archive branchName --prefix='projectName/' --format=zip > projectName.zip
 ```
