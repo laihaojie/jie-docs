@@ -38,13 +38,14 @@ export default defineConfig({
         link: '/src/engineering/',
       },
       {
-        text: '开发环境',
+        text: '环境搭建',
         items: [
           {
             items: [
               { text: 'Node 相关', link: '/src/develop/node/' },
               { text: 'Git 相关', link: '/src/develop/git/' },
               { text: '键盘侠', link: '/src/develop/vim/' },
+              { text: 'Frp', link: '/src/develop/frp/' },
             ],
           },
           { text: 'Item B', link: '/item-2' },

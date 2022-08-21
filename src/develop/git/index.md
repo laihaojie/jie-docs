@@ -65,6 +65,10 @@ $ git branch -a
 $ git branch -av 
 # 查看本地分支对应的远程分支
 $ git branch -vv 
+#查看已经合并的分支
+$ git branch --merged
+# 查看没有合并的分支
+$ git branch --no-merged
 
 # 新建分支
 # 在别的分支下新建一个分支，新分支会复制当前分支的内容
@@ -226,5 +230,3 @@ $ git checkout 主分支名称
 # 主分支合并子分支代码
 $ git merge 子分支名称
 ```
-
-

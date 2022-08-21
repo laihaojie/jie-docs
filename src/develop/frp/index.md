@@ -1,0 +1,25 @@
+# frp
+
+## frp下载
+
+[下载地址](https://github.com/fatedier/frp/releases)
+
+- 下载后将解压后的文件上传到服务器，并配置好相关配置文件
+
+## 修改服务器端服务配置
+
+- 修改frps.ini 配置文件
+
+```text
+[common]
+bind_port = 7000 # 绑定端口
+vhost_http_port = 6125 # 暴露出去的端口  可以给nginx使用代理
+```
+
+## 启动进程运行服务
+  
+```sh
+chmod +x frps
+# 使用pm2 运行
+pm2 start frps -- -c frps.ini
+```
