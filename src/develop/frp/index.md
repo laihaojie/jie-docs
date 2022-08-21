@@ -16,7 +16,7 @@ bind_port = 7000 # 绑定端口
 vhost_http_port = 6125 # 暴露出去的端口  可以给nginx使用代理
 ```
 
-## 启动进程运行服务
+## 启动进程运行服务器端服务
   
 ```sh
 chmod +x frps
@@ -25,7 +25,7 @@ pm2 start frps -- -c frps.ini
 ```
 
 
-## 修改客户端配置
+## 修改本地客户端服务配置
 
 ```text
 [common]
@@ -36,4 +36,10 @@ server_port = 7000 # 服务器端口
 type = http # 客户端类型
 local_port = 5173  # 本地端口
 custom_domains = frp.laihaojie.com # 自定义域名
+```
+
+## 启动进程运行本地客户端服
+  
+```sh
+frpc -c frpc.ini
 ```
