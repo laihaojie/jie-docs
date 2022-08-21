@@ -1,4 +1,4 @@
-# frp
+# 内网穿透
 
 ## frp下载
 
@@ -12,7 +12,7 @@
 
 ```text
 [common]
-bind_port = 7000 # 绑定端口
+bind_port = 7000 # 绑定服务器端口  如果端口没有开启，请先开启端口
 vhost_http_port = 6125 # 暴露出去的端口  可以给nginx使用代理
 ```
 

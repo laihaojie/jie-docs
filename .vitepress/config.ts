@@ -45,11 +45,15 @@ export default defineConfig({
               { text: 'Node 相关', link: '/src/develop/node/' },
               { text: 'Git 相关', link: '/src/develop/git/' },
               { text: '键盘侠', link: '/src/develop/vim/' },
-              { text: 'Frp', link: '/src/develop/frp/' },
             ],
           },
-          { text: 'Item B', link: '/item-2' },
-          { text: 'Item C', link: '/item-3' },
+          {
+            text: '其他',
+            items: [
+              { text: '内网穿透', link: '/src/develop/other/frp' },
+            ],
+          },
+          // { text: 'Item C', link: '/item-3' },
         ],
       },
       { text: '随手记', link: '/src/notes/' },
@@ -119,6 +123,11 @@ export default defineConfig({
           text: '键盘侠',
           collapsible: true,
           items: getMds('/develop/vim/'),
+        },
+        {
+          text: '其他',
+          collapsible: true,
+          items: getMds('/develop/other/'),
         },
       ],
       '/src/notes/': [
