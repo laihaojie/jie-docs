@@ -23,3 +23,17 @@ chmod +x frps
 # 使用pm2 运行
 pm2 start frps -- -c frps.ini
 ```
+
+
+## 修改客户端配置
+
+```text
+[common]
+server_addr = 47.101.45.132 # 服务器地址
+server_port = 7000 # 服务器端口
+
+[web]
+type = http # 客户端类型
+local_port = 5173  # 本地端口
+custom_domains = frp.laihaojie.com # 自定义域名
+```
