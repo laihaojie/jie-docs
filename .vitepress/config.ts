@@ -5,7 +5,21 @@ export default defineConfig({
   title: '阿杰',
   lang: 'zh-CN',
   lastUpdated: true,
-  head: [['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css', crossorigin: '' }]],
+  head: [
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css', crossorigin: '' }],
+    ['script', {}, `
+        // var _hmt = _hmt || []; 
+        // (function() { 
+        // var hm = document.createElement(“script”); 
+        // hm.src = “//hm.baidu.com/hm.js?XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX”; 
+        // var s = document.getElementsByTagName(“script”)[0]; 
+        // s.parentNode.insertBefore(hm, s); 
+        // })(); 
+        console.log('%c阿杰', 'font-size: 50px; color: #ff0000;');
+        // const token = localStorage.getItem('token');
+        // console.log(token);
+    `],
+  ],
   themeConfig: {
     nav: [
       {
