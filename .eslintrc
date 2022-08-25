@@ -3,6 +3,7 @@
   "rules": {
     "react/display-name": "off",
     "react/prop-types": "off",
-    "react/no-unknown-property": ["off"]
+    "react/no-unknown-property": ["off"],
+    "prefer-const": "off"
   }
 }
