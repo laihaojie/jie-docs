@@ -1,5 +1,25 @@
 # 插件配置
 
+## 用户配置
+
+```json
+{
+  "adb.path": "C:/Users/lu/AppData/Local/Android/Sdk/platform-tools/adb.exe",
+  "defaultFomat.typescript": "prettier",
+  "editor.colorScheme": "Monokai",
+  "editor.contentAssistSelectionMode": "数字模式",
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "eslint-js.autoFixOnSave": false,
+  "explorer.iconTheme": "hx-file-icons-colorful",
+  "node.path": "",
+  "npm.path": "",
+  "terminal.type": "内置终端",
+  "weApp.devTools.path": "C:/Program Files (x86)/Tencent/微信web开发者工具"
+}
+
+```
+
 ## jsbeautifyrc
 
 ```js
