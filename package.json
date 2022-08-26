@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "markdown-it-katex": "^2.0.3",
-    "npm-private-package": "github:laihaojie/npm-private-package",
     "vitepress": "1.0.0-alpha.4",
     "vue": "^3.2.37"
   },
