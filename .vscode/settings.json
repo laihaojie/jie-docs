@@ -15,5 +15,8 @@
     "html",
     "typescriptreact",
     "vue"
+  ],
+  "cSpell.words": [
+    "dataurl"
   ]
 }
