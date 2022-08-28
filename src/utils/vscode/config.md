@@ -62,3 +62,15 @@
   ]
 }
 ```
+
+## 窗口颜色配置
+
+```json
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#580B3E",
+    "titleBar.activeBackground": "#7B0F56",
+    "titleBar.activeForeground": "#FFFCFE"
+  }
+}
+```
