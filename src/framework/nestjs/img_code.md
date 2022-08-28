@@ -23,6 +23,8 @@ const captcha = svgCaptcha.create({
 })
 // 生成的随机验证码
 const code = captcha.text
-// 生成的图片
+// 生成的svg标签
+const svg = captcha.data
+// svg转base64 生成的图片
 const img = svgToDataURL(captcha.data)
 ```
