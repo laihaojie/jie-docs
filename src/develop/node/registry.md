@@ -7,7 +7,7 @@ npm config get registry
 
 - 换淘宝源
 ```sh
-npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npmmirror.com/
 ```
 
 ## nrm管理npm源
@@ -30,7 +30,7 @@ nrm use <name>
 
 # 添加新源
 nrm add <名称> <源地址>
-nrm add tb https://registry.npm.taobao.org/
+nrm add tb https://registry.npmmirror.com/
 
 # 删除源
 nrm del <registry>
