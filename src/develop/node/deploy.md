@@ -101,3 +101,9 @@ pm2 delete all
 ```bash
 pm2 delete 0
 ```
+
+## 查看日志
+
+```bash
+pm2 logs all
+```
