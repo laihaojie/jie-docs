@@ -18,5 +18,12 @@
   ],
   "cSpell.words": [
     "dataurl"
-  ]
+  ],
+  "filewatcher.commands": [{
+    "match": "\\.md*",
+    "isAsync": true,
+    "cmd": "echo '${file} file content Changed'",
+    "event": "onFileChange"
+  }]
+
 }

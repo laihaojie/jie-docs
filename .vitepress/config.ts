@@ -21,6 +21,10 @@ export default defineConfig({
     `],
   ],
   themeConfig: {
+    editLink: {
+      pattern: 'https://github.com/laihaojie/jie-docs/edit/main/:path',
+      text: '在GitHub编辑',
+    },
     nav: [
       {
         text: '工具软件',
