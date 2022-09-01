@@ -1,7 +1,7 @@
 # 部署node服务
 
 ## 用pm2部署
-
+[PM2文档](https://pm2.keymetrics.io/docs/usage/quick-start/)
 ## 安装
   
 ```bash
