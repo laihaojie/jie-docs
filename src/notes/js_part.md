@@ -31,3 +31,9 @@ function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min)
 }
 ```
+
+## 不刷新修改url地址栏
+
+```js
+history.pushState('', 'title', '修改后的url')
+```
