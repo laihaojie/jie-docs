@@ -37,3 +37,16 @@ function randomNumber(min, max) {
 ```js
 history.pushState('', 'title', '修改后的url')
 ```
+
+## node下载图片
+```js
+const axios = require('axios')
+axios({
+  method: 'get',
+  url: 'image_url.png',
+  responseType: 'stream',
+})
+  .then((response) => {
+    response.data.pipe(fs.createWriteStream('images/name.png'))
+  })
+```
