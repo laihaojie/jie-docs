@@ -13,7 +13,8 @@ pnpm install bignumber.js
 ```js
 import BigNumber from 'bignumber.js'
 
-a = new BigNumber(1011, 2) // "11"
-b = new BigNumber('zz.9', 36) // "1295.25"
-c = a.plus(b) // "1306.25"
+const a = new BigNumber(0.1) // 0.1
+const b = new BigNumber(0.2) // 0.2
+const c = a.plus(b) // 0.3
+console.log(c.toNumber())
 ```
