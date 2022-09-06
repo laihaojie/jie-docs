@@ -8,7 +8,7 @@ const bb = 22
 
 ```
 
-# 第二天学习
+# 二
 
   hello world javascript!  
 
@@ -30,7 +30,7 @@ const logout = async () => {
 }
 ```
 
-# 第三天学习
+# 三
 
 you're good man
 
@@ -44,13 +44,13 @@ function testFunction() {
 }
 ```
 
-# 第四天练习
+# 四
 
 ```js
 const aa = 11
 const bb = 22
 ```
-# 第五天练习
+# 五
 
 ```js
 const a_c = 1
@@ -68,14 +68,11 @@ const bb = 22
 
 ```
 
-# 第六天练习
+# 六
 ```js
 function setName(_name, age) {
   const aa = 11
   const bb = 22
-
-  const aa = 1
-  const b = 2
 
 }
 ```
