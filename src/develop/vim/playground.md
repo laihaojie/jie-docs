@@ -14,14 +14,14 @@ const bb = 22
 
 ```js
 const logout = async () => {
-  if (isWechat())
+  if (isWeChat())
     return
   await Dialog.alert({
     title: '提示',
     message: '退出登录',
     age: 1,
     showCancelButton: true,
-    name: 'zhangsan',
+    name: '张三',
   })
 
   // 清除token
@@ -73,7 +73,6 @@ const bb = 22
 function setName(_name, age) {
   const aa = 11
   const bb = 22
-
 }
 ```
 
