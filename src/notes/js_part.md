@@ -50,3 +50,23 @@ axios({
     response.data.pipe(fs.createWriteStream('images/name.png'))
   })
 ```
+
+## 统计字符串中某个字符出现的次数
+
+```js
+str.split(char).length - 1
+```
+
+## 检查对象是否为空
+
+```js
+const isEmpty = obj => Object.keys(obj).length === 0
+// or
+const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object
+```
+
+## 等待一段时间后执行
+
+```js
+const sleep = time => new Promise(resolve => setTimeout(resolve, time))
+```
