@@ -70,3 +70,28 @@ const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === 
 ```js
 const sleep = time => new Promise(resolve => setTimeout(resolve, time))
 ```
+
+## image转base64
+```js
+ // 图片文件转base64，利用canvas
+  function getBase64Image(img) {
+      var canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0, img.width, img.height);
+      var ext = img.src.substring(img.src.lastIndexOf(".")+1).toLowerCase();
+      var dataURL = canvas.toDataURL("image/"+ext);
+      return dataURL;
+  }
+
+
+  // 使用
+  var image = new Image();
+  // var image = document.createElement('image')
+  image.src = "https://bidcard.alltobid.com/cnbauth/Verification/NextCaptcha?SId=110ef5a7-7a8a-4b81-9158-27c542e253a2";  //你的图片路径
+  image.onload = function(){
+      var imgBase64 = getBase64Image(image);
+      console.log(imgBase64);
+  }
+```
