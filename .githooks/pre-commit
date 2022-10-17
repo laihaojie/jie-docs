@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "我是git-hooks  pre-commit"
+# exit 1
