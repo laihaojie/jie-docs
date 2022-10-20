@@ -2,7 +2,7 @@
 
 ## Windows命令
 ```sh
-# windows删除DNS缓存
+# windows删除DNS缓存 (注意要在cmd里面执行)
 ipconfig /flushdns
 ```
 
