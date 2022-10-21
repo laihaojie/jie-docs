@@ -47,6 +47,7 @@ export default defineConfig({
               { text: 'React Native', link: '/src/framework/react-native/' },
               { text: 'Android', link: '/src/framework/android/' },
               { text: 'NestJS', link: '/src/framework/nestjs/' },
+              { text: 'Electron', link: '/src/framework/electron/' },
               { text: 'MongoDB', link: '/src/framework/mongodb/' },
             ],
           },
