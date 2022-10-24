@@ -27,9 +27,9 @@ analyzer:
     non_constant_identifier_names: warning
 
 dart_code_metrics:
-  anti-patterns:
-    - long-method
-    - long-parameter-list
+  # anti-patterns:
+  # - long-method
+  # - long-parameter-list
   metrics:
     cyclomatic-complexity: 20
     maximum-nesting-level: 5
@@ -88,7 +88,8 @@ linter:
     # https://github.com/dart-lang/linter/blob/master/example/all.yaml
     # # 希望给函数加上返回值类型
     # - always_declare_return_types
-    - always_put_control_body_on_new_line
+    # # 将控制结构表达式与其语句分开。(提前返回 一行内) 不被允许 if (condition) return;
+    # - always_put_control_body_on_new_line
     # - always_put_required_named_parameters_first # we prefer having parameters in the same order as fields https://github.com/flutter/flutter/issues/10219
     - always_require_non_null_named_parameters
     # 强制必须指定类型
