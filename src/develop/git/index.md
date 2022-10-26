@@ -205,7 +205,7 @@ $ git mv oldName newName
 
 ```sh
 # 不删除物理文件，仅将该文件从缓存中删除
-git rm --cached -f "文件路径 or ."
+git rm --cached -r "文件路径 or ."
 
 # 不仅将该文件从缓存中删除，还会将物理文件删除（不会回收到垃圾桶）
 git rm --f "文件路径 or ."
