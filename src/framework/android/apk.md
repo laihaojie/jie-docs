@@ -19,7 +19,7 @@ android {
       include "armeabi-v7a", "arm64-v8a"
 
       // 是否生成通用的apk，也就是包含所有ABI的apk。如果设为 true，那么除了按 ABI 生成的 APK 之外，Gradle 还会生成一个通用 APK。
-      universalApk false
+      universalApk true
     }
   }
 
