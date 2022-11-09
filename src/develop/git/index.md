@@ -9,6 +9,8 @@ $ git init
 $ git remote add <name> <git-repo-url>  
 # 例如
 $ git remote add origin https://github.com/xxxxxx
+# 查看当前远端仓库
+$ git remote -v 
 ```
 
 ## clone 远程仓库
