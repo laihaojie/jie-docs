@@ -63,6 +63,7 @@ export default defineConfig({
           {
             items: [
               { text: 'Node 相关', link: '/src/develop/node/' },
+              { text: 'Docker', link: '/src/develop/docker/' },
               { text: 'Git 相关', link: '/src/develop/git/' },
               { text: '键盘侠', link: '/src/develop/vim/' },
             ],
@@ -99,6 +100,7 @@ export default defineConfig({
       ],
       '/src/develop/': [
         { text: 'Node 相关', collapsible: true, items: getMds('/develop/node/') },
+        { text: 'Docker', collapsible: true, items: getMds('/develop/docker/') },
         { text: 'Git 相关', collapsible: true, items: getMds('/develop/git/') },
         { text: '键盘侠', collapsible: true, items: getMds('/develop/vim/') },
         { text: '其他', collapsible: true, items: getMds('/develop/other/') },
