@@ -41,10 +41,16 @@ docker rmi 镜像名字或者id  镜像名字或者id  镜像名字或者id
 # 运行容器
 docker run [选项] 镜像名字或者id [命令] [参数] 
 docker run -d 镜像名字或者id # 后台运行 守护进程
+docker run -it --privileged=true -v /home:/home 镜像名字或者id # 交互式运行 -it  --privileged=true 为容器开启root权限 -v /home:/home 将宿主机的/home目录挂载到容器的/home目录
 选项：
 -d 后台运行
 -i 交互式运行
 -t 终端运行
+# -v 挂载数据卷 可以挂载多个 -v /home1:/home1 -v /home:/home
+# -v /home:/home:ro 容器只读
+-v 数据卷名字:容器内路径
+-e 环境变量
+--volumes-from 挂载其他容器的数据卷
 --name 容器名称
 --restart=always 自动重启
 --privileged=true 以特权模式运行
@@ -91,6 +97,7 @@ docker import 容器.tar 自定义组织名/镜像名:版本号
 
 # commit 命令
 ```bash
-# 提交容器
+# 提交容器 生成本地镜像
 docker commit -m="描述信息" -a="作者" 容器id或者名字 自定义组织名/自定义镜像名:版本号
+# 
 ```
