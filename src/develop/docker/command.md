@@ -86,5 +86,11 @@ docker port 容器id或者名字
 # 导出容器
 docker export 容器id或者名字 > 容器.tar
 # 导入容器
-docker import 容器.tar 用户名/镜像名:版本号
+docker import 容器.tar 自定义组织名/镜像名:版本号
+```
+
+# commit 命令
+```bash
+# 提交容器
+docker commit -m="描述信息" -a="作者" 容器id或者名字 自定义组织名/自定义镜像名:版本号
 ```
