@@ -26,7 +26,8 @@ export PATH=/bin:/usr/bin:$PATH
 # 使环境变量生效
 source ~/.bash_profile
 
-
+# 查看端口是否占用
+netstat -anp |grep 8080
 
 # 查看命令所在位置
 whereis python
