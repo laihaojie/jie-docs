@@ -10,3 +10,9 @@ keytool -genkey -alias com.jieapp -keyalg RSA -validity 200000 -keystore ./jieap
 ```sh
 keytool -V -list -keystore .\jieapp.jks
 ```
+
+## 获取秘钥散列 
+```sh
+keytool -exportcert -alias com.jieapp -keystore ./jieapp.keystore | openssl sha1 -binary | openssl base64
+```
+
