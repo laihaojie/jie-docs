@@ -8,7 +8,7 @@
   "keywords": [],
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev --port 6121",
+    "dev": "vitepress dev --port 6121 --host",
     "build": "vitepress build",
     "serve": "vitepress serve",
     "lint": "eslint .",
