@@ -3,12 +3,12 @@
 ## 生成包签名
 
 ```sh
-keytool -genkey -alias com.jieapp -keyalg RSA -validity 200000 -keystore ./jieapp.jks
+keytool -genkey -alias com.jieapp -keyalg RSA -validity 200000 -keystore ./jieapp.keystore
 ```
 
 ## 查看包签名
 ```sh
-keytool -V -list -keystore .\jieapp.jks
+keytool -V -list -keystore .\jieapp.keystore
 ```
 
 ## 获取秘钥散列 

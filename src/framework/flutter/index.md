@@ -3,6 +3,9 @@
 ## 命令
 
 ```bash
+# 创建项目
+flutter create --org com.xxxx  -i swift -a java project_name
+
 # 打包 apk
 flutter build apk
 
