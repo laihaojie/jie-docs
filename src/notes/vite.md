@@ -30,6 +30,7 @@ export default defineConfig({
     // assetsDir: 'login-assets', // 打包的静态资源目录
     emptyOutDir: false, // 是否清空输出目录
   },
+  publicDir: 'src/public',
   server: {
     open: '/login.html', // 打开的页面
   },
