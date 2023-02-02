@@ -2,7 +2,7 @@
 
 ## unocss
 - `line-clamp-2` 文字溢出...
-- `whitespace-pre-wrap`  pre标签文字换行
+- `whitespace-pre-wrap break-words`  pre标签文字换行
 
 ## css
 
@@ -20,6 +20,16 @@ overflow:hidden;
 
 /* 下滑线 */
 text-decoration:underline;
+
+/* pre标签文字换行 */
+
+pre {
+    white-space: pre-wrap; /* css-3 */
+    word-wrap: break-word; /* InternetExplorer5.5+ */
+    white-space: -moz-pre-wrap; /* Mozilla,since1999 */
+    white-space: -pre-wrap; /* Opera4-6 */
+    white-space: -o-pre-wrap; /* Opera7 */
+}
 ```
 
 ## 灰色滤镜
