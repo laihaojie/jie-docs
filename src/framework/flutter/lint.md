@@ -60,7 +60,6 @@ dart_code_metrics:
     - binary-expression-operand-order
     - double-literal-format
     - no-object-declaration
-    - prefer-async-await
     - prefer-correct-identifier-length:
         exceptions: [a, b, c]
         max-identifier-length: 30
