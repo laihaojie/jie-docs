@@ -20,6 +20,8 @@ overflow:hidden;
 
 /* 下滑线 */
 text-decoration:underline;
+/* 中横线 */
+text-decoration:line-through;
 
 /* pre标签文字换行 */
 
@@ -29,6 +31,10 @@ pre {
     white-space: -moz-pre-wrap; /* Mozilla,since1999 */
     white-space: -pre-wrap; /* Opera4-6 */
     white-space: -o-pre-wrap; /* Opera7 */
+}
+/* 删除默认样式 */
+button {
+   all: unset;
 }
 ```
 
