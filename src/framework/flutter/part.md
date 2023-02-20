@@ -43,3 +43,16 @@ flutter_icons:
 ```sh
 flutter pub run flutter_launcher_icons:main
 ```
+
+## Widget平移
+
+```dart
+Transform.translate(
+  offset: Offset(-10, -10),
+  child: Container(
+    width: 100,
+    height: 100,
+    color: Colors.red,
+  ),
+)
+```
