@@ -108,6 +108,19 @@ export default defineConfig({
       '/src/notes/': [
         { text: '随手记', collapsible: true, items: getMds('/notes/') },
       ],
+      '/src/other/': [
+        {
+          text: '娜第',
+          collapsible: true,
+          items: [
+            {
+              text: '娜第',
+              link: '/src/other/nana.md',
+            },
+          ],
+        },
+        { text: 'Python作业', collapsible: true, items: getMds('/other/python/') },
+      ],
     },
     algolia: {
       appId: 'S9J30WHNBE',
