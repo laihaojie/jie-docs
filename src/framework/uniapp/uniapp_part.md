@@ -15,3 +15,17 @@
 获取下安全距离：env(safe-area-inset-bottom)
 
 可以在底部的盒子加下内边距 padding-bottom: env(safe-area-inset-bottom) 避免元素被遮挡。
+
+
+## 去除首页警告弹窗
+
+```json
+// 在manifest.json  app-puls中添加
+{
+  "app-plus": {
+    "compatible": {
+      "ignoreVersion": true
+    }
+  }
+}
+```
