@@ -4,7 +4,7 @@
 
 ```text
 # 初始化一个Git仓库
-git init 
+git init -b main
 # 关联远程仓库
 git remote add <name> <git-repo-url>  
 # 例如
