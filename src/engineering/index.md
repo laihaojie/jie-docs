@@ -28,3 +28,22 @@ pnpm i eslint @djie/eslint-config -D
   }
 }
 ```
+
+- vscode 配置
+```json
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue",
+    "html",
+    "vue-html",
+    "nvue"
+  ],
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.tabSize": 2
+}
+```

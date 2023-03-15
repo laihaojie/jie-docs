@@ -36,6 +36,14 @@ pre {
 button {
    all: unset;
 }
+
+/* css渐变 */
+#grad {
+    /* 从上到下 */
+    background-image: linear-gradient(red, yellow);
+    /* 从左到右 */
+    background-image: linear-gradient(to right, red , yellow);
+}
 ```
 
 ## 灰色滤镜
