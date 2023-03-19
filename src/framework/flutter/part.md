@@ -56,3 +56,8 @@ Transform.translate(
   ),
 )
 ```
+
+## 复制文字
+```dart
+ await Clipboard.setData(ClipboardData(text: '文字'));
+```
