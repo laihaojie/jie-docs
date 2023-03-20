@@ -74,3 +74,18 @@ SystemChrome.setPreferredOrientations([
   DeviceOrientation.portraitDown,
 ]);
 ```
+
+## 保持屏幕常亮
+
+- [wakelock](https://pub.dev/packages/wakelock)
+
+```dart
+
+import 'package:wakelock/wakelock.dart';
+
+// The following line will enable the Android and iOS wakelock.
+Wakelock.enable();
+
+// The next line disables the wakelock again.
+Wakelock.disable();
+```
