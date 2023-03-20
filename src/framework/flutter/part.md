@@ -61,3 +61,16 @@ Transform.translate(
 ```dart
  await Clipboard.setData(ClipboardData(text: '文字'));
 ```
+
+## 设置屏幕旋转
+```dart
+// 控制横屏竖屏
+WidgetsFlutterBinding.ensureInitialized();
+
+SystemChrome.setPreferredOrientations([
+  DeviceOrientation.landscapeLeft,
+  DeviceOrientation.landscapeRight,
+  DeviceOrientation.portraitUp,
+  DeviceOrientation.portraitDown,
+]);
+```
