@@ -36,12 +36,8 @@ flutter_icons:
     image_path: assets/logo.png
     icon_size: 48 # min:48, max:256, default: 48
 
-```
-  
-- 运行命令
-  
-```sh
-flutter pub run flutter_launcher_icons:main
+# 最后在终端运行命令
+# flutter pub run flutter_launcher_icons:main
 ```
 
 ## Widget平移
