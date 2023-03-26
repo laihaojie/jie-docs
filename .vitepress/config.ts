@@ -93,6 +93,7 @@ export default defineConfig({
         { text: 'Github Actions', collapsible: true, items: getMds('/framework/github-actions/') },
         { text: 'Uniapp', collapsible: true, items: getMds('/framework/uniapp/') },
         { text: 'Flutter', collapsible: true, items: getMds('/framework/flutter/') },
+        { text: 'Electron', collapsible: true, items: getMds('/framework/electron/') },
         { text: 'React-Native', collapsible: true, items: getMds('/framework/react-native/') },
         { text: 'Android', collapsible: true, items: getMds('/framework/android/') },
         { text: 'NestJs', collapsible: true, items: getMds('/framework/nestjs/') },

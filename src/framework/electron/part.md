@@ -1,5 +1,20 @@
 # 代码片段
 
+## 开机自启动
+```js
+if (process.env.NODE_ENV !== 'development') {
+  // 开机自启动
+  app.setLoginItemSettings({
+    openAtLogin: true,
+    path: app.getPath('exe'),
+  })
+}
+```
+
+## 自动打开调试窗口
+```js
+mainWindow.webContents.openDevTools()
+```
 ## 拦截响应body
 ```js
 try {
@@ -38,3 +53,4 @@ const mainWindow = new BrowserWindow({
   },
 })
 ```
+
