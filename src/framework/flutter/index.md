@@ -20,4 +20,8 @@ flutter build apk --split-per-abi # 按abi分包
 flutter build apk --obfuscate --split-debug-info=/<project-name>/<directory>
 flutter build apk --obfuscate --split-debug-info=./symbols
 flutter build appbundle --obfuscate --split-debug-info=./symbols
+
+
+# 清理全局缓存
+dart pub cache clean
 ```
