@@ -54,3 +54,13 @@ const mainWindow = new BrowserWindow({
 })
 ```
 
+## 加载本地静态资源
+```js
+const addPath = url.format({
+  pathname: join(app.getAppPath(), 'renderer', 'index.html'),
+  protocol: 'file:',
+  slashes: true,
+  hash: '/add',
+})
+mainWindow.loadURL(addPath)
+```
