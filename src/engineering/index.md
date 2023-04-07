@@ -47,3 +47,21 @@ pnpm i eslint @djie/eslint-config -D
   "editor.tabSize": 2
 }
 ```
+
+
+## 配置改动
+```js
+// 新加的
+rules = {
+  'vue/html-indent': 'off',
+  'vue/html-closing-bracket-newline': 'off',
+  'vue/html-self-closing': 'off',
+  'vue/first-attribute-linebreak': 'off',
+  'vue/singleline-html-element-content-newline': 'off'
+}
+
+// 修改的
+rules = {
+
+}
+```
