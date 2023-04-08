@@ -121,3 +121,13 @@ function Toast(msg, duration = 2000) {
   }, duration)
 }
 ```
+
+## 根据经度纬度跳转到地图
+```js 
+// 百度地图
+window.open(`http://api.map.baidu.com/marker?location=${lat},${lng}&title=${title}&content=${address}&output=html`)
+// 高德地图
+window.open(`http://uri.amap.com/marker?position=${lng},${lat}&name=${title}&src=mypage&coordinate=gaode&callnative=1`)
+// 谷歌地图
+window.open(`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`)
+```
