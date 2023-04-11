@@ -11,11 +11,10 @@ ipconfig /flushdns
 # 临时添加环境变量path 文件目录
 export PATH=/bin:/usr/bin:$PATH
 
-
 # 永久添加环境变量path 文件目录 (全局添加)
 vim /etc/profile
-# 编辑环境变量
-export PATH=/bin:/usr/bin:$PATH
+# 编辑环境变量 添加多个路径用冒号隔开
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin
 # 使环境变量生效
 source /etc/profile
 
