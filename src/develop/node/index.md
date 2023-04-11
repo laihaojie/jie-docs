@@ -5,7 +5,7 @@
 - 第一步
 
 ```shell
-curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
+curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
 ```
 
 - 第二步
@@ -23,7 +23,7 @@ node -V
 ## nvm管理node版本
 
 ```shell
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | root bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
 
 [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating)
