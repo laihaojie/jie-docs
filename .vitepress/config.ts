@@ -69,6 +69,12 @@ export default defineConfig({
             ],
           },
           {
+            text: '服务器',
+            items: [
+              { text: 'Centos', link: '/src/develop/centos/' },
+            ],
+          },
+          {
             text: '其他',
             items: [
               { text: '内网穿透', link: '/src/develop/other/frp' },
@@ -104,6 +110,7 @@ export default defineConfig({
         { text: 'Docker', collapsible: true, items: getMds('/develop/docker/') },
         { text: 'Git 相关', collapsible: true, items: getMds('/develop/git/') },
         { text: '键盘侠', collapsible: true, items: getMds('/develop/vim/') },
+        { text: 'Centos', collapsible: true, items: getMds('/develop/centos/') },
         { text: '其他', collapsible: true, items: getMds('/develop/other/') },
       ],
       '/src/notes/': [
