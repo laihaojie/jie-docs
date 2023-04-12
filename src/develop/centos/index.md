@@ -21,6 +21,7 @@ systemctl stop nginx
 # /etc/nginx/nginx.conf
 
 # 关闭阿里云安装Centos后欢迎页
+lsof -i:80
 sudo fuser -k 80/tcp
 ```
 
