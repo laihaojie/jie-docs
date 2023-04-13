@@ -17,7 +17,6 @@
   "terminal.type": "内置终端",
   "weApp.devTools.path": "C:/Program Files (x86)/Tencent/微信web开发者工具"
 }
-
 ```
 
 ## jsbeautifyrc

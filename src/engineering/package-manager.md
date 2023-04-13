@@ -22,7 +22,6 @@ if (!/pnpm/.test(process.env.npm_execpath || '')) {
     "preinstall": "node scripts/preinstall.js"
   }
 }
-
 ```
 
 ## 限制必须使用yarn
@@ -50,5 +49,4 @@ module.exports = {
     "preinstall": "node scripts/preinstall.js"
   }
 }
-
 ```

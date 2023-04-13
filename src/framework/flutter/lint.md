@@ -295,5 +295,4 @@ linter:
     # - use_to_and_as_if_applicable # has false positives, so we prefer to catch this by code-review
     - valid_regexps
     - void_checks
-
 ```

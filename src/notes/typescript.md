@@ -105,7 +105,6 @@ class User {}
 const user: any = new User()
 
 console.log(user.getName())
-
 ```
 
 - 方法装饰器

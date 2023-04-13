@@ -142,6 +142,7 @@ export default defineConfig({
   vue: {
     template: {
       compilerOptions: {
+        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         isCustomElement: tag => customElements.includes(tag),
       },
     },

@@ -1,17 +1,16 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable n/handle-callback-err */
-import path from 'path'
+import path from 'node:path'
 import fs from 'fs-extra'
 import type { DefaultTheme } from 'vitepress'
 
 const src_path = path.resolve(__dirname, '../src')
 
+// eslint-disable-next-line unused-imports/no-unused-vars
 function readFiles(root_path) {
   const dirs = fs.readdirSync(root_path)
   for (const dir of dirs) {
     const fullPath = path.join(root_path, dir)
     // console.log(fullPath)
-    fs.stat(fullPath, (err, stats) => {
+    fs.stat(fullPath, (_err, stats) => {
       if (stats.isDirectory())
         return readFiles(fullPath)
       else
@@ -42,17 +41,3 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
   }) as DefaultTheme.SidebarItem[]
 }
 // console.log(getMds('/notes/'))
-
-interface User {
-  name: string
-  [key: string]: any
-}
-
-const user: User = {
-  name: 'sss',
-  test: 1,
-}
-
-const m: ClassDecorator = (target) => {
-  console.log(target)
-}

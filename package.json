@@ -16,12 +16,13 @@
   },
   "dependencies": {
     "markdown-it-katex": "^2.0.3",
-    "vitepress": "1.0.0-alpha.4",
+    "vitepress": "1.0.0-alpha.65",
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@djie/eslint-config": "^1.0.24",
-    "eslint": "^8.21.0",
+    "@types/node": "^18.15.11",
+    "eslint": "^8.38.0",
     "esno": "^0.16.3",
     "fs-extra": "^10.1.0"
   },
