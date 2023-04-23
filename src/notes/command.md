@@ -10,6 +10,8 @@ MSG /server:192.168.137.1 * "自定义消息"
 netsh wlan show profile
 # 获取链接过的WIFI密码
 netsh wlan show profile name="WIFI名称" key=clear
+# 查看当前电脑ip真实归属地（无法获取开启代理后的地址）
+curl -L ip.tool.lu
 ```
 
 ## Linux命令
