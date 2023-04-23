@@ -6,6 +6,10 @@
 ipconfig /flushdns
 # 给其他内网ip发送消息弹窗
 MSG /server:192.168.137.1 * "自定义消息"
+# 查看电脑连接过得WIFI
+netsh wlan show profile
+# 获取链接过的WIFI密码
+netsh wlan show profile name="WIFI名称" key=clear
 ```
 
 ## Linux命令
