@@ -4,6 +4,8 @@
 ```sh
 # windows删除DNS缓存 (注意要在cmd里面执行)
 ipconfig /flushdns
+# 给其他内网ip发送消息弹窗
+MSG /server:192.168.137.1 * "自定义消息"
 ```
 
 ## Linux命令
