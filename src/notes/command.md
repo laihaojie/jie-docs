@@ -16,6 +16,10 @@ curl -L ip.tool.lu
 chkdsk /f
 # 检查系统文件是否有问题
 sfc /scannow
+# 定时关机 （3600秒后关机）
+shutdown -s -t 3600
+# 取消关机
+shutdown -a
 ```
 
 ## Linux命令
