@@ -46,6 +46,22 @@ button {
     /* 从左到右 */
     background-image: linear-gradient(to right, red , yellow);
 }
+
+/* 隐藏滚动条 */
+.wrapper::-webkit-scrollbar { /* 整个滚动条 */  
+    width: 0; /* 纵向滚动条的宽度  */  
+    background: rgba(213,215,220,0.3);
+    border: none;
+    height: 10px;
+}
+.wrapper::-webkit-scrollbar-track { /* 滚动条轨道  */  
+    border: none;   
+}
+/* 横向滚动条宽度  */  
+.wrapper::-webkit-scrollbar-thumb { /* 滚动条里面的小方块  */  
+    border-radius: 10px;
+    background: #ccc;
+}
 ```
 
 ## 灰色滤镜
