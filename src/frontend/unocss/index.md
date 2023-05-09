@@ -1,6 +1,42 @@
 # UnoCss
 
-## 配置
+## 使用
+
+::: code-group
+  ```bash [pnpm]
+  pnpm add -D unocss
+  ```
+  ```bash [yarn]
+  yarn add -D unocss
+  ```
+  ```bash [npm]
+  npm install -D unocss
+  ```
+:::
+
+## 配置 vite.config.ts
+
+```ts
+// vite.config.ts
+import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  plugins: [
+    UnoCSS(),
+  ],
+})
+```
+
+
+添加 `virtual:uno.css` 到你的 `main.ts` 文件中:
+
+```ts
+// main.ts
+import 'virtual:uno.css'
+```
+
+## 配置 uno.config.ts
 ```js
 import {
   defineConfig,
