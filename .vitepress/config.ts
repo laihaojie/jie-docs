@@ -54,6 +54,16 @@ export default defineConfig({
         ],
       },
       {
+        text: '前端技术',
+        items: [
+          {
+            items: [
+              { text: 'UnoCss', link: '/src/frontend/unocss/' },
+            ],
+          },
+        ],
+      },
+      {
         text: '前端工程化',
         link: '/src/engineering/',
       },
@@ -94,6 +104,9 @@ export default defineConfig({
       ],
       '/src/engineering/': [
         { text: '前端工程化', collapsed: false, items: getMds('/engineering/') },
+      ],
+      '/src/frontend/': [
+        { text: 'UnoCss', collapsed: false, items: getMds('/frontend/unocss/') },
       ],
       '/src/framework/': [
         { text: 'Github Actions', collapsed: false, items: getMds('/framework/github-actions/') },
