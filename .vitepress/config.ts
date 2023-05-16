@@ -128,18 +128,10 @@ export default defineConfig({
       ],
       '/src/notes/': [
         { text: '随手记', collapsed: false, items: getMds('/notes/') },
+        { text: 'Windows', collapsed: false, items: getMds('/notes/windows/') },
       ],
       '/src/other/': [
-        {
-          text: '娜第',
-          collapsed: false,
-          items: [
-            {
-              text: '娜第',
-              link: '/src/other/nana.md',
-            },
-          ],
-        },
+        { text: '娜第', collapsed: false, items: getMds('/other/') },
         { text: 'Python作业', collapsed: false, items: getMds('/other/python/') },
       ],
     },
