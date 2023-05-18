@@ -71,3 +71,17 @@ html.gray {
     -webkit-filter: grayscale(.85) saturate(.8);
 }
 ```
+
+
+## 引入字体图标
+```css
+/* 导入 */
+@font-face {
+  font-family: 'font-name';
+  src: url('/font.ttf'), url('/font.woff') format('truetype'),
+}
+/* 使用 */
+.text{
+  font-family: 'font-name';
+}
+```
