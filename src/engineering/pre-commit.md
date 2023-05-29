@@ -1,6 +1,6 @@
 # 代码格式化 
 ## 使用simple-git-hooks 
-- 安装 simple-git-hooks 
+- 安装 [simple-git-hooks](https://www.npmjs.com/package/simple-git-hooks) 和 [lint-staged](https://www.npmjs.com/package/lint-staged)
 ```sh
 pnpm i simple-git-hooks lint-staged -D
 ```
@@ -48,17 +48,9 @@ npx simple-git-hooks
 
 ## 使用husky
 
-- 安装 husky
+- 安装 [husky](https://www.npmjs.com/package/husky) 和 [lint-staged](https://www.npmjs.com/package/lint-staged) 
 ```sh
 pnpm i husky lint-staged -D
-```
-
-- 在根目录新建 .husky/pre-commit 文件
-```sh
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-pnpm exec lint-staged
 ```
 
 - 在package.json中添加配置
@@ -76,3 +68,10 @@ pnpm exec lint-staged
   }
 }
 ```
+
+- 运行命令
+```bash
+npx husky install
+npx husky add .husky/pre-commit "pnpm exec lint-staged"
+```
+
