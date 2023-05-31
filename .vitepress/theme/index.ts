@@ -4,5 +4,5 @@ import './vars.css'
 import './overrides.css'
 
 export default {
-  ...Theme
+  ...Theme,
 }
