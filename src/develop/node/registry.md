@@ -14,7 +14,7 @@ npm config set registry https://registry.npmmirror.com/
 
 - 安装
 ```sh
-npm install -g nrm
+npm install -g nrm open@8.4.2
 ```
 
 - 使用
