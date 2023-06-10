@@ -72,6 +72,15 @@ html.gray {
 }
 ```
 
+## 图片变白
+```css
+/* 图片变成白色 */
+filter: brightness(100);
+
+/* 图片变成黑色 */
+filter: brightness(0);
+```
+
 
 ## 引入字体图标
 ```css
