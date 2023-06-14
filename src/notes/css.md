@@ -94,3 +94,21 @@ filter: brightness(0);
   font-family: 'font-name';
 }
 ```
+
+## 选择器
+
+```css
+/* 设置前3个元素的margin-top值与其他的不同 */
+:nth-child(-n+3){
+     margin-top: 12px;
+ }
+
+/*【负方向范围】选择第1个到第6个 */
+:nth-child(-n+6){}
+
+/*【正方向范围】选择从第6个开始的 */
+:nth-child(n+6){}
+
+/*【限制范围】选择第6个到第9个，取两者的交集【感谢小伙伴的纠正~】 */
+:nth-child(-n+9):nth-child(n+6){}
+```
