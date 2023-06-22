@@ -141,7 +141,8 @@ export default defineConfig({
       indexName: 'laihaojie',
       // debug: false,
     },
-    logo: '/logo.png',
+    // logo: '/logo.png',
+    logo: '/an.webp',
     lastUpdatedText: '上次更新于',
   },
   vue: {

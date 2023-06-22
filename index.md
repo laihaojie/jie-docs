@@ -7,6 +7,7 @@ hero:
   tagline: Lorem ipsum...
   image:
     src: /mao.png
+    # src: /an.webp
     alt: VitePress
   actions:
     # - theme: brand
