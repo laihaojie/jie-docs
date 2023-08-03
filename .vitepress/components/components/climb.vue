@@ -22,6 +22,7 @@
   width: 30px;
   border-radius: 50%;
   background: #2a9d8f;
+  -webkit-animation: loading-bounce 0.5s ease-in-out infinite alternate;
   animation: loading-bounce 0.5s ease-in-out infinite alternate;
 }
 
@@ -33,20 +34,25 @@
   height: 7px;
   width: 45px;
   border-radius: 4px;
+  -webkit-box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
   box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
+  -webkit-animation: loading-step 1s ease-in-out infinite;
   animation: loading-step 1s ease-in-out infinite;
 }
 
-@keyframes loading-bounce {
+@-webkit-keyframes loading-bounce {
   0% {
+    -webkit-transform: scale(1, 0.7);
     transform: scale(1, 0.7);
   }
 
   40% {
+    -webkit-transform: scale(0.8, 1.2);
     transform: scale(0.8, 1.2);
   }
 
   60% {
+    -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
   }
 
@@ -55,8 +61,33 @@
   }
 }
 
-@keyframes loading-step {
+@keyframes loading-bounce {
   0% {
+    -webkit-transform: scale(1, 0.7);
+    transform: scale(1, 0.7);
+  }
+
+  40% {
+    -webkit-transform: scale(0.8, 1.2);
+    transform: scale(0.8, 1.2);
+  }
+
+  60% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  100% {
+    bottom: 140px;
+  }
+}
+
+@-webkit-keyframes loading-step {
+  0% {
+    -webkit-box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+      0 10px 0 #f2f2f2,
+      -35px 50px 0 #f2f2f2,
+      -70px 90px 0 #f2f2f2;
     box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
       0 10px 0 #f2f2f2,
       -35px 50px 0 #f2f2f2,
@@ -64,6 +95,34 @@
   }
 
   100% {
+    -webkit-box-shadow: 0 10px 0 #f2f2f2,
+      -35px 50px 0 #f2f2f2,
+      -70px 90px 0 #f2f2f2,
+      -70px 90px 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 10px 0 #f2f2f2,
+      -35px 50px 0 #f2f2f2,
+      -70px 90px 0 #f2f2f2,
+      -70px 90px 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes loading-step {
+  0% {
+    -webkit-box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+      0 10px 0 #f2f2f2,
+      -35px 50px 0 #f2f2f2,
+      -70px 90px 0 #f2f2f2;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+      0 10px 0 #f2f2f2,
+      -35px 50px 0 #f2f2f2,
+      -70px 90px 0 #f2f2f2;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 10px 0 #f2f2f2,
+      -35px 50px 0 #f2f2f2,
+      -70px 90px 0 #f2f2f2,
+      -70px 90px 0 rgba(0, 0, 0, 0);
     box-shadow: 0 10px 0 #f2f2f2,
       -35px 50px 0 #f2f2f2,
       -70px 90px 0 #f2f2f2,
