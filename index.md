@@ -18,9 +18,9 @@ hero:
       link: https://github.com/laihaojie/jie-docs
 
 features: 
-  - icon: ⚡️ 
-    title: Vite, The DX that can't be beat 
-    details: Lorem ipsum... 
+  # - icon: ⚡️ 
+  #   title: Vite, The DX that can't be beat 
+  #   details: Lorem ipsum... 
   # - icon: 🖖 
   #   title: Power of Vue meets Markdown 
   #   details: Lorem ipsum... 
@@ -30,8 +30,8 @@ features:
 ---
 
 
-<!-- <script setup>
+<script setup>
 import home from './.vitepress/components/home.vue'
 </script>
 
-<home /> -->
+<home></home>
