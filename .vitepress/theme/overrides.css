@@ -223,6 +223,7 @@ table {
 
 
 
+.container .VPButton:hover,
 .container .VPButton:hover:focus {
   color: #ffffff;
   background-color: #008cff;
