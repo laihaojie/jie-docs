@@ -19,11 +19,16 @@
   "cSpell.words": [
     "dataurl"
   ],
-  "filewatcher.commands": [{
-    "match": "\\.md*",
-    "isAsync": true,
-    "cmd": "echo '${file} file content Changed'",
-    "event": "onFileChange"
-  }]
-
+  "filewatcher.commands": [
+    {
+      "match": "\\.md*",
+      "isAsync": true,
+      "cmd": "echo '${file} file content Changed'",
+      "event": "onFileChange"
+    }
+  ],
+  "markdownlint.config": {
+    "default": true,
+    "MD033": false,
+  }
 }

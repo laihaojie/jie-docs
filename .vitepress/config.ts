@@ -95,6 +95,16 @@ export default defineConfig({
         ],
       },
       { text: '随手记', link: '/src/notes/' },
+      {
+        text: 'Fun',
+        items: [
+          {
+            items: [
+              { text: '前端', link: '/src/fun/frontend/' },
+            ],
+          },
+        ],
+      },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/laihaojie' },
@@ -130,6 +140,9 @@ export default defineConfig({
       '/src/notes/': [
         { text: '随手记', collapsed: false, items: getMds('/notes/') },
         { text: 'Windows', collapsed: false, items: getMds('/notes/windows/') },
+      ],
+      '/src/fun/': [
+        { text: '前端', collapsed: false, items: getMds('/fun/frontend/') },
       ],
       '/src/other/': [
         { text: '娜第', collapsed: false, items: getMds('/other/') },

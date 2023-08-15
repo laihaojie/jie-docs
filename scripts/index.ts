@@ -30,8 +30,13 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
     const stats = fs.statSync(fullPath)
     if (!stats.isDirectory()) {
       const content = fs.readFileSync(fullPath, 'utf-8')
+
+      const fileName = file.split('.')[0]
+      const title = content.match(/#\s+(.*)$/m)?.[1]
+      const note = content.match(/<!--(.*?)-->/m)?.[1]
+
       return {
-        text: content.match(/#\s+(.*)$/m)?.[1],
+        text: note || title || fileName,
         link: `/src${root_path}${file}`,
       }
     }
