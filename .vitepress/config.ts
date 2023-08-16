@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import Unocss from 'unocss/vite'
 import { getMds } from '../scripts'
 
 export default defineConfig({
@@ -158,6 +159,11 @@ export default defineConfig({
     // logo: '/logo.png',
     logo: '/an.webp',
     lastUpdatedText: '上次更新于',
+  },
+  vite: {
+    plugins: [
+      Unocss(),
+    ],
   },
   vue: {
     template: {
