@@ -31,7 +31,7 @@ features:
 
 
 <script setup>
-import home from './.vitepress/components/home.vue'
+import home from 'root/components/home.vue'
 </script>
 
 <home></home>
