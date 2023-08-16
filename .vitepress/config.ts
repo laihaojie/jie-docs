@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
-import { getMds } from '../scripts'
+import { nav } from './nav'
+import { sidebar } from './sidebar'
+import { customElements } from './shared/customeElements'
 
 export default defineConfig({
   title: '阿杰',
@@ -27,129 +29,11 @@ export default defineConfig({
       pattern: 'https://github.com/laihaojie/jie-docs/edit/main/:path',
       text: '在GitHub编辑',
     },
-    nav: [
-      {
-        text: '工具软件',
-        items: [
-          {
-            items: [
-              { text: 'VsCode', link: '/src/utils/vscode/' },
-            ],
-          },
-        ],
-      },
-      {
-        text: '框架文档',
-        items: [
-          {
-            items: [
-              { text: 'Github Actions', link: '/src/framework/github-actions/' },
-              { text: 'Uniapp', link: '/src/framework/uniapp/' },
-              { text: 'Flutter', link: '/src/framework/flutter/' },
-              { text: 'React Native', link: '/src/framework/react-native/' },
-              { text: 'Android', link: '/src/framework/android/' },
-              { text: 'NestJS', link: '/src/framework/nestjs/' },
-              { text: 'Electron', link: '/src/framework/electron/' },
-              { text: 'MongoDB', link: '/src/framework/mongodb/' },
-            ],
-          },
-        ],
-      },
-      {
-        text: '前端技术',
-        items: [
-          {
-            items: [
-              { text: 'UnoCss', link: '/src/frontend/unocss/' },
-            ],
-          },
-        ],
-      },
-      {
-        text: '前端工程化',
-        link: '/src/engineering/',
-      },
-      {
-        text: '环境搭建',
-        items: [
-          {
-            items: [
-              { text: 'Node 相关', link: '/src/develop/node/' },
-              { text: 'Docker', link: '/src/develop/docker/' },
-              { text: 'Git 相关', link: '/src/develop/git/' },
-              { text: '键盘侠', link: '/src/develop/vim/' },
-            ],
-          },
-          {
-            text: '服务器',
-            items: [
-              { text: 'Centos', link: '/src/develop/centos/' },
-            ],
-          },
-          {
-            text: '其他',
-            items: [
-              { text: '内网穿透', link: '/src/develop/other/frp' },
-            ],
-          },
-          // { text: 'Item C', link: '/item-3' },
-        ],
-      },
-      { text: '随手记', link: '/src/notes/' },
-      {
-        text: 'Fun',
-        items: [
-          {
-            items: [
-              { text: '前端', link: '/src/fun/frontend/' },
-            ],
-          },
-        ],
-      },
-    ],
+    nav: nav(),
     socialLinks: [
       { icon: 'github', link: 'https://github.com/laihaojie' },
     ],
-    sidebar: {
-      '/src/utils/': [
-        { text: 'VsCode', collapsed: false, items: getMds('/utils/vscode/') },
-      ],
-      '/src/engineering/': [
-        { text: '前端工程化', collapsed: false, items: getMds('/engineering/') },
-      ],
-      '/src/frontend/': [
-        { text: 'UnoCss', collapsed: false, items: getMds('/frontend/unocss/') },
-      ],
-      '/src/framework/': [
-        { text: 'Github Actions', collapsed: false, items: getMds('/framework/github-actions/') },
-        { text: 'Uniapp', collapsed: false, items: getMds('/framework/uniapp/') },
-        { text: 'Flutter', collapsed: false, items: getMds('/framework/flutter/') },
-        { text: 'Electron', collapsed: false, items: getMds('/framework/electron/') },
-        { text: 'React-Native', collapsed: false, items: getMds('/framework/react-native/') },
-        { text: 'Android', collapsed: false, items: getMds('/framework/android/') },
-        { text: 'NestJs', collapsed: false, items: getMds('/framework/nestjs/') },
-        { text: 'MongoDB', collapsed: false, items: getMds('/framework/mongodb/') },
-      ],
-      '/src/develop/': [
-        { text: 'Node 相关', collapsed: false, items: getMds('/develop/node/') },
-        { text: 'Docker', collapsed: false, items: getMds('/develop/docker/') },
-        { text: 'Git 相关', collapsed: false, items: getMds('/develop/git/') },
-        { text: '键盘侠', collapsed: false, items: getMds('/develop/vim/') },
-        { text: 'Centos', collapsed: false, items: getMds('/develop/centos/') },
-        { text: '其他', collapsed: false, items: getMds('/develop/other/') },
-      ],
-      '/src/notes/': [
-        { text: '随手记', collapsed: false, items: getMds('/notes/') },
-        { text: 'Windows', collapsed: false, items: getMds('/notes/windows/') },
-      ],
-      '/src/fun/': [
-        { text: '前端', collapsed: false, items: getMds('/fun/frontend/') },
-      ],
-      '/src/other/': [
-        { text: '娜第', collapsed: false, items: getMds('/other/') },
-        { text: 'Python作业', collapsed: false, items: getMds('/other/python/') },
-      ],
-    },
+    sidebar: sidebar(),
     algolia: {
       appId: 'S9J30WHNBE',
       apiKey: '39b330225e68321010adc394aacf069e',
@@ -159,6 +43,10 @@ export default defineConfig({
     // logo: '/logo.png',
     logo: '/an.webp',
     lastUpdatedText: '上次更新于',
+    // footer: {
+    //   message: '阿杰的编程手册',
+    //   copyright: 'Copyright © 2023 ajie',
+    // },
   },
   vite: {
     plugins: [
@@ -168,7 +56,6 @@ export default defineConfig({
   vue: {
     template: {
       compilerOptions: {
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         isCustomElement: tag => customElements.includes(tag),
       },
     },
@@ -180,91 +67,3 @@ export default defineConfig({
     },
   },
 })
-
-const customElements = [
-  'math',
-  'maction',
-  'maligngroup',
-  'malignmark',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mi',
-  'mlongdiv',
-  'mmultiscripts',
-  'mn',
-  'mo',
-  'mover',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'ms',
-  'mscarries',
-  'mscarry',
-  'mscarries',
-  'msgroup',
-  'mstack',
-  'mlongdiv',
-  'msline',
-  'mstack',
-  'mspace',
-  'msqrt',
-  'msrow',
-  'mstack',
-  'mstack',
-  'mstyle',
-  'msub',
-  'msup',
-  'msubsup',
-  'mtable',
-  'mtd',
-  'mtext',
-  'mtr',
-  'munder',
-  'munderover',
-  'semantics',
-  'math',
-  'mi',
-  'mn',
-  'mo',
-  'ms',
-  'mspace',
-  'mtext',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'msqrt',
-  'mstyle',
-  'mmultiscripts',
-  'mover',
-  'mprescripts',
-  'msub',
-  'msubsup',
-  'msup',
-  'munder',
-  'munderover',
-  'none',
-  'maligngroup',
-  'malignmark',
-  'mtable',
-  'mtd',
-  'mtr',
-  'mlongdiv',
-  'mscarries',
-  'mscarry',
-  'msgroup',
-  'msline',
-  'msrow',
-  'mstack',
-  'maction',
-  'semantics',
-  'annotation',
-  'annotation-xml',
-]
