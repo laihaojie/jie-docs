@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import Unocss from 'unocss/vite'
 import { nav } from './nav'
 import { sidebar } from './sidebar'
 import { customElements } from './shared/customeElements'
@@ -47,11 +46,6 @@ export default defineConfig({
     //   message: '阿杰的编程手册',
     //   copyright: 'Copyright © 2023 ajie',
     // },
-  },
-  vite: {
-    plugins: [
-      Unocss(),
-    ],
   },
   vue: {
     template: {
