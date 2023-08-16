@@ -185,8 +185,8 @@ onMounted(() => {
   display: block;
   height: 4cqi;
   position: absolute;
-  bottom: -3cqi;
-  left: -1.75cqi;
+  bottom: -2cqi;
+  left: -0.75cqi;
   width: 4cqi;
 }
 
