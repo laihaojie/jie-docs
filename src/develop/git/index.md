@@ -2,7 +2,7 @@
 
 ## 初始化项目，关联远程仓库
 
-```text
+```txt
 # 初始化一个Git仓库
 git init -b main
 # 关联远程仓库
@@ -17,7 +17,7 @@ git remote set-url origin URL
 
 ## clone 远程仓库
 
-```text
+```txt
 # 新建好远程仓库，然后 clone 到本地
 git clone <git-repo-url>
 
@@ -113,7 +113,8 @@ git commit --amend --only -m 'xxxxxxx'
 ```
 
 ## 修改最近commit提交信息(描述信息 + 文件)
-```text
+
+```txt
 git commit --amend
 ```
 
@@ -148,7 +149,7 @@ git checkout <tag>
 
 ### reset相关
 
-```text
+```txt
 # 从暂存区撤销特定文件，但不改变工作区。它会取消这个文件的暂存，而不覆盖任何更改
 git reset <fileName>
 # 重置暂存区最近的一次提交，但工作区的文件不变
@@ -173,7 +174,7 @@ git reset --hard  <commit>
 
 ### revert相关
 
-```text
+```txt
 # 生成一个撤销最近的一次提交的新提交
 git revert HEAD 
 # 生成一个撤销最近一次提交的上一次提交的新提交
@@ -191,15 +192,16 @@ git revert <commit_id> --no-edit
 
 ## 删除文件
 
-```text
+```txt
 # 删除暂存区和工作区的文件
 git rm filename  
 # 只删除暂存区的文件，不会删除工作区的文件
 git rm --cached filename 
 ```
+
 ## 修改文件名称
 
-```text
+```txt
 # 修改暂存区和工作区的文件名称
 # git mv a.txt b.txt
 git mv oldName newName
@@ -216,6 +218,7 @@ git rm --f "文件路径 or ."
 ```
 
 ## 打包代码成zip压缩包
+
 ```sh
 # git archive master --prefix='admin/' --format=zip > master.zip
 git archive branchName --prefix='projectName/' --format=zip > projectName.zip

@@ -2,12 +2,12 @@
 
 ## 打开用户主目录文件夹
 
-```text
+```txt
 %userprofile%
 ```
 
 ## 打开应用程序数据文件夹
 
-```text
+```txt
 %appdata%
 ```

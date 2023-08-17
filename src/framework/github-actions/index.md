@@ -1,7 +1,8 @@
 # 部署web项目
 
 ## 部署到阿里云OSS
-```text
+
+```txt
 name: Deploy to Aliyun OSS
 
 on:
@@ -52,7 +53,8 @@ jobs:
 ```
 
 ## 部署到亚马逊S3
-```text
+
+```txt
 name: Deploy to Amazon S3
 on:
   push:

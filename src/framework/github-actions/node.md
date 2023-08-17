@@ -2,7 +2,7 @@
 
 ## 部署node服务到阿里云ESC
 
-```text
+```txt
 name: Deploy
 on: push
 
@@ -54,7 +54,7 @@ jobs:
 
 ## 部署node服务到亚马逊EC2
 
-```text
+```txt
 name: Deploy
 on:
   push:

@@ -10,7 +10,7 @@
 
 - 修改frps.ini 配置文件
 
-```text
+```txt
 [common]
 bind_port = 7000 # 绑定服务器端口  如果端口没有开启，请先开启端口
 vhost_http_port = 6125 # 暴露出去的端口  可以给nginx使用代理
@@ -24,10 +24,9 @@ chmod +x frps
 pm2 start frps -- -c frps.ini
 ```
 
-
 ## 修改本地客户端服务配置
 
-```text
+```txt
 [common]
 server_addr = 47.101.45.132 # 服务器地址
 server_port = 7000 # 服务器端口

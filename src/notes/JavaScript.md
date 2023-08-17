@@ -1,10 +1,8 @@
-#                             JavaScript
+# JavaScript
 
 ## 第一章 什么是JavaScript
 
-### 	1.1 JavaScript历史	
-
-
+### 1.1 JavaScript历史 
 
 ```
 JavaScript诞生于1995年 原名叫(LiveScript)
@@ -21,8 +19,6 @@ DOM document
 BOM window location navigator screen history
 ```
 
-
-
 ## 第二章 HTML中的JavaScript
 
 ### 2.1 \<script>元素
@@ -33,15 +29,11 @@ defer属性: 可是使得js代码等到文档完全解析完成在解析当前js
 async属性: 异步加载js文件 但不能保证js文件加载顺序
 ```
 
-
-
 ### 2.2 行内代码
 
 ```
 虽然可以直接在HTML文件中嵌入JavaScript代码 但通常认为尽可能把代码放入外部文件当中, 优势主要有 可维护性高 浏览器可缓存 适应未来
 ```
-
-
 
 ### 2.3 文档模式
 
@@ -49,15 +41,11 @@ async属性: 异步加载js文件 但不能保证js文件加载顺序
 分为混杂模式和标准模式 主要区别在于如何对待图片元素周围的空白(在表格中使用图片最明显)
 ```
 
-
-
 ### 2.4 \<noscript>元素
 
 ```
 noscript 只有浏览器不支持脚本 或者 浏览器对脚本的支持关闭 才会显示其中的内容否则不会显示
 ```
-
-
 
 ## 第三章 语言基础
 
@@ -70,8 +58,6 @@ noscript 只有浏览器不支持脚本 或者 浏览器对脚本的支持关闭
 严格模式: 在文件首行添加字符串 "use strict"
 ```
 
-
-
 ### 3.2 关键字与保留字
 
 ```
@@ -79,18 +65,14 @@ noscript 只有浏览器不支持脚本 或者 浏览器对脚本的支持关闭
 保留字:始终保留: enum 严格模式下保留: implements package public interface protected static let private 模板代码中保留: await
 ```
 
-
-
 ### 3.3 变量
 
 ```
 变量声明:
-	var 函数的局部作用于 可以重复定义 存在变量提升问题
-	let 代码块作用域  重复定义会报错 不存在变量提升问题
-    const 代码块作用域 顶层不可修改 修改会报错 不存在变量提升		  问题
+ var 函数的局部作用于 可以重复定义 存在变量提升问题
+ let 代码块作用域  重复定义会报错 不存在变量提升问题
+    const 代码块作用域 顶层不可修改 修改会报错 不存在变量提升    问题
 ```
-
-
 
 ### 3.4 数据类型
 
@@ -104,8 +86,6 @@ Boolean 类型
 Null 类型
 Symbol 类型
 ```
-
-
 
 ### 3.5 操作符
 
@@ -127,7 +107,7 @@ Symbol 类型
 
 ### 3.6 语句
 
-```text
+```txt
 if 语句
 do-while 语句
 while 语句
@@ -140,8 +120,8 @@ switch 语句
 
 标签语句:
 start: for (let i = 0;i < count; i ++){
-	console.log(i) // 这里的start就是标签
-	可以使用 break start 退出到指定位置
+ console.log(i) // 这里的start就是标签
+ 可以使用 break start 退出到指定位置
 }
 
 ```
@@ -163,15 +143,11 @@ const date = new Date()
 获取毫秒: date.getMilliseconds()
 ```
 
-
-
 ### 5.2 RegExp
 
 ```javascript
 const reg = new RegExp()
 ```
-
-
 
 ### 5.3 原始值包装类型
 
@@ -194,8 +170,6 @@ toLocaleLowerCase() 将字符串转为小写
 toLocaleUpperCase() 将字符串转为大写
 match() 字符串匹配方法 参数可传正则
 ```
-
-
 
 ### 5.4 单列内置对象
 
@@ -229,8 +203,6 @@ function random(min,max){
 const obj = new Object() 或者字面量 const obj = {}
 
 ```
-
-
 
 ### 6.2 Array
 
@@ -272,11 +244,11 @@ arr.map() 根据返回结果构成新数组
 
 ### 6.6 Set
 
-​                                   
+​
 
 ## 第十章 函数
 
-### 10.1 箭头函数       
+### 10.1 箭头函数
 
 ```
 ()=>{return }
@@ -385,7 +357,7 @@ function fib(n){
 
 ```
 function waibu(){
-	return neibu()
+ return neibu()
 }
 ```
 
@@ -420,8 +392,6 @@ javascript是没有私有变量的概念的    但是在函数中或者在局部
 
 
 ```
-
-
 
 ## 第十二章 BOM
 
@@ -572,8 +542,6 @@ document.body.className = 'hello' // 打印Hello
 
 ```
 
-
-
 ## 第十五章 DOM扩展
 
 ### 15.1 Selectors API
@@ -638,8 +606,6 @@ scrollWidth
 
 ```
 
-
-
 ## 第十七章 事件
 
 ### 17.1 事件流
@@ -693,8 +659,6 @@ parse() 将json类型转为JavaScript类型
 
 ### 24.1 XMLHttpRequest 对象
 
-
-
 ## 第二十五章 客户端存储
 
 ### 25.1 cookie
@@ -735,4 +699,3 @@ localStorage sessionStorage 存值限制为 每个源 5MB
 ```
 是浏览器中存储结构化数据的一个方案 IndexDB使用对象存储而不是表格保存数据. IndexDB数据库就是在一个公共命名空间下的一组对象存储,类似于NoSQL风格的实现
 ```
-

@@ -1,6 +1,6 @@
 # 全局安装的工具
 
-```text
+```txt
 @antfu/ni  包管理别名
 degit  代码模板拉取
 npkill 或者 rimraf  快速删除node_models文件

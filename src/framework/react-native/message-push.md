@@ -1,6 +1,6 @@
 # 消息推送
 
-## JPUSH 消息推送 
+## JPUSH 消息推送
 
 [*引用原文*](https://blog.csdn.net/Bombas/article/details/123654883)
 
@@ -25,14 +25,14 @@ npm install jpush-react-native jcore-react-native
 
 - 在app/build.gradle中添加
 
-```text 
+```txt
 implementation project(':jpush-react-native')  // 添加 jpush 依赖
 implementation project(':jcore-react-native')  // 添加 jcore 依赖
 ```
 
 - 在 settings.gradle 中添加
 
-```text
+```txt
 include ':jpush-react-native'
 project(':jpush-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/jpush-react-native/android')
 include ':jcore-react-native'
