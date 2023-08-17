@@ -2,7 +2,7 @@
 
 ## 第一章 什么是JavaScript
 
-### 1.1 JavaScript历史 
+### 1.1 JavaScript历史
 
 ```
 JavaScript诞生于1995年 原名叫(LiveScript)

@@ -1,29 +1,38 @@
 {
   "hash": "becbd457",
-  "browserHash": "b223a8fb",
+  "browserHash": "4aec346d",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/.pnpm/vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "28922b71",
+      "fileHash": "1b5521b2",
       "needsInterop": false
     },
     "driver.js": {
       "src": "../../../node_modules/.pnpm/driver.js@1.2.1/node_modules/driver.js/dist/driver.js.mjs",
       "file": "driver__js.js",
-      "fileHash": "59c0e541",
+      "fileHash": "84710f40",
       "needsInterop": false
     },
     "@vueuse/core": {
       "src": "../../../node_modules/.pnpm/@vueuse+core@10.3.0_vue@3.2.47/node_modules/@vueuse/core/index.mjs",
       "file": "@vueuse_core.js",
-      "fileHash": "bc4ea71a",
+      "fileHash": "7ed62ab5",
       "needsInterop": false
+    },
+    "fs-extra": {
+      "src": "../../../node_modules/.pnpm/fs-extra@10.1.0/node_modules/fs-extra/lib/index.js",
+      "file": "fs-extra.js",
+      "fileHash": "2e43b8fc",
+      "needsInterop": true
     }
   },
   "chunks": {
     "chunk-GOZHMCMR": {
       "file": "chunk-GOZHMCMR.js"
+    },
+    "chunk-RSJERJUL": {
+      "file": "chunk-RSJERJUL.js"
     }
   }
 }

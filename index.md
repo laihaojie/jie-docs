@@ -31,7 +31,7 @@ features:
 
 
 <script setup>
-import home from 'root/components/home.vue'
+import Home from 'root/components/home.vue'
 </script>
 
-<home></home>
+<Home></Home>

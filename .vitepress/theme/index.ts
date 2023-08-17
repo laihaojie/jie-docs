@@ -5,14 +5,16 @@ import 'uno.css'
 import './rainbow.css'
 import './vars.css'
 import './overrides.css'
+import { auth } from './auth'
 
 export default {
   ...Theme,
   // eslint-disable-next-line unused-imports/no-unused-vars
   async enhanceApp({ app, router, siteData }) {
-    // 弹出输入框 账号密码
-    // window.prompt('请输入账号', 'admin')
-    // window.prompt('请输入密码', 'admin')
-    // await new Promise(resolve => setTimeout(resolve, 4000))
+    if (!import.meta.env.SSR) {
+      const isLogin = await auth()
+      if (!isLogin)
+        return router.go('login')
+    }
   },
 }

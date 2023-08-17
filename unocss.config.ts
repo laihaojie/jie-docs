@@ -8,7 +8,7 @@ import { presetWeb } from '@djie/unocss'
 
 export default defineConfig({
   presets: [
-    presetWeb(),
+    presetWeb({ unit: 'px' }),
   ],
   transformers: [
     transformerDirectives(),
