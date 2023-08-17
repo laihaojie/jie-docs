@@ -15,7 +15,7 @@ export default {
       if (window.location.pathname !== '/login.html') {
         const isLogin = await auth()
         if (!isLogin)
-          return window.location.href = 'login'
+          return window.location.href = 'login.html'
       }
     }
   },
