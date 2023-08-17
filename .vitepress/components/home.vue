@@ -1,9 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import Climb from './components/climb.vue'
 import Washing from './components/washing.vue'
+import Driver from './components/driver.vue'
 </script>
 
 <template>
+  <Driver></Driver>
   <div class="home-wrapper">
     <Climb></Climb>
     <Washing></Washing>
