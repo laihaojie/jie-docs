@@ -59,5 +59,6 @@ export default defineConfig({
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       md.use(require('markdown-it-katex'))
     },
+    lineNumbers: true,
   },
 })
