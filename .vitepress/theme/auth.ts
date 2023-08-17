@@ -1,6 +1,6 @@
 import { useLocalStorage } from '@vueuse/core'
 
-const isAuth = true
+const isAuth = false
 
 export async function auth(): Promise<boolean> {
   if (!isAuth) return true
