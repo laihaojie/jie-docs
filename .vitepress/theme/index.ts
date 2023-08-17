@@ -12,9 +12,11 @@ export default {
   // eslint-disable-next-line unused-imports/no-unused-vars
   async enhanceApp({ app, router, siteData }) {
     if (!import.meta.env.SSR) {
-      const isLogin = await auth()
-      if (!isLogin)
-        return router.go('login')
+      if (window.location.pathname !== '/login.html') {
+        const isLogin = await auth()
+        if (!isLogin)
+          return window.location.href = 'login'
+      }
     }
   },
 }
