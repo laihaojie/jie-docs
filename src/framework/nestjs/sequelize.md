@@ -1,6 +1,6 @@
 # sequelize
 
-## 安装 
+## 安装
 
 ```sh
 pnpm i mysql2 sequelize sequelize-typescript

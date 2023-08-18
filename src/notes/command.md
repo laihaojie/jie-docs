@@ -1,6 +1,7 @@
 # 各种命令
 
 ## Linux命令
+
 ```sh
 # 临时添加环境变量path 文件目录
 export PATH=/bin:/usr/bin:$PATH

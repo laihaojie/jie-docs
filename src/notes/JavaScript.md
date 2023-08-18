@@ -4,14 +4,14 @@
 
 ### 1.1 JavaScript历史
 
-```
+```txt
 JavaScript诞生于1995年 原名叫(LiveScript)
 1997年,JavaScript 1.1作为提案被提交给欧洲计算机制造商协会(Ecma) . 第39技术委员会(TC39).承担了"标准化一门通用,跨平台,厂商中立的脚本语言的语法和语义"的任务.
 ```
 
 ### 1.2 JavaScript的实现
 
-```
+```txt
 JavaScript是由 ECMAScript + DOM + BOM 组成
 
 核心(ECMAScript) + 文档对象模型(DOM) + 浏览器对象模型(BOM)
@@ -23,7 +23,7 @@ BOM window location navigator screen history
 
 ### 2.1 \<script>元素
 
-```
+```txt
 scr属性: 设置外部文件的url地址或本地文件地址
 defer属性: 可是使得js代码等到文档完全解析完成在解析当前js文件
 async属性: 异步加载js文件 但不能保证js文件加载顺序
@@ -31,19 +31,19 @@ async属性: 异步加载js文件 但不能保证js文件加载顺序
 
 ### 2.2 行内代码
 
-```
+```txt
 虽然可以直接在HTML文件中嵌入JavaScript代码 但通常认为尽可能把代码放入外部文件当中, 优势主要有 可维护性高 浏览器可缓存 适应未来
 ```
 
 ### 2.3 文档模式
 
-```
+```txt
 分为混杂模式和标准模式 主要区别在于如何对待图片元素周围的空白(在表格中使用图片最明显)
 ```
 
 ### 2.4 \<noscript>元素
 
-```
+```txt
 noscript 只有浏览器不支持脚本 或者 浏览器对脚本的支持关闭 才会显示其中的内容否则不会显示
 ```
 
@@ -51,7 +51,7 @@ noscript 只有浏览器不支持脚本 或者 浏览器对脚本的支持关闭
 
 ### 3.1语法
 
-```
+```txt
 一切都区分大小写 无论是变量,函数名,操作符都区分大小写
 标识符: 第一个字必须是 字母, 下划线, 美元符, 或者数字
 注释: 单行注释 // 或者 多行注释 /* */
@@ -60,14 +60,14 @@ noscript 只有浏览器不支持脚本 或者 浏览器对脚本的支持关闭
 
 ### 3.2 关键字与保留字
 
-```
+```txt
 关键字: break do in typeof case else instanceof var class extends return while const finally super with continue for switch yield debugger function this default if throw delete import try
 保留字:始终保留: enum 严格模式下保留: implements package public interface protected static let private 模板代码中保留: await
 ```
 
 ### 3.3 变量
 
-```
+```txt
 变量声明:
  var 函数的局部作用于 可以重复定义 存在变量提升问题
  let 代码块作用域  重复定义会报错 不存在变量提升问题
@@ -76,7 +76,7 @@ noscript 只有浏览器不支持脚本 或者 浏览器对脚本的支持关闭
 
 ### 3.4 数据类型
 
-```
+```txt
 typeof 数据类型判断
 Undefined 类型
 Number 类型
@@ -89,7 +89,7 @@ Symbol 类型
 
 ### 3.5 操作符
 
-```
+```txt
 非数字类型会使用Number()进行转换 操作符遇到对象视情况而定使用对象的valueOf()或toString()
 
 一元操作符: 单个变量进行运算操作  (+)(-)
@@ -198,7 +198,7 @@ function random(min,max){
 
 ### 6.1 Object
 
-```
+```txt
 对象创建方式: 
 const obj = new Object() 或者字面量 const obj = {}
 
@@ -206,7 +206,7 @@ const obj = new Object() 或者字面量 const obj = {}
 
 ### 6.2 Array
 
-```
+```txt
 数组创建方式:
 const arr = new Array() 或者字面量 const arr = []
 
@@ -250,7 +250,7 @@ arr.map() 根据返回结果构成新数组
 
 ### 10.1 箭头函数
 
-```
+```txt
 ()=>{return }
 只有一个参数可以不写括号
 函数体只有一行可以不不写大括号 默认返回函数体执行结果 没有返回undefined
@@ -259,14 +259,14 @@ arr.map() 根据返回结果构成新数组
 
 ### 10.2 函数名
 
-```
+```txt
 函数名其实是指向函数的指针 函数名==指针 指针 + () 可以调用函数
 指针.name 可以获取函数名的字符串结果
 ```
 
 ### 10.3 理解参数
 
-```
+```txt
 函数的参数都不是必传的  
 也可以不写命名参数
 如果没有写命名参数 可以从函数中 arguments里面获取值
@@ -277,14 +277,14 @@ arguments是一个数组  但不是 Array的实例
 
 ### 10.4 没有重载
 
-```
+```txt
 默认没有重载
 如果重新定义函数默认会覆盖之间的定义
 ```
 
 ### 10.5 默认参数值
 
-```
+```txt
 只需要在定义时括号内写 (name='慧慧子')
 如果传了使用传过来的结果 没传使用默认参数
 还可以写成 (name=nikename)
@@ -293,26 +293,26 @@ arguments是一个数组  但不是 Array的实例
 
 ### 10.6 参数扩展与收集
 
-```
+```txt
 扩展参数可以使用三个点来解构 ...arr 后面跟着的是一个可迭代对象
 如果还有命名参数 扩展参数必须写在命名参数后面  因为不确定 可迭代对象里面有多少值 可能会发生位置错乱
 ```
 
 ### 10.7 函数申明与函数表达式
 
-```
+```txt
 如果是用函数声明的方式定义的函数 调用该函数的时候不需要在乎调用位置 因为 函数声明会提升 全部提升到源代码顶部
 ```
 
 ### 10.8 函数作为值
 
-```
+```txt
 函数也可以作为一个值来给别处使用 比如说常见的闭包
 ```
 
 ### 10.9 函数内部
 
-```
+```txt
 函数内部存在两个特殊的对象 arguments 和 this
 arguments对象有一个属性callee 该属性指向的是函数的指针
 可以通过该属性来调用当前函数
@@ -325,7 +325,7 @@ caller属性可以获取谁调用的它
 
 ### 10.10 函数属性与方法
 
-```
+```txt
 每个函数都有两个属性和方法 length prototype
 length 是函数命名参数的个数
 prototype 原型链 tostring() valueof() 都是放在原型链上
@@ -336,7 +336,7 @@ call() apply() bind()
 
 ### 10.11 函数表达式
 
-```
+```txt
 function(){} 匿名函数 兰姆达
 ```
 
@@ -355,7 +355,7 @@ function fib(n){
 
 ### 10.13 尾调用优化
 
-```
+```txt
 function waibu(){
  return neibu()
 }
@@ -363,7 +363,7 @@ function waibu(){
 
 ### 10.14 闭包
 
-```
+```txt
 闭包指的是那些引用了另一个函数作用域中的变量的函数  通常函数嵌套内存函数引用了外层函数的变量就叫做闭包   
 
 闭包会占用内存比较多
@@ -377,14 +377,14 @@ this
 
 ### 10.15 立即调用的函数表达式
 
-```
+```txt
 (function(){})();  函数的自调用  
 自调用函数会产生一个块级作用域 外部不能访问函数内部
 ```
 
 ### 10.16 私有变量
 
-```
+```txt
 javascript是没有私有变量的概念的    但是在函数中或者在局部作用域中的参数或者定义的变量  外部是不能访问的 那这些变量对于外部来说可以当做私有变量  
 
 外部如果想访问内部变量 内存函数使用外部函数的变量 可以在局部函数中通过闭包的方式返回给外部使用 
@@ -434,7 +434,7 @@ prompt 弹出一个输入框
 
 ### 12.2 location对象
 
-```
+```txt
 location属性列表:
 hash URL散列值 (#后面的字符串)
 host 服务器名及端口号
@@ -451,20 +451,20 @@ origin URL的源地址
 
 ### 12.3 navigator对象
 
-```
+```txt
 navigator在各个浏览器都有不同 都有自己的属性
 里面的属性和方法都是关于浏览器本身的属性 比如appVersion查看浏览器版本 mediaDevices 返回可用媒体设备 onLine检测是否联网
 ```
 
 ### 12.4 screen对象
 
-```
+```txt
 screen对象可以获取浏览器窗口显示的信息 比如获取屏幕像素宽高 screen.width screen.height
 ```
 
 ### 12.5 history对象
 
-```
+```txt
 对于当前窗口 go() 方法 可以返回指定历史页面 负数为后退 正数为前进 如果历史页面不存在不做任何跳转
 后退一页 history.back() 前进一页 history.forward()
 ```
@@ -473,7 +473,7 @@ screen对象可以获取浏览器窗口显示的信息 比如获取屏幕像素�
 
 ### 14.1 节点层级
 
-```
+```txt
 document节点表示每个文档的根结点 唯一一个子节点是<html>元素  <html>元素我们称之为文档元素
 
 Node类型:
@@ -517,7 +517,7 @@ document.createElement() 传入一个参数 标签名  返回一个节点 让后
 
 ### 14.2 DOM编程
 
-```
+```txt
 动态脚本:
 let script = document.createElement("script");
 script.src = "index.js";
@@ -546,7 +546,7 @@ document.body.className = 'hello' // 打印Hello
 
 ### 15.1 Selectors API
 
-```
+```txt
 querySelector() 方法接收CSS选择符参数 返回DOM树中查询到的第一个节点
 querySelectorAll() 方法接收CSS选择符参数 返回多个结果 NodeList 的静态实例
 matches() 返回布尔值 检测是否可以被querySelector查找
@@ -554,13 +554,13 @@ matches() 返回布尔值 检测是否可以被querySelector查找
 
 ### 15.2 元素遍历
 
-```
+```txt
 
 ```
 
 ### 15.3 HTML5
 
-```
+```txt
 css扩展类:
 getElementsByClassName() 
 clasList 节点的类名列表 可以通过add remove来操作class
@@ -583,7 +583,7 @@ contains() 确定节点是否是当前节点的子节点 返回布尔值
 
 ## 第十六章 DOM2 DOM3
 
-```
+```txt
 let app = document.getElementById("app")
 app.style.cssText = ----
 cssText可以获取元素css 也可以快速设置多个css
@@ -610,7 +610,7 @@ scrollWidth
 
 ### 17.1 事件流
 
-```
+```txt
 let btn = document.getElementById("app")
 btn.addEventListener("click",()=>{})
 
@@ -640,7 +640,7 @@ btn.addEventListener("click",()=>{})
 
 ### 23.1  语法
 
-```
+```txt
 JSON 语法支持表示三种类型的值
 简单值: 字符串 数值 布尔值 和 null
 对象:对象表示有序键值对 每个值可以是简单值 也可以是复杂类型
@@ -649,7 +649,7 @@ JSON 语法支持表示三种类型的值
 
 ### 23.2 解析与序列化
 
-```
+```txt
 JSON 对象 有两个方法
 stringify() 将JavaScript数据类型转为json类型 有三个参数 第一个转化对象 第二个过滤字段规则可以传对象里面键值的数组,转化结果就只包含传了的结果 第二个参数还可以是一个函数 该函数第一个参数是key 第二个为value 也可以根据key值过滤 第三个为字符串缩进起到美化输出的作用
 parse() 将json类型转为JavaScript类型
@@ -663,7 +663,7 @@ parse() 将json类型转为JavaScript类型
 
 ### 25.1 cookie
 
-```
+```txt
 document.cookie 
 
 限制:
@@ -678,7 +678,7 @@ document.cookie
 
 ### 25.2 Web Storage
 
-```
+```txt
 localStorage 本地持久化存储
 方法取值:localStorage.getItem("name")
 方法存值:localStorage.setItem("name","hello")
@@ -696,6 +696,6 @@ localStorage sessionStorage 存值限制为 每个源 5MB
 
 ### 25.3 IndexDB
 
-```
+```txt
 是浏览器中存储结构化数据的一个方案 IndexDB使用对象存储而不是表格保存数据. IndexDB数据库就是在一个公共命名空间下的一组对象存储,类似于NoSQL风格的实现
 ```

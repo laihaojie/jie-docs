@@ -1,6 +1,7 @@
 # 代码片段
 
 ## 按条件导包
+
 ```dart
 // 如果都不满足默认导入default
 import 'package:default.dart'
@@ -54,11 +55,13 @@ Transform.translate(
 ```
 
 ## 复制文字
+
 ```dart
  await Clipboard.setData(ClipboardData(text: '文字'));
 ```
 
 ## 设置屏幕旋转
+
 ```dart
 // 控制横屏竖屏
 WidgetsFlutterBinding.ensureInitialized();

@@ -1,10 +1,15 @@
-# 代码格式化 
-## 使用simple-git-hooks 
+# 代码格式化
+
+## 使用simple-git-hooks
+
 - 安装 [simple-git-hooks](https://www.npmjs.com/package/simple-git-hooks) 和 [lint-staged](https://www.npmjs.com/package/lint-staged)
+
 ```sh
 pnpm i simple-git-hooks lint-staged -D
 ```
+
 - 在package.json中添加配置
+
 ```json
 {
   "script": {
@@ -45,15 +50,16 @@ npx simple-git-hooks
 
 设置完成之后 git commit 之前就会触发lint检查, 看是否有错误
 
-
 ## 使用husky
 
-- 安装 [husky](https://www.npmjs.com/package/husky) 和 [lint-staged](https://www.npmjs.com/package/lint-staged) 
+- 安装 [husky](https://www.npmjs.com/package/husky) 和 [lint-staged](https://www.npmjs.com/package/lint-staged)
+
 ```sh
 pnpm i husky lint-staged -D
 ```
 
 - 在package.json中添加配置
+
 ```json
 {
   "script": {
@@ -70,8 +76,8 @@ pnpm i husky lint-staged -D
 ```
 
 - 运行命令
+
 ```bash
 npx husky install
 npx husky add .husky/pre-commit "pnpm exec lint-staged"
 ```
-

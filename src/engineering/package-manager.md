@@ -1,7 +1,7 @@
 # 包管理器的限制
 
-
 ## 限制必须使用pnpm
+
 - 新建script preinstall.js
 
 ```js
@@ -25,6 +25,7 @@ if (!/pnpm/.test(process.env.npm_execpath || '')) {
 ```
 
 ## 限制必须使用yarn
+
 - 新建.pnpmfile.cjs
 
 ```js

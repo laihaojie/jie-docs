@@ -16,4 +16,3 @@ npx @dcloudio/uvm 3.2.12.20211029
 npx @dcloudio/uvm 3.2.14.20211112-alpha
 
 ```
-

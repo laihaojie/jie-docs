@@ -1,12 +1,13 @@
 # nodemon
 
 ## 安装
+
 ```sh
 npm install -g nodemon
 ```
 
-
 ## 单个文件运行
+
 ```json
 {
   "script": "nodemon index.js"
@@ -14,6 +15,7 @@ npm install -g nodemon
 ```
 
 ## 使用配置文件运行
+
 ```json
 {
   "watch": [

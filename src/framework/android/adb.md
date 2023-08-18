@@ -1,7 +1,9 @@
 # ADB
 
 [命令文章](https://blog.csdn.net/Next_Second/article/details/73648754)
+
 ## 常用命令
+
 ```bash
 # 列出所有设备
 adb devices
@@ -47,9 +49,8 @@ adb shell rm /sdcard/text.txt
 # -i 删除文件前需要确认
 ```
 
-
-
 ## 连接手机
+
 ```bash
 # 手机连接USB数据线 打开USB调试
 # cmd环境执行

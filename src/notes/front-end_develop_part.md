@@ -1,6 +1,7 @@
 # 前端开发代码片段
 
 ## JS
+
 ```js
 // 弹出确认框
 ElMessageBox.confirm('您确定要删除吗?', '提示', { type: 'warning' }).then(async () => {

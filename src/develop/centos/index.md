@@ -1,12 +1,14 @@
 # Centos7
 
 ## 命令
+
 ```bash
 # 查看命令所在位置
 which xxx
 ```
 
 ## 安装nginx
+
 ```bash
 # 安装nginx 
 yum install nginx
@@ -25,8 +27,8 @@ lsof -i:80
 sudo fuser -k 80/tcp
 ```
 
-
 ## 安装Mysql
+
 ```bash
 yum install mysql
 yum install mysql-devel

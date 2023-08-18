@@ -1,6 +1,7 @@
 # 代码片段
 
 ## 开机自启动
+
 ```js
 if (process.env.NODE_ENV !== 'development') {
   // 开机自启动
@@ -12,10 +13,13 @@ if (process.env.NODE_ENV !== 'development') {
 ```
 
 ## 自动打开调试窗口
+
 ```js
 mainWindow.webContents.openDevTools()
 ```
+
 ## 拦截响应body
+
 ```js
 try {
   mainWindow.webContents.debugger.attach('1.3')
@@ -40,7 +44,8 @@ mainWindow.webContents.debugger.on('message', (event, method, params) => {
 mainWindow.webContents.debugger.sendCommand('Network.enable')
 ```
 
-##  设置session隔离
+## 设置session隔离
+
 ```js
 const mainWindow = new BrowserWindow({
   width: 1900,
@@ -55,6 +60,7 @@ const mainWindow = new BrowserWindow({
 ```
 
 ## 加载本地静态资源
+
 ```js
 const addPath = url.format({
   pathname: join(app.getAppPath(), 'renderer', 'index.html'),

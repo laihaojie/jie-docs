@@ -1,6 +1,7 @@
 # 常用命令
 
 ## 启动命令
+
 ```bash
 # 启动docker
 systemctl start docker
@@ -37,6 +38,7 @@ docker rmi 镜像名字或者id  镜像名字或者id  镜像名字或者id
 ```
 
 ## 容器命名
+
 ```bash
 # 运行容器
 docker run [选项] 镜像名字或者id [命令] [参数] 
@@ -95,7 +97,8 @@ docker export 容器id或者名字 > 容器.tar
 docker import 容器.tar 自定义组织名/镜像名:版本号
 ```
 
-# commit 命令
+## commit 命令
+
 ```bash
 # 提交容器 生成本地镜像
 docker commit -m="描述信息" -a="作者" 容器id或者名字 自定义组织名/自定义镜像名:版本号

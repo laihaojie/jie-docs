@@ -13,12 +13,14 @@
 ###### 六级标题
 ```
 
-
 ## 段落与格式
+
 ### 段落
+
 Markdown 段落没有特殊的格式，直接编写文字就好，**段落的换行是使用两个以上空格加上回车。**
 
 ### 字体
+
 |格式| 例子 | 代码|
 |--|--|--|
 |斜体|*斜体*|\*斜体文本\*|
@@ -29,10 +31,11 @@ Markdown 段落没有特殊的格式，直接编写文字就好，**段落的换
 
 ### 分隔线
 
-```
+```txt
 ***
 - - -
 ```
+
 ***
 - - -
 
@@ -40,15 +43,18 @@ Markdown 段落没有特殊的格式，直接编写文字就好，**段落的换
 
 * 第一项
 * 第二项
-* 第三项   
+* 第三项
 
 代码如下
+
 ```
 * 第一项
 * 第二项
 * 第三项
 ```
+
 ## 代码块
+
 ```javascript
 $(document).ready(function () {
     alert('RUNOOB');
@@ -62,13 +68,14 @@ $(document).ready(function () {
 });
 ```
 ````
-
 
 ## 表格
+
 |学校|学生姓名|
 |----|----|
 |幼儿园|张三|
 |小学|李四|
+
 ```
 |学校|学生姓名|
 |----|----|
@@ -77,9 +84,11 @@ $(document).ready(function () {
 ```
 
 ## 链接
+
 [文字超链接](https://www.w3school.com.cn/i/eg_mouse.jpg)
 ![图片](https://www.w3school.com.cn/i/eg_mouse.jpg)
 <https://www.lingman.tech>
+
 ```
 [文字超链接](https://www.w3school.com.cn/i/eg_mouse.jpg)
 ![鼠标](https://www.w3school.com.cn/i/eg_mouse.jpg)
@@ -87,7 +96,7 @@ $(document).ready(function () {
 ```
 
 ## 区块
-   
+
 > 区块引用
 > 菜鸟教程
 > 学的不仅是技术更是梦想
@@ -97,6 +106,5 @@ $(document).ready(function () {
 > 菜鸟教程
 > 学的不仅是技术更是梦想
 ```
-
 
 $L(\hat{y},y)=-[y\log\hat{y}+(1-y)\log(1-\hat{y})]$

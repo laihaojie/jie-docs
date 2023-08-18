@@ -17,7 +17,6 @@
 
 - 此ABI支持x86-64位架构的CPU。同上
 
-
 ::: tip
 对于mips、mips64、armeabi这些架构来说，Android从Android Plugin for Gradle 3.1.0（对应gradle 4.4）后不再支持，因为从NDK r17开始，不再将这些 ABI 作为支持的目标。
 :::
