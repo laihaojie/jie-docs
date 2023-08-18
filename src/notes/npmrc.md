@@ -8,4 +8,10 @@ ignore-workspace-root-check=true
 # 用pnpm时是否扁平化node_modules
 node-linker=hoisted
 shamefully-hoist=true
+
+# 换源
+# 淘宝源
+registry=https://registry.npmmirror.com/
+# npm源
+registry=https://registry.npmjs.org/
 ```

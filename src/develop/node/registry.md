@@ -1,23 +1,35 @@
 # npm源
 
 - 查看当前源
+
 ```sh
 npm config get registry
 ```
 
-- 换淘宝源
-```sh
+- 换源
+
+::: code-group
+
+```sh [淘宝源]
 npm config set registry https://registry.npmmirror.com/
 ```
+
+```sh [NPM源]
+npm config set registry https://registry.npmjs.org/ 
+```
+
+:::
 
 ## nrm管理npm源
 
 - 安装
+
 ```sh
 npm install -g nrm open@8.4.2
 ```
 
 - 使用
+
 ```sh
 # 查看当前源
 nrm current
