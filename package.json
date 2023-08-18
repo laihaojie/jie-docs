@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.3.0",
+    "cropperjs": "^1.5.13",
     "driver.js": "^1.2.1",
     "markdown-it-katex": "^2.0.3",
     "vitepress": "1.0.0-alpha.75",
