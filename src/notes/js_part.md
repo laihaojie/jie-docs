@@ -1,4 +1,4 @@
-# js片段
+# JavaScript代码片段
 
 ## __dirname
 
@@ -41,6 +41,7 @@ history.pushState('', 'title', '修改后的url')
 ```
 
 ## node下载图片
+
 ```js
 const axios = require('axios')
 
@@ -75,6 +76,7 @@ const sleep = time => new Promise(resolve => setTimeout(resolve, time))
 ```
 
 ## image转base64
+
 ```js
 // 图片文件转base64，利用canvas
 function getBase64Image(img) {
@@ -123,11 +125,43 @@ function Toast(msg, duration = 2000) {
 ```
 
 ## 根据经度纬度跳转到地图
-```js 
-// 百度地图
+
+::: code-group
+
+```js [百度地图]
 window.open(`http://api.map.baidu.com/marker?location=${lat},${lng}&title=${title}&content=${address}&output=html`)
-// 高德地图
+```
+
+```js [高德地图]
 window.open(`http://uri.amap.com/marker?position=${lng},${lat}&name=${title}&src=mypage&coordinate=gaode&callnative=1`)
-// 谷歌地图
+```
+
+```js [谷歌地图]
 window.open(`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`)
 ```
+
+:::
+
+## Fetch用法
+
+::: code-group
+
+```js [Get请求]
+fetch('https://...').then(res => res.json()).then((data) => {
+
+})
+```
+
+```js [Post请求]
+fetch('https://...', {
+  method: 'post',
+  body: JSON.stringify(base),
+  headers: {
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json()).then((data) => {
+
+})
+```
+
+:::
