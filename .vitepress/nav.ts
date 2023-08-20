@@ -67,7 +67,7 @@ export function nav() {
         // { text: 'Item C', link: '/item-3' },
       ],
     },
-    { text: '随手记', link: '/src/notes/' },
+    { text: '随手记', link: '/src/notes/part/javascript' },
     {
       text: 'Fun',
       items: [

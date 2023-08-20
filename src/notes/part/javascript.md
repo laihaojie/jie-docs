@@ -1,4 +1,4 @@
-# JavaScript代码片段
+# JavaScript
 
 ## __dirname
 
