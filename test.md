@@ -7,7 +7,7 @@ import { ref } from 'vue'
 import { useData  } from 'vitepress'
 
 console.log(useData())
-const count = ref(1)
+const count = ref(1);
 </script>
 
 <div class="cursor-pointer select-none" @click="count = count + 2">{{count}}</div>
