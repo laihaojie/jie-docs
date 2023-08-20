@@ -9,6 +9,15 @@ const isDriver = useLocalStorage('isDriver', false)
 const driverObj = driver({
   steps: [
     {
+      element: '#docsearch',
+      popover: {
+        title: '快速搜索',
+        description: '输入标题或关键字可快速搜索。',
+        prevBtnText: '上一个',
+        nextBtnText: '下一个',
+      },
+    },
+    {
       element: '.VPSwitchAppearance',
       popover: {
         title: '暗黑模式切换',
