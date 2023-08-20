@@ -37,7 +37,7 @@ function randomNumber(min, max) {
 ## 不刷新修改url地址栏
 
 ```js
-history.pushState('', 'title', '修改后的url')
+window.history.replaceState(window.history.state, document.title, '修改后的url')
 ```
 
 ## node下载图片
