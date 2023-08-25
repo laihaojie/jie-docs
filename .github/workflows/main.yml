@@ -31,6 +31,13 @@ jobs:
           access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
       - run: ossutil cp -rf ./.vitepress/dist/ oss://docs-laihaojie-top/
 
+      - name: Github Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.vitepress/dist
+          destination_dir: test
+
       - name: Send success message
         if: success()
         run: curl -G "https://wss.laihaojie.com/api/tools/releaseSuccess" --data-urlencode "id=文档"
