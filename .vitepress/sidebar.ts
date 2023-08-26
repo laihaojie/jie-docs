@@ -31,6 +31,7 @@ export function sidebar() {
     ],
     '/src/notes/': [
       { text: '代码片段', collapsed: false, items: getMds('/notes/part/') },
+      { text: 'BUG', collapsed: false, items: getMds('/notes/bug/') },
       { text: '随手记', collapsed: false, items: getMds('/notes/') },
       { text: 'Windows', collapsed: false, items: getMds('/notes/windows/') },
     ],
