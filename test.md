@@ -24,4 +24,5 @@ const count = ref(1);
 | col {{count}} is      |   centered    |   $12 |
 | zebra stripes |   are neat    |    $1 |
 
-<div class="h-100 w-100 bg-red"></div>
+<div class="h-100 w-100 bg-primary"></div>
+<div class="h-100 w-100 bg-success"></div>

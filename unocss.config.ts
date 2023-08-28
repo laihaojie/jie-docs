@@ -11,7 +11,11 @@ export default defineConfig({
     presetWeb({ unit: 'px' }),
   ],
   theme: {
+    colors: {
+      primary: '#ff0000',
 
+      success: '#00ff00',
+    },
   },
   transformers: [
     transformerDirectives(),
