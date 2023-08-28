@@ -1,16 +1,5 @@
 # JavaScript
 
-## __dirname
-
-```js
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-const __filename = fileURLToPath(import.meta.url)
-
-const __dirname = path.dirname(__filename)
-```
-
 ## 注入js
 
 ```js
@@ -38,21 +27,6 @@ function randomNumber(min, max) {
 
 ```js
 window.history.replaceState(window.history.state, document.title, '修改后的url')
-```
-
-## node下载图片
-
-```js
-const axios = require('axios')
-
-axios({
-  method: 'get',
-  url: 'image_url.png',
-  responseType: 'stream',
-})
-  .then((response) => {
-    response.data.pipe(fs.createWriteStream('images/name.png'))
-  })
 ```
 
 ## 统计字符串中某个字符出现的次数
