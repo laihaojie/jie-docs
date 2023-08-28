@@ -10,6 +10,9 @@ export default defineConfig({
   presets: [
     presetWeb({ unit: 'px' }),
   ],
+  theme: {
+
+  },
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
