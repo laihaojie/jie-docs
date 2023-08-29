@@ -60,7 +60,7 @@ async function download() {
 <template>
   <div class="mt-20">
     <div class="flex flex-col mb-20">
-      <input v-model="defaultImg" class="border border-primary border-solid rounded-4 py-2 px-8" type="text"
+      <input v-model="defaultImg" class="border border-primary border-solid rounded-4 py-6 px-9" type="text"
         placeholder="输入在线图片地址裁剪">
       <div class="mt-20">
         <button class="btn border border-primary border-solid mr-10" :class="!aspectRatio ? '' : '!bg-transparent'"
