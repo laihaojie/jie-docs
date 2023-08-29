@@ -19,6 +19,8 @@ onMounted(async () => {
 async function register() {
   cropper.value = new Cropper(image.value, {
     aspectRatio: aspectRatio.value,
+    minContainerWidth: 688,
+    minContainerHeight: 688,
     crop(event) {
       console.log(event.detail.x)
       console.log(event.detail.y)
@@ -36,6 +38,8 @@ watch(
   () => {
     if (defaultImg.value)
       cropper.value.replace(defaultImg.value)
+    else
+      cropper.value.replace(localImg)
   },
 )
 
