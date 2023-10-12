@@ -67,7 +67,16 @@ export function nav() {
         // { text: 'Item C', link: '/item-3' },
       ],
     },
-    { text: '随手记', link: '/src/notes/part/javascript' },
+    {
+      text: '随手记',
+      items: [
+        { text: '代码片段', link: '/src/notes/part/javascript' },
+        { text: 'BUG', link: '/src/notes/bug/front_end' },
+        { text: '随手记', link: '/src/notes/command' },
+        { text: 'Windows', link: '/src/notes/windows/' },
+        { text: 'Github', link: '/src/notes/github/part' },
+      ],
+    },
     {
       text: 'Fun',
       items: [

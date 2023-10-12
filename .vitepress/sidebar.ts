@@ -34,6 +34,7 @@ export function sidebar() {
       { text: 'BUG', collapsed: false, items: getMds('/notes/bug/') },
       { text: '随手记', collapsed: false, items: getMds('/notes/') },
       { text: 'Windows', collapsed: false, items: getMds('/notes/windows/') },
+      { text: 'Github', collapsed: false, items: getMds('/notes/github/') },
     ],
     '/src/fun/': [
       { text: '前端', collapsed: false, items: getMds('/fun/frontend/') },
