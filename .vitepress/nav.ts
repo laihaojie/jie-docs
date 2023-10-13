@@ -15,7 +15,6 @@ export function nav() {
       items: [
         {
           items: [
-            { text: 'Github Actions', link: '/src/framework/github-actions/' },
             { text: 'Uniapp', link: '/src/framework/uniapp/' },
             { text: 'Flutter', link: '/src/framework/flutter/' },
             { text: 'React Native', link: '/src/framework/react-native/' },

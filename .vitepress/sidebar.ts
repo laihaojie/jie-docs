@@ -12,7 +12,6 @@ export function sidebar() {
       { text: 'UnoCss', collapsed: false, items: getMds('/frontend/unocss/') },
     ],
     '/src/framework/': [
-      { text: 'Github Actions', collapsed: false, items: getMds('/framework/github-actions/') },
       { text: 'Uniapp', collapsed: false, items: getMds('/framework/uniapp/') },
       { text: 'Flutter', collapsed: false, items: getMds('/framework/flutter/') },
       { text: 'Electron', collapsed: false, items: getMds('/framework/electron/') },
