@@ -237,3 +237,20 @@ git checkout 主分支名称
 # 主分支合并子分支代码
 git merge 子分支名称
 ```
+
+## 合并不同仓库的代码 不相关的历史
+
+```sh
+# 关联远程仓库
+git remote add upstream <original-repo-url>
+# 检查是否关联成功
+git remote -v
+# 拉取远程仓库的代码
+git fetch upstream
+
+# 切换到需要合并的分支
+git checkout <branch-name>
+
+# 合并远程仓库的代码
+git merge --allow-unrelated-histories <branch-name>
+```
