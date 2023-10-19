@@ -8,16 +8,19 @@ pnpm i eslint @djie/eslint-config -D
 
  [*@djie/eslint-config*](https://github.com/laihaojie/eslint-config)这个包是我个人自己使用的eslint配置文件, 在[@antfu](https://github.com/antfu/eslint-config)的基础上改的
 
-- 新建 .eslintrc 文件
+- 新建 eslint.config.js 文件
 
-```json
-{
-  "extends": ["@djie"]
-  // "overrides": [{
-  //   "files": ["*.nvue"],
-  //   "extends": ["@djie/eslint-config-vue"]
-  // }]
-}
+```js
+// {
+//   "extends": ["@djie"]
+//   // "overrides": [{
+//   //   "files": ["*.nvue"],
+//   //   "extends": ["@djie/eslint-config-vue"]
+//   // }]
+// }
+import jie from '@djie/eslint-config'
+
+export default jie()
 ```
 
 - 在package.json中添加配置
@@ -35,19 +38,45 @@ pnpm i eslint @djie/eslint-config -D
 
 ```json
 {
+  // Enable the ESlint flat config support
+  "eslint.experimental.useFlatConfig": true,
+
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+
+  // Enable eslint for all supported languages
   "eslint.validate": [
     "javascript",
     "javascriptreact",
+    "typescript",
+    "typescriptreact",
     "vue",
     "html",
-    "vue-html",
-    "nvue"
-  ],
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "editor.tabSize": 2
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml"
+  ]
 }
 ```
 
