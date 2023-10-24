@@ -22,6 +22,9 @@ export default defineConfig({
         // const token = localStorage.getItem('token');
         // console.log(token);
     `],
+    ['script', { type: 'text/javascript', src: '/js/particles.js' }],
+    ['link', { rel: 'stylesheet', href: '/css/particles.css' }],
+    ['script', { type: 'text/javascript', src: '/js/index.js' }]
   ],
   themeConfig: {
     editLink: {
