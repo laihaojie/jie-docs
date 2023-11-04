@@ -82,6 +82,7 @@ export function nav() {
         {
           items: [
             { text: '前端', link: '/src/fun/frontend/' },
+            { text: 'Python', link: '/src/fun/python/' },
           ],
         },
       ],

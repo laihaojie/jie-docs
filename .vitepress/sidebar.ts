@@ -37,6 +37,7 @@ export function sidebar() {
     ],
     '/src/fun/': [
       { text: '前端', collapsed: false, items: getMds('/fun/frontend/') },
+      { text: 'Python', collapsed: false, items: getMds('/fun/python/') },
     ],
     '/src/other/': [
       { text: '娜第', collapsed: false, items: getMds('/other/') },
