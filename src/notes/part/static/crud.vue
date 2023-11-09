@@ -24,7 +24,7 @@ loadData()
       </div>
       <div class="">
       </div>
-      <div class="w-122 flex items-center">
+      <div class="flex items-center">
         <el-button type="primary" @click="(dialogVisible = true, Object.assign(item, generateItem()))">
           添加
         </el-button>
