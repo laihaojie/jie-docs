@@ -162,3 +162,10 @@ fetch('https://...', {
   catch (err) { }
 })()
 ```
+
+## 注入Cookie
+
+```js
+// 注入Cookie 设置不过期
+document.cookie = 'name=value; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT;'
+```
