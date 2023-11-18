@@ -52,9 +52,12 @@ adb shell rm /sdcard/text.txt
 ## 连接手机
 
 ```bash
-# 手机连接USB数据线 打开USB调试
+# 手机连接USB数据线 打开USB调试 在同一局域网下可以使用无线连接
 # cmd环境执行
 # 配置adb服务的端口号为 5555 会自动重启设备端的adb服务
 adb tcpip 5555
-adb connect 192.168.1.136
+
+
+# 连接手机 手机ip地址:5555   （手机的IP地址可以在设置里面看到）
+adb connect 192.168.1.136:5555
 ```
