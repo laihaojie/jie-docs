@@ -1,6 +1,8 @@
 import Theme from 'vitepress/theme'
 import Layout from '../layout/index.vue'
 
+import Eye from 'root/components/components/eye.vue'
+
 import 'uno.css'
 
 import './rainbow.css'
@@ -14,6 +16,8 @@ export default {
   Layout,
   // eslint-disable-next-line unused-imports/no-unused-vars
   async enhanceApp({ app, router, siteData }) {
+    app.component('Eye', Eye)
+
     if (!import.meta.env.SSR) {
       if (window.location.pathname !== '/login.html') {
         const isLogin = await auth()
