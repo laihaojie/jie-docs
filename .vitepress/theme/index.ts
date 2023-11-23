@@ -1,4 +1,5 @@
 import Theme from 'vitepress/theme'
+import Layout from '../layout/index.vue'
 
 import 'uno.css'
 
@@ -8,7 +9,9 @@ import './overrides.css'
 import { auth } from './auth'
 
 export default {
-  ...Theme,
+  // ...Theme,
+  extends: Theme,
+  Layout,
   // eslint-disable-next-line unused-imports/no-unused-vars
   async enhanceApp({ app, router, siteData }) {
     if (!import.meta.env.SSR) {
