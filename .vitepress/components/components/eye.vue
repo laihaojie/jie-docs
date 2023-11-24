@@ -51,6 +51,7 @@ onMounted(() => {
   width: 214px;
   height: 275px;
   z-index: 1;
+  transform: scale(0.6);
 
   .head {
     width: 100%;
