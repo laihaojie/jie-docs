@@ -10,6 +10,7 @@ export function sidebar() {
     ],
     '/src/frontend/': [
       { text: 'UnoCss', collapsed: false, items: getMds('/frontend/unocss/') },
+      { text: 'Vue', collapsed: false, items: getMds('/frontend/vue/') },
     ],
     '/src/framework/': [
       { text: 'Uniapp', collapsed: false, items: getMds('/framework/uniapp/') },
