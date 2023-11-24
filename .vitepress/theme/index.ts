@@ -1,7 +1,6 @@
 import Theme from 'vitepress/theme'
-import Layout from '../layout/index.vue'
-
 import Eye from 'root/components/components/eye.vue'
+import Layout from '../layout/index.vue'
 
 import 'uno.css'
 
@@ -25,5 +24,9 @@ export default {
           return window.location.href = 'login.html'
       }
     }
+  },
+  setup() {
+    // eslint-disable-next-line no-console
+    console.log('setup')
   },
 }

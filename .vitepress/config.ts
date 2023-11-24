@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import ItKatex from 'markdown-it-katex'
 import { nav } from './nav'
 import { sidebar } from './sidebar'
 import { customElements } from './shared/customeElements'
@@ -24,7 +25,7 @@ export default defineConfig({
     `],
     ['script', { type: 'text/javascript', src: '/js/particles.js' }],
     ['link', { rel: 'stylesheet', href: '/css/particles.css' }],
-    ['script', { type: 'text/javascript', src: '/js/index.js' }]
+    ['script', { type: 'text/javascript', src: '/js/index.js' }],
   ],
   themeConfig: {
     editLink: {
@@ -59,8 +60,7 @@ export default defineConfig({
   },
   markdown: {
     config: (md) => {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
-      md.use(require('markdown-it-katex'))
+      md.use(ItKatex)
     },
     lineNumbers: true,
   },
