@@ -4,7 +4,7 @@
 
 ```js
 // 开启一个子进程 (文件路径)
-let child = fork('src/child.js')
+const child = fork('src/child.js')
 // 给子进程传递消息
 child.send(user_list)
 // 接受子进程传递过来的消息

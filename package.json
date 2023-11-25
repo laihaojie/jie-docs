@@ -1,5 +1,6 @@
 {
   "name": "jie-docs",
+  "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@7.3.0",
   "description": "",
@@ -7,7 +8,6 @@
   "license": "ISC",
   "keywords": [],
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "vitepress dev --port 6121 --host",
     "build": "vitepress build",
@@ -24,7 +24,7 @@
     "vue": "^3.3.8"
   },
   "devDependencies": {
-    "@djie/eslint-config": "1.0.0-beta.27",
+    "@djie/eslint-config": "2.1.1",
     "@djie/unocss": "^1.0.27",
     "@iconify-json/carbon": "^1.1.21",
     "@types/node": "^20.10.0",

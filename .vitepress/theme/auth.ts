@@ -3,7 +3,8 @@ import { useLocalStorage } from '@vueuse/core'
 const isAuth = false
 
 export async function auth(): Promise<boolean> {
-  if (!isAuth) return true
+  if (!isAuth)
+    return true
   const token = useLocalStorage('token', '')
   const urlObj = new URL(window.location.href)
   const queryToken = urlObj.searchParams.get('token')

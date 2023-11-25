@@ -31,7 +31,6 @@ import 'highlight.js/lib/common'
 import hljsVuePlugin from '@highlightjs/vue-plugin'
 
 const code = ref(`SELECT * FROM table_name;`)
-
 </script>
 
 <template>

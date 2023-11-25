@@ -19,8 +19,9 @@ async function copy(text) {
   <Theme.Layout>
     <template #aside-outline-after>
       <div class="p-10 fc mt-30 c-primary fwbold flex flex-col">
-
-        <div class="text-20 mb-16">{{ info.name }}</div>
+        <div class="text-20 mb-16">
+          {{ info.name }}
+        </div>
         <div class="flex">
           <a :href="info.github" target="_blank">
             <div class="i-carbon:logo-github mx-4 cp" :title="info.github"></div>
@@ -33,7 +34,6 @@ async function copy(text) {
       </div>
     </template>
     <template #aside-ads-after>
-
     </template>
   </Theme.Layout>
 </template>

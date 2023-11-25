@@ -12,7 +12,7 @@ const bb = 22
   hello world javascript!  
 
 ```js
-const logout = async () => {
+async function logout() {
   if (isWeChat())
     return
   await Dialog.alert({

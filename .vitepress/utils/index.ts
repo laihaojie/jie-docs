@@ -9,7 +9,8 @@ export function Toast(msg, duration = 2000) {
   m.style.cssText = 'color: rgb(255, 255, 255);background-color: rgba(0, 0, 0, 0.6);padding: 10px 15px;margin: 0 0 0 -60px;border-radius: 4px;position: fixed;    top: 50%;left: 50%;width: 130px;text-align: center;'
   document.body.appendChild(m)
   setTimeout(() => {
-    if (!document.body.contains(m)) return
+    if (!document.body.contains(m))
+      return
     const d = 0.5
     m.style.opacity = '0'
     setTimeout(() => {
@@ -17,7 +18,6 @@ export function Toast(msg, duration = 2000) {
     }, d * 1000)
   }, duration)
 }
-
 
 export function copyText(text: string) {
   // return navigator.clipboard.writeText(text)

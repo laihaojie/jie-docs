@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <div class="spoiler">隐藏的文字</div>
+  <div class="spoiler">
+    隐藏的文字
+  </div>
 </template>
 
 <style lang='scss' scoped>

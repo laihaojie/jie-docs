@@ -3,9 +3,9 @@
 ## 注入js
 
 ```js
-let script = document.createElement('script')
+const script = document.createElement('script')
 script.src = 'https://xxx'
-let s = document.getElementsByTagName('script')[0]
+const s = document.getElementsByTagName('script')[0]
 s.parentNode.insertBefore(script, s)
 ```
 
@@ -54,22 +54,22 @@ const sleep = time => new Promise(resolve => setTimeout(resolve, time))
 ```js
 // 图片文件转base64，利用canvas
 function getBase64Image(img) {
-  let canvas = document.createElement('canvas')
+  const canvas = document.createElement('canvas')
   canvas.width = img.width
   canvas.height = img.height
-  let ctx = canvas.getContext('2d')
+  const ctx = canvas.getContext('2d')
   ctx.drawImage(img, 0, 0, img.width, img.height)
-  let ext = img.src.substring(img.src.lastIndexOf('.') + 1).toLowerCase()
-  let dataURL = canvas.toDataURL(`image/${ext}`)
+  const ext = img.src.substring(img.src.lastIndexOf('.') + 1).toLowerCase()
+  const dataURL = canvas.toDataURL(`image/${ext}`)
   return dataURL
 }
 
 // 使用
-let image = new Image()
+const image = new Image()
 // var image = document.createElement('image')
 image.src = 'https://bidcard.alltobid.com/cnbauth/Verification/NextCaptcha?SId=110ef5a7-7a8a-4b81-9158-27c542e253a2' // 你的图片路径
 image.onload = function () {
-  let imgBase64 = getBase64Image(image)
+  const imgBase64 = getBase64Image(image)
   console.log(imgBase64)
 }
 ```
@@ -88,7 +88,8 @@ function Toast(msg, duration = 2000) {
   m.style.cssText = 'font-size: .32rem;color: rgb(255, 255, 255);background-color: rgba(0, 0, 0, 0.6);padding: 10px 15px;margin: 0 0 0 -60px;border-radius: 4px;position: fixed;    top: 50%;left: 50%;width: 130px;text-align: center;'
   document.body.appendChild(m)
   setTimeout(() => {
-    if (!document.body.contains(m)) return
+    if (!document.body.contains(m))
+      return
     const d = 0.5
     m.style.opacity = '0'
     setTimeout(() => {

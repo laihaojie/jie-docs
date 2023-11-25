@@ -1,3 +1,12 @@
-const jie = require('@djie/eslint-config').default
+import jie from '@djie/eslint-config'
 
-module.exports = jie()
+export default jie(
+  {
+    rules: {},
+  },
+  {
+    ignores: [
+      'public',
+    ],
+  },
+)

@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted } from 'vue'
 
 onMounted(() => {
-  document.addEventListener("mousemove", (e) => {
-    const eyes = document.querySelectorAll(".eye");
-    [].forEach.call(eyes, function (eye) {
-      let mouseX = eye.getBoundingClientRect().right;
-      if (eye.classList.contains("eye-left")) {
-        mouseX = eye.getBoundingClientRect().left;
-      }
-      let mouseY = eye.getBoundingClientRect().top;
-      let radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY);
-      let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180;
-      eye.style.transform = `rotate(${rotationDegrees}deg)`;
-    });
-  });
+  document.addEventListener('mousemove', (e) => {
+    const eyes = document.querySelectorAll('.eye');
+    [].forEach.call(eyes, (eye) => {
+      let mouseX = eye.getBoundingClientRect().right
+      if (eye.classList.contains('eye-left'))
+        mouseX = eye.getBoundingClientRect().left
+
+      const mouseY = eye.getBoundingClientRect().top
+      const radianDegrees = Math.atan2(e.clientX - mouseX, e.clientY - mouseY)
+      const rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180
+      eye.style.transform = `rotate(${rotationDegrees}deg)`
+    })
+  })
 })
 </script>
 

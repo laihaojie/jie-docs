@@ -7,7 +7,7 @@ import { computed, nextTick, onMounted, ref, watch } from 'vue'
 
 const image = ref(null)
 const defaultImg = ref('')
-const aspectRatio = ref(NaN)
+const aspectRatio = ref(Number.NaN)
 const fileInput = ref()
 
 const cropper = ref<Cropper>(null)
@@ -77,31 +77,43 @@ async function chooseImage(e) {
   <div class="mt-20">
     <div class="flex flex-col mb-20">
       <div class="w-full flex items-center justify-between">
-        <input v-model="defaultImg" class="flex-1 mr-10 border border-primary border-solid rounded-4 py-3.8 px-9"
-          type="text" placeholder="输入图片地址或上传图片">
+        <input
+          v-model="defaultImg" class="flex-1 mr-10 border border-primary border-solid rounded-4 py-3.8 px-9"
+          type="text" placeholder="输入图片地址或上传图片"
+        >
         <button class="btn border border-primary" @click="fileInput.click">
           <input ref="fileInput" class="display-none" type="file" accept="image/*" @change="chooseImage"> 上传
         </button>
       </div>
       <div class="mt-20 flex items-center">
-        <button class="btn border border-primary border-solid mr-10" :class="!aspectRatio ? '' : '!bg-transparent'"
-          @click="aspectRatio = NaN">
+        <button
+          class="btn border border-primary border-solid mr-10" :class="!aspectRatio ? '' : '!bg-transparent'"
+          @click="aspectRatio = NaN"
+        >
           默认
         </button>
-        <button class="btn border border-primary border-solid mr-10"
-          :class="aspectRatio === 16 / 9 ? '' : '!bg-transparent'" @click="aspectRatio = 16 / 9">
+        <button
+          class="btn border border-primary border-solid mr-10"
+          :class="aspectRatio === 16 / 9 ? '' : '!bg-transparent'" @click="aspectRatio = 16 / 9"
+        >
           16 / 9
         </button>
-        <button class="btn border border-primary border-solid mr-10"
-          :class="aspectRatio === 4 / 3 ? '' : '!bg-transparent'" @click="aspectRatio = 4 / 3">
+        <button
+          class="btn border border-primary border-solid mr-10"
+          :class="aspectRatio === 4 / 3 ? '' : '!bg-transparent'" @click="aspectRatio = 4 / 3"
+        >
           4 / 3
         </button>
-        <button class="btn border border-primary border-solid mr-10"
-          :class="aspectRatio === 1 / 1 ? '' : '!bg-transparent'" @click="aspectRatio = 1 / 1">
+        <button
+          class="btn border border-primary border-solid mr-10"
+          :class="aspectRatio === 1 / 1 ? '' : '!bg-transparent'" @click="aspectRatio = 1 / 1"
+        >
           1 / 1
         </button>
         <div class="flex-1"></div>
-        <button class="btn" @click="download">下载</button>
+        <button class="btn" @click="download">
+          下载
+        </button>
       </div>
     </div>
 
