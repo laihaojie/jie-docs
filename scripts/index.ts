@@ -31,18 +31,19 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
     if (!stats.isDirectory()) {
       const content = fs.readFileSync(fullPath, 'utf-8')
 
-      const fileName = file.split('.')[0]
-      const title = content.match(/#\s+(.*)$/m)?.[1]
-      const note = content.match(/<!--(.*?)-->/m)?.[1]
+      const fileName = file.split('.')[0].trim()
+      const title = content.match(/#\s+(.*)$/m)?.[1].trim()
+      const note = content.match(/<!--(.*?)-->/m)?.[1].trim()
 
       return {
         text: note || title || fileName,
         link: `/src${root_path}${file}`,
+        disable: note === 'disable',
       }
     }
     else {
       return {}
     }
-  }) as DefaultTheme.SidebarItem[]
+  }).filter(i => !i.disable || !i.link) as DefaultTheme.SidebarItem[]
 }
 // console.log(getMds('/notes/'))

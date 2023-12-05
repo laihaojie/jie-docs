@@ -48,7 +48,7 @@ export function nav() {
             { text: 'Node 相关', link: '/src/develop/node/' },
             { text: 'Docker', link: '/src/develop/docker/' },
             { text: 'Git 相关', link: '/src/develop/git/' },
-            { text: '键盘侠', link: '/src/develop/vim/' },
+            { text: '键盘侠', link: '/src/develop/vim/keyboard' },
           ],
         },
         {

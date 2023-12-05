@@ -1,3 +1,4 @@
+<!-- disable -->
 # iTerm2
 
 ## 导航
