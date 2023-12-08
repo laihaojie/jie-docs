@@ -1,4 +1,6 @@
-export function nav() {
+import type { DefaultTheme } from 'vitepress'
+
+export function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: '工具软件',
