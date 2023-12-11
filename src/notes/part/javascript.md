@@ -170,3 +170,28 @@ fetch('https://...', {
 // 注入Cookie 设置不过期
 document.cookie = 'name=value; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT;'
 ```
+
+## 等待某个元素加载完成
+
+```js
+function waitForElm(selector: string): Promise<Element> {
+  return new Promise((resolve) => {
+    const dom = document.querySelector(selector)
+    if (dom)
+      return resolve(dom)
+
+    const observer = new MutationObserver((mutations) => {
+      const elm = document.querySelector(selector)
+      if (elm) {
+        observer.disconnect()
+        resolve(elm)
+      }
+    })
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    })
+  })
+}
+```
