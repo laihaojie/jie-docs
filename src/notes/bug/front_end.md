@@ -17,3 +17,13 @@ $env:NODE_OPTIONS = "--openssl-legacy-provider"
 ```
 
 :::
+
+-  在package.json中添加
+
+```json
+{
+  "scripts": {
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vite"
+  }
+}
+```
