@@ -174,7 +174,7 @@ document.cookie = 'name=value; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT;'
 ## 等待某个元素加载完成
 
 ```js
-function waitForElm(selector: string): Promise<Element> {
+function waitForElm(selector) {
   return new Promise((resolve) => {
     const dom = document.querySelector(selector)
     if (dom)
@@ -194,4 +194,19 @@ function waitForElm(selector: string): Promise<Element> {
     })
   })
 }
+```
+
+## 下载接口返回的文件
+
+```js
+const res = await service.get('/api/backups/download', { params: { kind: kind.value, fileName: row.name }, responseType: 'blob' }) as Blob
+const blob = new Blob([res], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8' })
+const downloadElement = document.createElement('a')
+const href = window.URL.createObjectURL(blob)
+downloadElement.href = href
+downloadElement.download = row.name
+document.body.appendChild(downloadElement)
+downloadElement.click()
+document.body.removeChild(downloadElement)
+window.URL.revokeObjectURL(href)
 ```
