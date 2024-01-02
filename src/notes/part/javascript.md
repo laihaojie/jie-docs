@@ -196,17 +196,34 @@ function waitForElm(selector) {
 }
 ```
 
-## 下载接口返回的文件
+## 下载网络图片和接口返回的文件
 
-```js
-const res = await service.get('/api/backups/download', { params: { kind: kind.value, fileName: row.name }, responseType: 'blob' }) as Blob
+::: code-group
+
+```js [Fetch]
+fetch(url).then(res => res.blob()).then((blob) => {
+  const downloadElement = document.createElement('a')
+  const href = window.URL.createObjectURL(blob)
+  downloadElement.href = href
+  downloadElement.download = '文件名'
+  document.body.appendChild(downloadElement)
+  downloadElement.click()
+  document.body.removeChild(downloadElement)
+  window.URL.revokeObjectURL(href)
+})
+```
+
+```js [Axios]
+const res = await axios.get(url, { params: { kind: kind.value, fileName: row.name }, responseType: 'blob' }) as Blob
 const blob = new Blob([res], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8' })
 const downloadElement = document.createElement('a')
 const href = window.URL.createObjectURL(blob)
 downloadElement.href = href
-downloadElement.download = row.name
+downloadElement.download = '文件名'
 document.body.appendChild(downloadElement)
 downloadElement.click()
 document.body.removeChild(downloadElement)
 window.URL.revokeObjectURL(href)
 ```
+
+:::
