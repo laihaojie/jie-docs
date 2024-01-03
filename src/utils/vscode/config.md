@@ -73,3 +73,12 @@
   }
 }
 ```
+
+
+## 默认GitBash终端
+  
+```json
+{
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
+}
+```
