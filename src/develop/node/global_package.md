@@ -15,15 +15,15 @@ esno  node运行esm
 ::: code-group
 
 ```bash [npm]
-npm i -g @antfu/ni degit rimraf nrm nvm serve esno @djie/cli
+npm i -g @antfu/ni degit rimraf nrm serve esno @djie/cli
 ```
 
 ```bash [yarn]
-yarn global add @antfu/ni degit rimraf nrm nvm serve esno @djie/cli
+yarn global add @antfu/ni degit rimraf nrm serve esno @djie/cli
 ```
 
 ```bash [pnpm]
-pnpm i -g @antfu/ni degit rimraf nrm nvm serve esno @djie/cli
+pnpm i -g @antfu/ni degit rimraf nrm serve esno @djie/cli
 ```
 
 :::
