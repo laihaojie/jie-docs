@@ -35,3 +35,11 @@ axios({
     response.data.pipe(fs.createWriteStream('images/name.png'))
   })
 ```
+
+## 控制台替换输出 （输出百分比进度）
+
+```js
+process.stdout.clearLine()
+process.stdout.cursorTo(0)
+process.stdout.write(`下载进度：${percent}%`)
+```
