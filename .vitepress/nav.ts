@@ -76,6 +76,7 @@ export function nav(): DefaultTheme.NavItem[] {
         { text: '随手记', link: '/src/notes/command' },
         { text: 'Windows', link: '/src/notes/windows/' },
         { text: 'Github', link: '/src/notes/github/part' },
+        { text: 'Mysql', link: '/src/notes/mysql/' },
       ],
     },
     {
