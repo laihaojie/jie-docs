@@ -8,3 +8,4 @@
 - `[&:nth-child(1)]:bg-red`  子标签伪类选择器
 - `![&_div_span~span]:hover:hidden` 选择器组合 后代选择器
 - `bg-[url(@/frontend/unocss/assets/mao.png)]` 设置背景图片
+- `[word-wrap:break-word] [word-break:break-all]` 设置英文和数字换行
