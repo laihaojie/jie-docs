@@ -4,9 +4,9 @@
 
 ```txt
 # 删除暂存区和工作区的文件
-git rm filename  
+git rm filename
 # 只删除暂存区的文件，不会删除工作区的文件
-git rm --cached filename 
+git rm --cached filename
 ```
 
 ## 修改文件名称
@@ -76,4 +76,18 @@ git stash list
 
 # 将之前保存至堆栈中的文件取出来
 git stash pop
+```
+
+## 删除当前仓库的所有提交记录
+
+```sh
+# 删除所有提交记录
+git checkout --orphan new_branch
+git add -A
+git commit -am "删除所有提交记录"
+git branch -D main
+git branch -m main
+
+git push -f origin main
+# 如果远端分支是受保护的，需要去除保护. 完成后再添加保护
 ```
