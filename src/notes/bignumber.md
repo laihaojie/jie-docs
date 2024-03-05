@@ -1,7 +1,8 @@
 # JS浮点数运算
 
-[decimal.js](https://github.com/MikeMcl/decimal.js)
-[bignumber.js](https://github.com/MikeMcl/bignumber.js)
+[`decimal.js`](https://github.com/MikeMcl/decimal.js)
+
+[`bignumber.js`](https://github.com/MikeMcl/bignumber.js)
 
 - 安装
 
