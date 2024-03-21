@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import ItKatex from 'markdown-it-katex'
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { nav } from './nav'
 import { sidebar } from './sidebar'
 import { customElements } from './shared/customeElements'
@@ -63,5 +64,8 @@ export default defineConfig({
       md.use(ItKatex)
     },
     lineNumbers: true,
+    codeTransformers: [
+      transformerTwoslash(),
+    ],
   },
 })

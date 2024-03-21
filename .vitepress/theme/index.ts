@@ -1,6 +1,8 @@
 import Theme from 'vitepress/theme'
 import Eye from 'root/components/components/eye.vue'
+import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import Layout from '../layout/index.vue'
+import '@shikijs/vitepress-twoslash/style.css'
 
 import 'uno.css'
 
@@ -16,6 +18,7 @@ export default {
   // eslint-disable-next-line unused-imports/no-unused-vars
   async enhanceApp({ app, router, siteData }) {
     app.component('Eye', Eye)
+    app.use(TwoslashFloatingVue)
 
     if (!import.meta.env.SSR) {
       if (window.location.pathname !== '/login.html') {

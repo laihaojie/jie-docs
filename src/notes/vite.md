@@ -36,3 +36,8 @@ export default defineConfig({
   },
 })
 ```
+
+```ts twoslash
+console.log('hello')
+//      ^?
+```
