@@ -33,6 +33,7 @@
     "esno": "^4.0.0",
     "fs-extra": "^11.2.0",
     "sass": "^1.69.7",
+    "typescript": "^5.4.3",
     "unocss": "^0.58.3",
     "vite-plugin-inspect": "^0.8.1"
   },
