@@ -413,6 +413,10 @@
   "less.validate": false,
   "window.zoomLevel": 1,
   // 文件夹展开
-  "explorer.compactFolders": false
+  "explorer.compactFolders": false,
+  // 改为false即可禁止拖动
+  "editor.dragAndDrop": false,
+  // 如下是被vscode认为是单词分隔符的字符  比如material-icon-theme 会被认为是三个单词
+  "editor.wordSeparators": "`~#!@$%^&*()=+[{]}\\|;:'\",<>/?."
 }
 ```
