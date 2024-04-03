@@ -43,3 +43,53 @@ process.stdout.clearLine()
 process.stdout.cursorTo(0)
 process.stdout.write(`下载进度：${percent}%`)
 ```
+
+## 把文件压缩成zip
+
+::: code-group
+
+```bash [npm]
+npm i adm-zip
+```
+
+```bash [yarn]
+yarn add adm-zip
+```
+
+```bash [pnpm]
+pnpm i adm-zip
+```
+
+:::
+
+```js
+import fs from 'node:fs'
+import path from 'node:path'
+import process from 'node:process'
+import AdmZip from 'adm-zip'
+
+function zipFolder() {
+  const folderPath = path.resolve(process.cwd(), 'dist')
+  // Example usage
+  const outputPath = path.resolve(process.cwd(), 'dist.zip')
+
+  return new Promise((resolve, reject) => {
+    // Create a new zip instance
+    const zip = new AdmZip()
+
+    zip.addLocalFolder(folderPath)
+
+    // Write the zip file
+    zip.writeZip(outputPath, (err) => {
+      if (err) {
+        reject(err)
+      }
+      else {
+        // 读取压缩后的文件 返回
+        const data = fs.readFileSync(outputPath)
+        resolve(data)
+      }
+    })
+  })
+}
+```
