@@ -26,6 +26,12 @@ pnpm add inquirer -D
 pnpm add chalk -D
 ```
 
+- [*kolorist*](https://www.npmjs.com/package/kolorist)
+
+```sh
+pnpm add kolorist -D
+```
+
 - [*kleur*](https://www.npmjs.com/package/kleur)
 
 ```sh

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Theme from 'vitepress/theme'
 import { Toast, copyText } from 'root/utils'
+import { autoToast } from 'root/utils/autolog'
 
 const info = {
   name: '阿杰',
@@ -11,7 +12,8 @@ const info = {
 
 async function copy(text) {
   await copyText(text)
-  Toast('复制成功')
+  // Toast('复制成功')
+  autoToast('复制成功')
 }
 </script>
 

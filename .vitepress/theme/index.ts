@@ -1,4 +1,5 @@
 import Theme from 'vitepress/theme'
+import DemoContainer from 'root/components/demoContainer.vue'
 import Eye from 'root/components/components/eye.vue'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import Layout from '../layout/index.vue'
@@ -18,6 +19,7 @@ export default {
   // eslint-disable-next-line unused-imports/no-unused-vars
   async enhanceApp({ app, router, siteData }) {
     app.component('Eye', Eye)
+    app.component('DemoContainer', DemoContainer)
     app.use(TwoslashFloatingVue)
 
     if (!import.meta.env.SSR) {

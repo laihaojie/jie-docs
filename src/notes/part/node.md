@@ -1,5 +1,9 @@
 # NodeJS
 
+<script setup>
+import PLimit from './components/p-limit.vue'
+</script>
+
 ## 个人Package
 
 ::: code-group
@@ -93,3 +97,15 @@ function zipFolder() {
   })
 }
 ```
+
+## 限制并发请求
+
+### 示例
+
+<DemoContainer>
+    <PLimit></PLimit>
+</DemoContainer>
+
+### 代码
+
+<<< @/src/notes/part/components/p-limit.vue

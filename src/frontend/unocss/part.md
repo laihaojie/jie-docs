@@ -9,3 +9,6 @@
 - `![&_div_span~span]:hover:hidden` 选择器组合 后代选择器
 - `bg-[url(@/frontend/unocss/assets/mao.png)]` 设置背景图片
 - `[word-wrap:break-word] [word-break:break-all]` 设置英文和数字换行
+- `grid grid-cols-3 gap-40` 网格布局 一行三个 间距40px
+- `shadow-[0_0_20px_#16F5FF]` 阴影 0 0 20px #16F5FF
+- `bg-[length:100%_100%]` 背景大小
