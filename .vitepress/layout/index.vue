@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Theme from 'vitepress/theme'
-import { Toast, copyText } from 'root/utils'
+import { copyText } from 'root/utils'
 import { autoToast } from 'root/utils/autolog'
 
 const info = {

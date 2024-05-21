@@ -2,7 +2,6 @@
 
 # Bumpp
 
-
 ## 安装
 
 ::: code-group

@@ -10,7 +10,7 @@ which xxx
 ## 安装nginx
 
 ```bash
-# 安装nginx 
+# 安装nginx
 yum install nginx
 # 启动nginx
 systemctl start nginx

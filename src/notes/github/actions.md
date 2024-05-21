@@ -97,7 +97,6 @@ jobs:
       - name: Deploy static site to S3 bucket
         run: aws s3 sync ./dist/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
-
       - name: Send success message
         if: success()
         # 工作流成功钩子

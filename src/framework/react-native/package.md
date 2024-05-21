@@ -51,7 +51,6 @@ public class TestManager extends ReactContextBaseJavaModule {
         }
     }
 
-
     private PackageInfo getPackageInfo() {
         PackageManager manager = getReactApplicationContext().getPackageManager();
         PackageInfo info = null;
@@ -70,8 +69,6 @@ public class TestManager extends ReactContextBaseJavaModule {
     public void getStrings(Callback successCallback) {
         successCallback.invoke("我是android 返回的字符串");
     }
-
-
 
     /**
      * Promise方式
@@ -92,13 +89,11 @@ public class TestManager extends ReactContextBaseJavaModule {
         promise.resolve(writableMap);
     }
 
-
-
 }
 ```
 
 - 添加testPackage.java
-  
+
 ```java
 
 package com.jieapp;
@@ -113,7 +108,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class TestPackage implements ReactPackage {
-
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {

@@ -11,7 +11,7 @@ git log --pretty=oneline --abbrev-commit
 xxxx代表的是查询commit的hash值
 
 ```bash
-git tag v1.0.0 xxxx    
+git tag v1.0.0 xxxx
 ```
 
 ## 查看tag

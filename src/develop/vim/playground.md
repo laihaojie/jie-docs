@@ -9,7 +9,7 @@ const bb = 22
 
 # 二
 
-  hello world javascript!  
+  hello world javascript!
 
 ```js
 async function logout() {

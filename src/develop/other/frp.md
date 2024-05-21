@@ -17,7 +17,7 @@ vhost_http_port = 6125 # 暴露出去的端口  可以给nginx使用代理
 ```
 
 ## 启动进程运行服务器端服务
-  
+
 ```sh
 chmod +x frps
 # 使用pm2 运行
@@ -38,7 +38,7 @@ custom_domains = frp.laihaojie.com # 自定义域名
 ```
 
 ## 启动进程运行本地客户端服
-  
+
 ```sh
 frpc -c frpc.ini
 ```

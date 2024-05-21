@@ -15,7 +15,7 @@ import 'package:default.dart'
 [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons)
 
 - 在pubspec.yaml添加配置
-  
+
 ```yaml
 dev_dependencies:
   flutter_test:

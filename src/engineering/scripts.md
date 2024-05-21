@@ -25,7 +25,7 @@ npm init -y
 - 本地测试
 
 ```sh
-npm link 
+npm link
 ```
 
 然后就可以在本地目录下执行my-cli了

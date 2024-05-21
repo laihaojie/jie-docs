@@ -10,7 +10,7 @@ android {
 
       // 必须为true，打包才会为不同的abi生成不同的apk
       enable true
-     
+
       // 默认情况下，包含了所有的ABI。
       // 所以使用reset()清空所有的ABI，再使用include指定我们想要生成的架构armeabi-v7a、arm-v8a
       reset()
@@ -23,8 +23,6 @@ android {
     }
   }
 
-
-  
   buildTypes {
       debug {
           signingConfig signingConfigs.debug
@@ -34,13 +32,13 @@ android {
           // TODO: Add your own signing config for the release build.
           // Signing with the debug keys for now, so `flutter run --release` works.
           signingConfig signingConfigs.release
-          
+
       }
 
       // 为不同的abi架构配置不同的签名
       applicationVariants.all { variant ->
           variant.outputs.all { output ->
-  
+
               String abi = ""
               if (output.getFilters() != null && output.getFilters().size() > 0) {
                   abi = output.getFilters().get(0).getIdentifier()

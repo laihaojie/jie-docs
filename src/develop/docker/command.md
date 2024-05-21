@@ -33,7 +33,7 @@ docker pull 镜像名称:[版本号]
 # 查看镜像 容器 数据卷 所占用的空间
 docker system df
 # 删除镜像 -f [强制删除] 删除多个
-docker rmi 镜像名字或者id  镜像名字或者id  镜像名字或者id 
+docker rmi 镜像名字或者id  镜像名字或者id  镜像名字或者id
 
 ```
 
@@ -41,7 +41,7 @@ docker rmi 镜像名字或者id  镜像名字或者id  镜像名字或者id
 
 ```bash
 # 运行容器
-docker run [选项] 镜像名字或者id [命令] [参数] 
+docker run [选项] 镜像名字或者id [命令] [参数]
 docker run -d 镜像名字或者id # 后台运行 守护进程
 docker run -it --privileged=true -v /home:/home 镜像名字或者id # 交互式运行 -it  --privileged=true 为容器开启root权限 -v /home:/home 将宿主机的/home目录挂载到容器的/home目录
 选项：
@@ -66,8 +66,8 @@ docker run -it --privileged=true -v /home:/home 镜像名字或者id # 交互式
 # 列出正在运行的容器 -a 列出所有容器
 docker ps
 # 退出
-exit # 关闭容器 
-ctrl + p + q # 退出容器 不关闭 
+exit # 关闭容器
+ctrl + p + q # 退出容器 不关闭
 # 启动已经停止容器
 docker start 容器id或者名字
 # 重启容器
@@ -83,7 +83,7 @@ docker top 容器id或者名字
 # 查看容器细节
 docker inspect 容器id或者名字
 # 进入容器
-docker exec -it 容器id或者名字 /bin/bash 
+docker exec -it 容器id或者名字 /bin/bash
 docker attach 容器id或者名字 # 退出容器会关闭容器 基本上不用
 # 容器拷贝文件到本地
 docker cp 容器id或者名字:容器内文件路径 本地文件路径
@@ -102,5 +102,5 @@ docker import 容器.tar 自定义组织名/镜像名:版本号
 ```bash
 # 提交容器 生成本地镜像
 docker commit -m="描述信息" -a="作者" 容器id或者名字 自定义组织名/自定义镜像名:版本号
-# 
+#
 ```

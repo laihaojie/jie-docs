@@ -4,7 +4,7 @@
 
 ```bash
 # 配置全局用户
-git config --global user.name "用户名" 
+git config --global user.name "用户名"
 git config --global user.email "git账号"
 # 配置别名
 git config --global alias.co checkout

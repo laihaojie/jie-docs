@@ -3,15 +3,15 @@
 ## android 添加 react-native-splash-screen
 
 - 安装
-  
+
 ```sh
 npm install react-native-splash-screen --save
 ```
 
 - 在MainApplication.java中添加
-  
+
 ```java
-// react-native-splash-screen >= 0.3.1 
+// react-native-splash-screen >= 0.3.1
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 
 private final ReactNativeHost mReactNativeHost =
@@ -38,12 +38,11 @@ private final ReactNativeHost mReactNativeHost =
 ```
 
 - 在MainActivity.java中添加
-  
+
 ```java
 import android.os.Bundle;
-// react-native-splash-screen >= 0.3.1 
-import org.devio.rn.splashscreen.SplashScreen; 
-
+// react-native-splash-screen >= 0.3.1
+import org.devio.rn.splashscreen.SplashScreen;
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +54,7 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 
 - 新建layout文件 launch_screen.xml
-  
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -77,7 +76,6 @@ protected void onCreate(Bundle savedInstanceState) {
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,7 +89,6 @@ protected void onCreate(Bundle savedInstanceState) {
         app:layout_constraintTop_toBottomOf="@+id/ivLogo">
 
     </TextView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```

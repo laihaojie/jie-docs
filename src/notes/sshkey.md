@@ -6,7 +6,7 @@ ssh-keygen -t rsa -C "xxxx@xx.com"
 # 输入密码
 ```
 
-`id_rsa.pub`是公钥  
+`id_rsa.pub`是公钥
 `id_rsa` 是私钥
 
 ## 在github中添加公钥

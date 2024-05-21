@@ -5,7 +5,7 @@
 [PM2文档](https://pm2.keymetrics.io/docs/usage/quick-start/)
 
 ## 安装
-  
+
 ```bash
 npm install -g pm2
 ```
@@ -33,7 +33,7 @@ npm install -g pm2
 ## 命令行运行脚本
 
 ```sh
-# pm2 start <脚本名称> -- <脚本需要的参数> 
+# pm2 start <脚本名称> -- <脚本需要的参数>
 ```
 
 ## 配置说明
@@ -88,7 +88,7 @@ pm2 stop all
 ```
 
 ## 停止指定的进程
-  
+
 ```bash
 pm2 stop app_name
 ```
@@ -100,7 +100,7 @@ pm2 restart all  or  pm2 reload all
 ```
 
 ## 杀死全部进程
-  
+
 ```bash
 pm2 delete all
 ```

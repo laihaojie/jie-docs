@@ -15,7 +15,7 @@ npm config set registry https://registry.npmmirror.com/
 ```
 
 ```sh [NPM源]
-npm config set registry https://registry.npmjs.org/ 
+npm config set registry https://registry.npmjs.org/
 ```
 
 :::

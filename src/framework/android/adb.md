@@ -25,7 +25,6 @@ adb shell pm path your.package.name
 # 清空指定包名对应的应用的数据和缓存文件
 adb shell pm clear your.package.name
 
-
 # 列出进程列表及其pid
 adb shell ps
 # 杀死指定pid的进程
@@ -35,7 +34,6 @@ adb shell ps -x pid
 
 # 正常重启
 adb reboot
-
 
 # 将电脑文件复制到设备sd卡上
 adb push 电脑文件路径 /sdcard
@@ -56,7 +54,6 @@ adb shell rm /sdcard/text.txt
 # cmd环境执行
 # 配置adb服务的端口号为 5555 会自动重启设备端的adb服务
 adb tcpip 5555
-
 
 # 连接手机 手机ip地址:5555   （手机的IP地址可以在设置里面看到）
 adb connect 192.168.1.136:5555

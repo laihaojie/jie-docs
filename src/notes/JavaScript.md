@@ -131,7 +131,7 @@ start: for (let i = 0;i < count; i ++){
 ### 5.1 Date
 
 ```javascript
-const date = new Date() 
+const date = new Date()
 获取时间毫秒数: date.getTime()
 获取年份: date.getFullyear()
 获取月份: date.getMonth() + 1
@@ -174,7 +174,7 @@ match() 字符串匹配方法 参数可传正则
 ### 5.4 单列内置对象
 
 ```javascript
-Global对象  其实就是平常使用的全局方法比如 isNaN() isFinite() parseInt() ParseFloat() 
+Global对象  其实就是平常使用的全局方法比如 isNaN() isFinite() parseInt() ParseFloat()
 URL编码方法
 编码: encodeURIComponent()
 解码: decodeURIComponent()
@@ -199,7 +199,7 @@ function random(min,max){
 ### 6.1 Object
 
 ```txt
-对象创建方式: 
+对象创建方式:
 const obj = new Object() 或者字面量 const obj = {}
 
 ```
@@ -223,10 +223,10 @@ Array.isArray() 可以检测是否为数组
 
 队列方法: shift() 删除数组第一个元素并返回 unshift()在第一个位置添加元素
 
-排序方法: reverse() 数组反转 sort((a,b)=>a-b) 可以传一个函数 
-                                  
-操作方法: concat() 合并数组 slice() 切割数组 
-splice(1,2,3)第一个参数索引 第二个参数删除个数 第三个添加元素 
+排序方法: reverse() 数组反转 sort((a,b)=>a-b) 可以传一个函数
+
+操作方法: concat() 合并数组 slice() 切割数组
+splice(1,2,3)第一个参数索引 第二个参数删除个数 第三个添加元素
 
 find((value,index,arr)=>value==1) 查找元素 满足条件退出不在继续匹配
 
@@ -243,8 +243,6 @@ arr.map() 根据返回结果构成新数组
 ### 6.4 Map
 
 ### 6.6 Set
-
-​
 
 ## 第十章 函数
 
@@ -267,7 +265,7 @@ arr.map() 根据返回结果构成新数组
 ### 10.3 理解参数
 
 ```txt
-函数的参数都不是必传的  
+函数的参数都不是必传的
 也可以不写命名参数
 如果没有写命名参数 可以从函数中 arguments里面获取值
 arguments是一个数组  但不是 Array的实例
@@ -350,7 +348,7 @@ function fib(n){
     }
     return fib(n -1) + fib(n - 2)
 }
-    
+
 ```
 
 ### 10.13 尾调用优化
@@ -364,10 +362,9 @@ function waibu(){
 ### 10.14 闭包
 
 ```txt
-闭包指的是那些引用了另一个函数作用域中的变量的函数  通常函数嵌套内存函数引用了外层函数的变量就叫做闭包   
+闭包指的是那些引用了另一个函数作用域中的变量的函数  通常函数嵌套内存函数引用了外层函数的变量就叫做闭包
 
 闭包会占用内存比较多
-
 
 this
 
@@ -378,18 +375,16 @@ this
 ### 10.15 立即调用的函数表达式
 
 ```txt
-(function(){})();  函数的自调用  
+(function(){})();  函数的自调用
 自调用函数会产生一个块级作用域 外部不能访问函数内部
 ```
 
 ### 10.16 私有变量
 
 ```txt
-javascript是没有私有变量的概念的    但是在函数中或者在局部作用域中的参数或者定义的变量  外部是不能访问的 那这些变量对于外部来说可以当做私有变量  
+javascript是没有私有变量的概念的    但是在函数中或者在局部作用域中的参数或者定义的变量  外部是不能访问的 那这些变量对于外部来说可以当做私有变量
 
-外部如果想访问内部变量 内存函数使用外部函数的变量 可以在局部函数中通过闭包的方式返回给外部使用 
-
-
+外部如果想访问内部变量 内存函数使用外部函数的变量 可以在局部函数中通过闭包的方式返回给外部使用
 
 ```
 
@@ -428,7 +423,6 @@ alert() confirm() prompt()
 alert 弹出一个警告框
 confirm 弹出一个选择框
 prompt 弹出一个输入框
-
 
 ```
 
@@ -539,7 +533,6 @@ document.body.className = 'hello' // 打印Hello
 
 上面代码监控了 body的属性变化 如果body属性发生改变可以触发回调函数
 
-
 ```
 
 ## 第十五章 DOM扩展
@@ -562,22 +555,19 @@ matches() 返回布尔值 检测是否可以被querySelector查找
 
 ```txt
 css扩展类:
-getElementsByClassName() 
+getElementsByClassName()
 clasList 节点的类名列表 可以通过add remove来操作class
 <div id="app" data-id="123" data-name="好好">hello</div>
 let div = document.getElementById("app")
 div.dataset.id
 div.dataset.name
-自定义属性 data-  通过dataset 取值  
+自定义属性 data-  通过dataset 取值
 
 innerHtml: 会返回该节点所有后代HTML字符串 如果赋值则更新dom
 outerHTMl: 会返回该节点本身和所有后代HTML字符串 如果赋值则更新dom
 
 children 返回只包含Element 类型的子节点
 contains() 确定节点是否是当前节点的子节点 返回布尔值
-
-
-
 
 ```
 
@@ -587,7 +577,6 @@ contains() 确定节点是否是当前节点的子节点 返回布尔值
 let app = document.getElementById("app")
 app.style.cssText = ----
 cssText可以获取元素css 也可以快速设置多个css
-
 
 offsetHeight 元素在垂直方向占用的尺寸 盒模型高度
 offsetWidth 元素在水平方向占用的像素尺寸 盒模型宽度
@@ -614,7 +603,6 @@ scrollWidth
 let btn = document.getElementById("app")
 btn.addEventListener("click",()=>{})
 
-
 事件流包含两个阶段  事件捕获和事件冒泡
 事件捕获是从根节点 document 传递到div 然后事件冒泡是从div 传递到document
 
@@ -632,7 +620,6 @@ btn.addEventListener("click",()=>{})
 焦点事件 鼠标事件 滚轮事件 输入事件 合成事件
 
 事件委托 利用事件冒泡原理 在最顶层做处理 依次判断事件源从哪个元素发出然后处理响应逻辑
-
 
 ```
 
@@ -664,7 +651,7 @@ parse() 将json类型转为JavaScript类型
 ### 25.1 cookie
 
 ```txt
-document.cookie 
+document.cookie
 
 限制:
 不超过300个cookit
@@ -672,7 +659,6 @@ document.cookie
 每个域不超过20个cookie
 每个域不能超过81920字节
 每个域能设置cookie总数也是受限制的,但不同浏览器的限制不同
-
 
 ```
 
