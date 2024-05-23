@@ -66,6 +66,7 @@ pnpm i adm-zip
 
 :::
 
+### 压缩
 ```js
 import fs from 'node:fs'
 import path from 'node:path'
@@ -94,6 +95,28 @@ function zipFolder() {
         resolve(data)
       }
     })
+  })
+}
+```
+
+### 解压
+```js
+import fs from 'node:fs'
+import path from 'node:path'
+import process from 'node:process'
+import AdmZip from 'adm-zip'
+
+function unzipFile() {
+  const zipPath = path.resolve(process.cwd(), 'dist.zip')
+  const outputPath = path.resolve(process.cwd(), 'dist')
+
+  return new Promise((resolve, reject) => {
+    const zip = new AdmZip(zipPath)
+
+    // 解压到指定目录 强制覆盖
+    zip.extractAllTo(outputPath, true)
+
+    resolve()
   })
 }
 ```
