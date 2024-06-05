@@ -12,6 +12,13 @@ C:\Windows\System32\drivers\etc\hosts
 C:\Windows\System32\WindowsPowerShell\v1.0\Microsoft.PowerShell_profile.ps1
 ```
 
+## PowerShell 无法运行脚本
+
+```bash
+# 以管理员身份运行
+Set-ExecutionPolicy RemoteSigned
+```
+
 ## 杀死端口
 
 ```bash

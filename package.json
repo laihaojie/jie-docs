@@ -2,7 +2,6 @@
   "name": "jie-docs",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@9.0.6",
   "description": "",
   "author": "",
   "license": "ISC",
@@ -22,7 +21,7 @@
     "markdown-it-katex": "^2.0.3",
     "p-limit": "^5.0.0",
     "pinyin-pro": "^3.20.4",
-    "vitepress": "1.0.1",
+    "vitepress": "1.2.3",
     "vue": "^3.4.13"
   },
   "devDependencies": {
