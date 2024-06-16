@@ -29,3 +29,25 @@ export function copyText(text: string) {
   document.execCommand('copy')
   document.body.removeChild(input)
 }
+
+export function waitForElm(selector: string): Promise<HTMLElement> {
+  return new Promise((resolve) => {
+    const dom = document.querySelector(selector) as HTMLElement
+    if (dom)
+      return resolve(dom)
+
+    // eslint-disable-next-line unused-imports/no-unused-vars
+    const observer = new MutationObserver((mutations) => {
+      const elm = document.querySelector(selector) as HTMLElement
+      if (elm) {
+        observer.disconnect()
+        resolve(elm)
+      }
+    })
+
+    observer.observe(document, {
+      childList: true,
+      subtree: true,
+    })
+  })
+}

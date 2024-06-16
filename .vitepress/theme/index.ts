@@ -2,6 +2,7 @@ import Theme from 'vitepress/theme'
 import DemoContainer from 'root/components/demoContainer.vue'
 import Eye from 'root/components/components/eye.vue'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
+import { extensionCodeBlock } from 'root/shared/extensionCodeBlock'
 import Layout from '../layout/index.vue'
 import '@shikijs/vitepress-twoslash/style.css'
 
@@ -29,6 +30,8 @@ export default {
           return window.location.href = 'login.html'
       }
     }
+
+    extensionCodeBlock()
   },
   setup() {
     // eslint-disable-next-line no-console

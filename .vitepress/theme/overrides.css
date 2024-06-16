@@ -236,3 +236,37 @@ table {
     0 0 50px #008cff,
     0 0 100px #008cff;
 }
+
+
+/* 设置exec样式 */
+:root {
+  --vp-icon-exec: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzg4ODg4OCIgZD0ibTMuNSA0LjVsMyAzbC0zIDNtNC41IDBoNG0tMTAuNS05aDEyYTEgMSAwIDAgMSAxIDF2MTBhMSAxIDAgMCAxLTEgMWgtMTJhMSAxIDAgMCAxLTEtMXYtMTBhMSAxIDAgMCAxIDEtMVoiLz48L3N2Zz4=");
+}
+
+.vp-doc [class*=language-]>button.exec {
+  direction: ltr;
+  position: absolute;
+  top: 12px;
+  right: 62px;
+  z-index: 3;
+  border: 1px solid var(--vp-code-copy-code-border-color);
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--vp-code-copy-code-bg);
+  opacity: 0;
+  cursor: pointer;
+  background-image: var(--vp-icon-exec);
+  background-position: 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  transition: border-color .25s, background-color .25s, opacity .25s
+}
+
+.vp-doc [class*=language-]:hover>button.exec {
+  opacity: 1
+}
+
+.vp-doc [class*=language-]:has(.copied)>button.exec {
+  right: 124px;
+}
