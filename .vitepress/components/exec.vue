@@ -45,7 +45,7 @@ useEventListener(divInputDom, 'keydown', (e) => {
       index.value = history.value.length
     }
     index.value--
-    setInputText(history.value[index.value].command)
+    setInputText(history.value[index.value]?.command)
   }
   if (e.key === 'ArrowDown') {
     e.preventDefault()
@@ -53,7 +53,7 @@ useEventListener(divInputDom, 'keydown', (e) => {
     if (index.value === history.value.length) {
       setInputText()
     } else {
-      setInputText(history.value[index.value].command)
+      setInputText(history.value[index.value]?.command)
     }
   }
 })
