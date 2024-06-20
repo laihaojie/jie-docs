@@ -267,6 +267,11 @@ table {
   opacity: 1
 }
 
+.vp-doc [class*='language-']>button.exec:hover {
+  border-color: var(--vp-code-copy-code-hover-border-color);
+  background-color: var(--vp-code-copy-code-hover-bg);
+}
+
 .vp-doc [class*=language-]:has(.copied)>button.exec {
   right: 124px;
 }

@@ -127,7 +127,12 @@ function focus() {
   document.execCommand('selectAll', false, null)
   document.getSelection().collapseToEnd()
 }
-
+function handleFocus(e){
+  console.log(e, e.target === divInputDom.value)
+  if(e.target !== divInputDom.value && !divInputDom.value.contains(e.target)){
+    focus()
+  }
+}
 </script>
 
 <template>
@@ -140,12 +145,12 @@ function focus() {
             <div v-for="i, idx in commands" :key="idx" class="text-white cp" @click="setInputText(i)">{{ i }}</div>
           </div>
 
-          <div ref="scrollDom" class="flex-1 h-0 overflow-y-auto overflow-hidden">
+          <div ref="scrollDom" class="flex-1 h-0 overflow-y-auto overflow-hidden" @click="handleFocus($event)">
             <pre v-for="i, idx in history" :key="idx" class="text-white whitespace-pre-wrap break-words m-0"
               v-html="i.data"></pre>
             <div ref="divInputDom" contenteditable="true"
               class="outline-none text-white [font-family:var(--vp-font-family-mono)] break-all"></div>
-            <div class="h-30"></div>
+            <div class="h-40"></div>
           </div>
         </template>
         <template v-else>
