@@ -15,7 +15,10 @@ export function extensionCodeBlock() {
     })
     waitForElm('.VPContent').then((elm) => {
       useMutationObserver(elm, () => {
-        console.log('VPContent change')
+        const docDom = elm.querySelector('.vp-doc') as HTMLElement
+        if (docDom) {
+          bindExec(docDom)
+        }
       }, { attributes: true })
     })
   }
