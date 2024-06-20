@@ -128,7 +128,6 @@ function focus() {
   document.getSelection().collapseToEnd()
 }
 function handleFocus(e){
-  console.log(e, e.target === divInputDom.value)
   if(e.target !== divInputDom.value && !divInputDom.value.contains(e.target)){
     focus()
   }
