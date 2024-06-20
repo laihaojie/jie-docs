@@ -152,45 +152,47 @@ const reg = new RegExp()
 ### 5.3 原始值包装类型
 
 ```javascript
-Boolean Number String
+// Boolean Number String
 const bool = new Boolean()
 const num = new Number()
-toFixed(2) 返回包含指定小数点位数值字符串
-isInteger() 判断是个数值是否为整数
+toFixed(2) // 返回包含指定小数点位数值字符串
+isInteger() // 判断是个数值是否为整数
 const str = new String()
 字符串的操作方法:
-concat(...str) 用于将一个或者多个字符串拼接成一个新的字符串
-slice() substr() 方法 字符串截取
-indexOf(str) 返回字符在字符串中的位置没有找到返回-1
-includes(str) 判断子字符串是否在字符串中 返回布尔值
-trim() 去除字符串两边的空白
-repeat(3) 复制3次字符串
-padStart() padEnd() 复制字符串 第一个参数是复制的长度第二个参数 如果长度没有达到默认用第二个参数填补
-toLocaleLowerCase() 将字符串转为小写
-toLocaleUpperCase() 将字符串转为大写
-match() 字符串匹配方法 参数可传正则
+concat(...str) // 用于将一个或者多个字符串拼接成一个新的字符串
+slice()
+substr() // 方法 字符串截取
+indexOf(str) // 返回字符在字符串中的位置没有找到返回-1
+includes(str) // 判断子字符串是否在字符串中 返回布尔值
+trim() // 去除字符串两边的空白
+repeat(3) // 复制3次字符串
+padStart()
+padEnd() // 复制字符串 第一个参数是复制的长度第二个参数 如果长度没有达到默认用第二个参数填补
+toLocaleLowerCase() // 将字符串转为小写
+toLocaleUpperCase() // 将字符串转为大写
+match() // 字符串匹配方法 参数可传正则
 ```
 
 ### 5.4 单列内置对象
 
 ```javascript
-Global对象  其实就是平常使用的全局方法比如 isNaN() isFinite() parseInt() ParseFloat()
+Global对象 // 其实就是平常使用的全局方法比如 isNaN() isFinite() parseInt() ParseFloat()
 URL编码方法
 编码: encodeURIComponent()
 解码: decodeURIComponent()
-eval() 该方法可以看做一个完整的JavaScript解释器 可以执行js代码 eval("console.log('hello world')")
-window对象 document对象
+eval() // 该方法可以看做一个完整的JavaScript解释器 可以执行js代码 eval("console.log('hello world')")
+// window对象 document对象
 
 Math
-Math.max() 最大值
-Math.min() 最小值
-Math.ceil() 向上取整
-Math.floor() 向下取整
-Math.round() 四舍五入
-Math.random() 返回0-1的随机小数
-生成 min-max的随机数:
-function random(min,max){
-    return Math.floor(Math.random()*(max-min+1)+min)
+Math.max() // 最大值
+Math.min() // 最小值
+Math.ceil() // 向上取整
+Math.floor() // 向下取整
+Math.round() // 四舍五入
+Math.random() // 返回0-1的随机小数
+// 生成 min-max的随机数:
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
 }
 ```
 
@@ -342,13 +344,12 @@ function(){} 匿名函数 兰姆达
 
 ```javascript
 // 自己调用自己
-function fib(n){
-    if(n<2){
-        return n
-    }
-    return fib(n -1) + fib(n - 2)
+function fib(n) {
+  if (n < 2) {
+    return n
+  }
+  return fib(n - 1) + fib(n - 2)
 }
-
 ```
 
 ### 10.13 尾调用优化
@@ -393,37 +394,37 @@ javascript是没有私有变量的概念的    但是在函数中或者在局部
 ### 12.1 window对象
 
 ```javascript
-BOM的核心是window对象 在浏览器中是ECMAScript的Global对象
-Global作用域中 var定义的变量是挂载到window上面的
-获取浏览器视口大小:
-let pageWidth = window.innerWidth,
-    pageHeight = window.innerHeight;
-if(typeof pageWidth != "number"){
-    if(document.compatMode == "CSS1Compat"){  // 检查页面是否属于标准模式
-        pageWidht = document.documentElement.clientWidth
-        pageHeight = document.documentElement.clientHeight
-    } else {
-        pageWidth = document.body.clientWidth
-        pageHeight = document.body.clientHeight
-    }
+// BOM的核心是window对象 在浏览器中是ECMAScript的Global对象
+// Global作用域中 var定义的变量是挂载到window上面的
+// 获取浏览器视口大小:
+let pageWidth = window.innerWidth
+let pageHeight = window.innerHeight
+if (typeof pageWidth != 'number') {
+  if (document.compatMode === 'CSS1Compat') { // 检查页面是否属于标准模式
+    pageWidht = document.documentElement.clientWidth
+    pageHeight = document.documentElement.clientHeight
+  }
+  else {
+    pageWidth = document.body.clientWidth
+    pageHeight = document.body.clientHeight
+  }
 }
 
-导航与打开新窗口:
-window.open() 第一个参数为目标地址  第二个参数为窗口名称
+// 导航与打开新窗口:
+window.open()// 第一个参数为目标地址  第二个参数为窗口名称
 
-定时器:
-JavaScript 在浏览器中是单线程执行的
-setTimeout() 指定一段时间后指定某些带代码
-setInterval() 指定每隔一段时间执行某些代码
-都会返回一个定时ID 可以用 clearTimeout clearInterval 取消定时任务
-一般来说尽量是不要使用setInterval 如果不主动取消 只能通过页面卸载清除
+// 定时器:
+// JavaScript 在浏览器中是单线程执行的
+setTimeout() // 指定一段时间后指定某些带代码
+setInterval() // 指定每隔一段时间执行某些代码
+// 都会返回一个定时ID 可以用 clearTimeout clearInterval 取消定时任务
+// 一般来说尽量是不要使用setInterval 如果不主动取消 只能通过页面卸载清除
 
-系统对话框:
-alert() confirm() prompt()
-alert 弹出一个警告框
-confirm 弹出一个选择框
-prompt 弹出一个输入框
-
+// 系统对话框:
+// alert() confirm() prompt()
+// alert 弹出一个警告框
+// confirm 弹出一个选择框
+// prompt 弹出一个输入框
 ```
 
 ### 12.2 location对象

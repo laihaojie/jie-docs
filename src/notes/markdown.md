@@ -56,9 +56,9 @@ Markdown 段落没有特殊的格式，直接编写文字就好，**段落的换
 ## 代码块
 
 ```javascript
-$(document).ready(function () {
-    alert('RUNOOB');
-});
+$(document).ready(() => {
+  alert('RUNOOB')
+})
 ```
 
 ````

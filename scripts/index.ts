@@ -33,7 +33,7 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
 
       const fileName = file.split('.')[0].trim()
       const title = content.match(/#\s+(.*)$/m)?.[1].trim()
-      const note = content.match(/<!--(.*?)-->/m)?.[1].trim()
+      const note = content.match(/<!--(.*?)-->/)?.[1].trim()
 
       return {
         text: note || title || fileName,

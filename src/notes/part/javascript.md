@@ -13,12 +13,12 @@ s.parentNode.insertBefore(script, s)
 
 ```js
 // 浮点数
-function randomNumber(min, max) {
+function randomFloatNumber(min, max) {
   return Math.random() * (max - min) + min
 }
 
 // 整数
-function randomNumber(min, max) {
+function randomIntNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min)
 }
 ```
@@ -40,7 +40,7 @@ str.split(char).length - 1
 ```js
 const isEmpty = obj => Object.keys(obj).length === 0
 // or
-const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object
+// const isEmpty = obj => Reflect.ownKeys(obj).length === 0 && obj.constructor === Object
 ```
 
 ## 等待一段时间后执行

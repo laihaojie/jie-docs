@@ -17,7 +17,7 @@ sudo yum install -y nodejs
 - 1. 第三步检查是否安装成功
 
 ```bash
-node -V
+node -v
 ```
 
 ## nvm管理node版本

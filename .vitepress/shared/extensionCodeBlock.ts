@@ -1,7 +1,9 @@
-/* eslint-disable no-console */
 import { useMutationObserver } from '@vueuse/core'
+import { usePopup } from 'root/hooks/dialog'
 import { waitForElm } from 'root/utils'
 import { inBrowser } from 'vitepress'
+import { h } from 'vue'
+import ExecDom from '../components/exec.vue'
 
 export function extensionCodeBlock() {
   if (inBrowser) {
@@ -31,7 +33,9 @@ function bindExec(elm: HTMLElement) {
       // 正则表达式用于匹配多行注释、单行注释和字符串
       const regex = /('(?:\\.|[^'\\])*'|"(?:\\.|[^"\\])*"|#.*$|\/\*[\s\S]*?\*\/)/gm
 
-      console.log(code.replace(regex, '').split(/\n/).filter(Boolean))
+      const cmdList = code.replace(regex, '').split(/\n/).filter(Boolean)
+      const dialog = usePopup(h(ExecDom, { commands: cmdList, close: () => dialog.close() }))
+      dialog.show()
     })
 
     // 插入到copy按钮前面

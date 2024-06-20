@@ -25,12 +25,12 @@
     "vue": "^3.4.13"
   },
   "devDependencies": {
-    "@djie/eslint-config": "2.1.4",
+    "@djie/eslint-config": "2.1.7",
     "@djie/unocss": "^1.0.32",
     "@iconify-json/carbon": "^1.1.27",
     "@shikijs/vitepress-twoslash": "^1.2.0",
     "@types/node": "^20.11.0",
-    "eslint": "^8.56.0",
+    "eslint": "^9.5.0",
     "esno": "^4.0.0",
     "fs-extra": "^11.2.0",
     "sass": "^1.69.7",
