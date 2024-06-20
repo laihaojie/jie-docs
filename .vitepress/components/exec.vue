@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import { useEventListener } from '@vueuse/core'
 import { autoToast } from 'root/utils/autolog'
-import { type PropType, nextTick, ref, watch } from 'vue'
+import { type PropType, nextTick, ref, watch, computed } from 'vue'
 
 defineProps({
   commands: {
@@ -13,25 +14,34 @@ defineProps({
   },
 })
 
-const inputDom = ref(null)
+const divInputDom = ref(null)
 const scrollDom = ref(null)
 
 const show = ref(false)
 const pwd = ref('')
+const pwdHtml = computed(() => `<span contenteditable="false" class="c-#12BC69">${pwd.value}&gt;&nbsp;</span>`)
 
-function setCommand(c = '') {
-  inputDom.value.value = `${pwd.value}> ${c}`
-  inputDom.value.focus()
+function setInputText(c = '') {
+  divInputDom.value.innerHTML = pwdHtml.value + c
+  focus()
 }
+
+useEventListener(divInputDom, 'keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault()
+    exec()
+  }
+
+  if ((e.key === 'Backspace' || e.key === 'Delete')) {
+    if (divInputDom.value.innerHTML === pwdHtml.value)
+      e.preventDefault();
+  }
+})
 
 watch(show, (v) => {
   if (v) {
     nextTick(() => {
-      inputDom.value.focus()
-      if (inputDom.value.value === '') {
-        setCommand()
-        inputDom.value.value = `${pwd.value}> `
-      }
+      setInputText()
     })
   }
 })
@@ -57,10 +67,11 @@ fetch(baseApi, { method: 'POST', body: JSON.stringify({ cmd: 'pwd' }) }).then(re
 const command = ref('')
 const history = ref([])
 function exec() {
+  command.value = divInputDom.value.innerHTML.replace(pwdHtml.value, '')
   if (!command.value.trim()) return
   if (command.value === 'clear') {
     history.value = []
-    setCommand()
+    setInputText()
     return
   }
   fetch(baseApi, {
@@ -68,10 +79,10 @@ function exec() {
     body: JSON.stringify({ cmd: command.value }),
   }).then(res => res.json()).then((r) => {
     // eslint-disable-next-line no-console
-    console.log(r)
-    history.value.push(`${inputDom.value.value}\n${r.data.data}`)
+    import.meta.env.MODE === "development" && console.log(r)
+    history.value.push(`${divInputDom.value.innerHTML}\n${r.data.data}`)
     pwd.value = r.data.pwd
-    setCommand()
+    setInputText()
 
     // 如果出现滚动条，滚动到底部
     nextTick(() => {
@@ -82,37 +93,12 @@ function exec() {
   })
 }
 
-function inputChange(e: InputEvent) {
-  const value = (e.target as HTMLTextAreaElement).value
-  const textarea = e.target as HTMLTextAreaElement
-  // 取消默认行为
-  e.preventDefault()
-
-  if (value.startsWith(`${pwd.value}> `)) {
-    inputDom.value.value = value
-  }
-  else {
-    setCommand()
-  }
-  command.value = value.replace(`${pwd.value}> `, '')
-
-  // 获取textarea的scrollHeight
-  const scrollHeight = textarea.scrollHeight
-
-  // 获取textarea的上下边框的高度
-  // 由于textarea的边框可能有别的地方定义了更高级别的样式
-  // 使用getComputedStyle 读取的样式是最终样式，包括了内联样式、嵌入样式和外部样式
-  // document.defaultView.getComputedStyle(element[,pseudo-element]);
-  // 或者
-  // window.getComputedStyle(element[,pseudo-element]);
-  const style = getComputedStyle(textarea)
-
-  const borderTop = Number.parseInt(style.borderTopWidth)
-  const borderBottom = Number.parseInt(style.borderBottomWidth)
-  const height = scrollHeight + borderTop + borderBottom
-
-  textarea.style.height = `${height}px`
+function focus() {
+  divInputDom.value.focus()
+  document.execCommand('selectAll', false, null)
+  document.getSelection().collapseToEnd()
 }
+
 </script>
 
 <template>
@@ -121,13 +107,15 @@ function inputChange(e: InputEvent) {
       <div class="i-carbon-close-outline absolute right-0 top-0 cp" @click="close()"> </div>
       <template v-if="show">
         <template v-if="isConnecting">
-          <div v-for="i, idx in commands" :key="idx" class="text-white cp" @click="setCommand(i)">{{ i }}</div>
+          <div class="flex flex-wrap gap-20 mb-10">
+            <div v-for="i, idx in commands" :key="idx" class="text-white cp" @click="setInputText(i)">{{ i }}</div>
+          </div>
+
           <div ref="scrollDom" class="flex-1 h-0 overflow-y-auto overflow-hidden">
-            <pre v-for="i, idx in history" :key="idx" class="text-white whitespace-pre-wrap break-words">{{ i }}</pre>
-            <textarea
-              ref="inputDom" class="w-full bg-black text-white text-16 [word-wrap:break-word]!" @input="inputChange"
-              @keydown.enter.prevent="exec()"
-            />
+            <pre v-for="i, idx in history" :key="idx" class="text-white whitespace-pre-wrap break-words m-0"
+              v-html="i"></pre>
+            <div ref="divInputDom" contenteditable="true"
+              class="outline-none text-white [font-family:var(--vp-font-family-mono)]"></div>
             <div class="h-30"></div>
           </div>
         </template>
