@@ -13,6 +13,11 @@ export function extensionCodeBlock() {
         bindExec(elm)
       }, { attributes: true })
     })
+    waitForElm('.VPContent').then((elm) => {
+      useMutationObserver(elm, () => {
+        console.log('VPContent change')
+      }, { attributes: true })
+    })
   }
 }
 

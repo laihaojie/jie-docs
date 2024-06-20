@@ -19,7 +19,7 @@ const scrollDom = ref(null)
 
 const show = ref(false)
 const pwd = ref('')
-const pwdHtml = computed(() => `<span contenteditable="false" class="c-#12BC69">${pwd.value}&gt;&nbsp;</span>`)
+const pwdHtml = computed(() => `<span contenteditable="false" class="c-#12BC69 fw-bold">${pwd.value}&gt;&nbsp;</span>`)
 
 function setInputText(c = '') {
   divInputDom.value.innerHTML = pwdHtml.value + c
@@ -107,7 +107,7 @@ function focus() {
       <div class="i-carbon-close-outline absolute right-0 top-0 cp" @click="close()"> </div>
       <template v-if="show">
         <template v-if="isConnecting">
-          <div class="flex flex-wrap gap-20 mb-10">
+          <div class="flex flex-wrap gap-y-10 gap-x-20 mb-10">
             <div v-for="i, idx in commands" :key="idx" class="text-white cp" @click="setInputText(i)">{{ i }}</div>
           </div>
 
@@ -115,7 +115,7 @@ function focus() {
             <pre v-for="i, idx in history" :key="idx" class="text-white whitespace-pre-wrap break-words m-0"
               v-html="i"></pre>
             <div ref="divInputDom" contenteditable="true"
-              class="outline-none text-white [font-family:var(--vp-font-family-mono)]"></div>
+              class="outline-none text-white [font-family:var(--vp-font-family-mono)] break-all"></div>
             <div class="h-30"></div>
           </div>
         </template>
