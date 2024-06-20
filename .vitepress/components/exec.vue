@@ -23,7 +23,7 @@ const pwdHtml = computed(() => `<span contenteditable="false" class="c-#12BC69 f
 
 function setInputText(c = '') {
   if (!c) index.value = 0
-  divInputDom.value.innerHTML = pwdHtml.value + c
+  divInputDom.value.innerHTML = pwdHtml.value + (c || '')
   focus()
 }
 
