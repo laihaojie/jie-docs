@@ -3,7 +3,7 @@ import { useEventListener } from '@vueuse/core'
 import { autoToast } from 'root/utils/autolog'
 import { type PropType, nextTick, ref, watch, computed } from 'vue'
 
-defineProps({
+const props = defineProps({
   commands: {
     type: Array as PropType<string[]>,
     required: true,
@@ -16,12 +16,13 @@ defineProps({
 
 const divInputDom = ref(null)
 const scrollDom = ref(null)
-
+const index = ref(0)
 const show = ref(false)
 const pwd = ref('')
 const pwdHtml = computed(() => `<span contenteditable="false" class="c-#12BC69 fw-bold">${pwd.value}&gt;&nbsp;</span>`)
 
 function setInputText(c = '') {
+  if (!c) index.value = 0
   divInputDom.value.innerHTML = pwdHtml.value + c
   focus()
 }
@@ -35,6 +36,31 @@ useEventListener(divInputDom, 'keydown', (e) => {
   if ((e.key === 'Backspace' || e.key === 'Delete')) {
     if (divInputDom.value.innerHTML === pwdHtml.value)
       e.preventDefault();
+  }
+
+  // 上下键
+  if (e.key === 'ArrowUp') {
+    e.preventDefault()
+    if (index.value === 0) {
+      index.value = history.value.length
+    }
+    index.value--
+    setInputText(history.value[index.value].command)
+  }
+  if (e.key === 'ArrowDown') {
+    e.preventDefault()
+    index.value++
+    if (index.value === history.value.length) {
+      setInputText()
+    } else {
+      setInputText(history.value[index.value].command)
+    }
+  }
+})
+
+useEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    props.close()
   }
 })
 
@@ -64,23 +90,26 @@ fetch(baseApi, { method: 'POST', body: JSON.stringify({ cmd: 'pwd' }) }).then(re
   show.value = true
 })
 
-const command = ref('')
-const history = ref([])
+
+const history = ref([] as { command: string, data: string }[])
 function exec() {
-  command.value = divInputDom.value.innerHTML.replace(pwdHtml.value, '')
-  if (!command.value.trim()) return
-  if (command.value === 'clear') {
+  const command = divInputDom.value.innerHTML.replace(pwdHtml.value, '')
+  if (!command.trim()) return
+  if (command === 'clear') {
     history.value = []
     setInputText()
     return
   }
   fetch(baseApi, {
     method: 'POST',
-    body: JSON.stringify({ cmd: command.value }),
+    body: JSON.stringify({ cmd: command }),
   }).then(res => res.json()).then((r) => {
     // eslint-disable-next-line no-console
     import.meta.env.MODE === "development" && console.log(r)
-    history.value.push(`${divInputDom.value.innerHTML}\n${r.data.data}`)
+    history.value.push({
+      command,
+      data: `${divInputDom.value.innerHTML}\n${r.data.data}`
+    })
     pwd.value = r.data.pwd
     setInputText()
 
@@ -113,7 +142,7 @@ function focus() {
 
           <div ref="scrollDom" class="flex-1 h-0 overflow-y-auto overflow-hidden">
             <pre v-for="i, idx in history" :key="idx" class="text-white whitespace-pre-wrap break-words m-0"
-              v-html="i"></pre>
+              v-html="i.data"></pre>
             <div ref="divInputDom" contenteditable="true"
               class="outline-none text-white [font-family:var(--vp-font-family-mono)] break-all"></div>
             <div class="h-30"></div>
