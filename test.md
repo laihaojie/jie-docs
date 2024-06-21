@@ -6,7 +6,7 @@ layout: doc
 import { ref } from 'vue'
 import { useData  } from 'vitepress'
 
-console.log(useData())
+// console.log(useData())
 const count = ref(1);
 </script>
 
