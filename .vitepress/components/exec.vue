@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useEventListener, useLocalStorage } from '@vueuse/core'
+import { execCheckCommand, execShell } from 'root/shared/config';
 import { autoToast } from 'root/utils/autolog'
+import { execRequest } from 'root/utils/exec';
 import { type PropType, nextTick, ref, watch, computed } from 'vue'
 
 const props = defineProps({
@@ -18,11 +20,10 @@ const divInputDom = ref(null)
 const scrollDom = ref(null)
 const index = ref(0)
 const show = ref(false)
-const shell = ref('')
 const cwd = useLocalStorage('cwd', '')
-const pwdHtml = computed(() => `<span contenteditable="false" class="${shell.value ? 'c-white' : 'c-#E5E510'} fw-bold"><span class="${shell.value ? 'c-white' : 'c-#12bc69'}">(${shell.value ? 'PowerShell' : 'bash'})</span> ${cwd.value}&gt;&nbsp;</span>`)
+const pwdHtml = computed(() => `<span contenteditable="false" class="${execShell.value ? 'c-white' : 'c-#E5E510'} fw-bold"><span class="${execShell.value ? 'c-white' : 'c-#12bc69'}">(${execShell.value ? 'PowerShell' : 'bash'})</span> ${cwd.value}&gt;&nbsp;</span>`)
 
-watch(shell, () => {
+watch(execShell, () => {
   setInputText()
 })
 
@@ -89,18 +90,15 @@ watch(show, (v) => {
 })
 
 const isConnecting = ref(false)
-const baseApi = 'http://127.0.0.1:32677'
-function request(data) {
-  return fetch(baseApi, { method: 'POST', body: JSON.stringify({ ...data, shell: shell.value }) }).then(res => res.json())
-}
 
-request({ cmd: 'pwd', cwd: cwd.value }).then(async (res) => {
+
+execRequest({ cmd: execCheckCommand, cwd: cwd.value }).then(async (res) => {
   if (res.code === 1) {
     isConnecting.value = true
     if (res.data.cwd)
       cwd.value = res.data.cwd
     else
-      await request({ cmd: 'pwd' }).then((r) => {
+      await execRequest({ cmd: execCheckCommand }).then((r) => {
         if (r.code === 1) {
           cwd.value = r.data.cwd
         }
@@ -126,7 +124,7 @@ function exec() {
     return
   }
 
-  request({ cmd: command, cwd: cwd.value }).then((r) => {
+  execRequest({ cmd: command, cwd: cwd.value }).then((r) => {
     if (r.code === 1) {
       // eslint-disable-next-line no-console
       import.meta.env.MODE === "development" && console.log(r)
@@ -168,8 +166,8 @@ function handleFocus(e) {
     <div class="relative w-full h-full flex flex-col">
       <div class="absolute right-0 top-0 cp flex items-center gap-x-10">
         <template v-if="show">
-          <div title="Git Bash" @click="shell = ''">Bash</div>
-          <div title="PowerShell" @click="shell = 'powershell.exe'">PowerShell</div>
+          <div title="Git Bash" @click="execShell = ''">Bash</div>
+          <div title="PowerShell" @click="execShell = 'powershell.exe'">PowerShell</div>
         </template>
         <div class="i-carbon-close-outline" @click="close()"> </div>
       </div>

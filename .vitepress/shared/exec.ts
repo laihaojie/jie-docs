@@ -2,8 +2,10 @@ import { useMutationObserver } from '@vueuse/core'
 import { usePopup } from 'root/hooks/dialog'
 import { waitForElm } from 'root/utils'
 import { inBrowser } from 'vitepress'
-import { h } from 'vue'
+import { h, ref } from 'vue'
 import ExecDom from '../components/exec.vue'
+import { execRequest } from 'root/utils/exec'
+import { execCheckCommand } from './config'
 
 export function extensionCodeBlock() {
   if (inBrowser) {
@@ -22,6 +24,18 @@ export function extensionCodeBlock() {
       }, { attributes: true })
     })
   }
+}
+
+export function checkExecConnectionStatus() {
+  const connection = ref(false)
+  execRequest({ cmd: execCheckCommand }).then((res) => {
+    if (res.code === 1) {
+      connection.value = true
+    }
+  }).catch(() => {
+    connection.value = false
+  })
+  return connection
 }
 
 function bindExec(elm: HTMLElement) {

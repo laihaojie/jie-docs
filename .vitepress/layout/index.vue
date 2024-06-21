@@ -2,6 +2,7 @@
 import Theme from 'vitepress/theme'
 import { copyText } from 'root/utils'
 import { autoToast } from 'root/utils/autolog'
+import { checkExecConnectionStatus } from 'root/shared/exec';
 
 const info = {
   name: '阿杰',
@@ -15,15 +16,19 @@ async function copy(text) {
   // Toast('复制成功')
   autoToast('复制成功')
 }
+
+const execConnection = checkExecConnectionStatus()
 </script>
 
 <template>
   <Theme.Layout>
     <template #aside-outline-after>
-      <div class="p-10 fc mt-30 c-primary fwbold flex flex-col">
-        <div class="text-20 mb-16">
+      <div class="p-10 fc mt-30 c-primary fwbold flex flex-col gap-12">
+        <div class="text-20">
           {{ info.name }}
         </div>
+        <div v-if="execConnection" title="连接成功" class="i-carbon-face-activated"></div>
+        <div v-else class="h-1.2em"></div>
         <div class="flex">
           <a :href="info.github" target="_blank">
             <div class="i-carbon:logo-github mx-4 cp" :title="info.github"></div>
@@ -32,7 +37,7 @@ async function copy(text) {
           <div class="i-carbon:logo-wechat mx-4 cp" :title="info.wechat" @click="copy(info.wechat)"></div>
         </div>
 
-        <Eye class="mt-20"></Eye>
+        <Eye></Eye>
       </div>
     </template>
     <template #aside-ads-after>

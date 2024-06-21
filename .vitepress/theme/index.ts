@@ -2,7 +2,6 @@ import Theme from 'vitepress/theme'
 import DemoContainer from 'root/components/demoContainer.vue'
 import Eye from 'root/components/components/eye.vue'
 import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
-import { extensionCodeBlock } from 'root/shared/extensionCodeBlock'
 import Layout from '../layout/index.vue'
 import '@shikijs/vitepress-twoslash/style.css'
 
@@ -12,6 +11,7 @@ import './rainbow.css'
 import './vars.css'
 import './overrides.css'
 import { auth } from './auth'
+import { checkExecConnectionStatus, extensionCodeBlock } from 'root/shared/exec'
 
 export default {
   // ...Theme,
@@ -30,11 +30,11 @@ export default {
           return window.location.href = 'login.html'
       }
     }
-
+    checkExecConnectionStatus()
     extensionCodeBlock()
   },
   setup() {
     // eslint-disable-next-line no-console
-    console.log('setup')
+    // console.log('setup')
   },
 }
