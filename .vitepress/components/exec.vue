@@ -20,9 +20,9 @@ const index = ref(0)
 const show = ref(false)
 const shell = ref('')
 const cwd = useLocalStorage('cwd', '')
-const pwdHtml = computed(() => `<span contenteditable="false" class="${shell.value?'c-white':'c-#E5E510'} fw-bold"><span class="${shell.value?'c-white':'c-#12bc69'}">(${shell.value?'PowerShell':'bash'})</span> ${cwd.value}&gt;&nbsp;</span>`)
+const pwdHtml = computed(() => `<span contenteditable="false" class="${shell.value ? 'c-white' : 'c-#E5E510'} fw-bold"><span class="${shell.value ? 'c-white' : 'c-#12bc69'}">(${shell.value ? 'PowerShell' : 'bash'})</span> ${cwd.value}&gt;&nbsp;</span>`)
 
-watch(shell, ()=>{
+watch(shell, () => {
   setInputText()
 })
 
@@ -157,7 +157,7 @@ function focus() {
   document.getSelection().collapseToEnd()
 }
 function handleFocus(e) {
-  if (e.target !== divInputDom.value && !divInputDom.value.contains(e.target)) {
+  if (e.target.tagName !== 'SPAN' && !divInputDom.value.contains(e.target)) {
     focus()
   }
 }
@@ -167,8 +167,10 @@ function handleFocus(e) {
   <div class="absolute right-10 bottom-10 w-580 h-500 bg-black rounded-10 p10">
     <div class="relative w-full h-full flex flex-col">
       <div class="absolute right-0 top-0 cp flex items-center gap-x-10">
-        <div title="Git Bash" @click="shell = ''">Bash</div>
-        <div title="PowerShell" @click="shell = 'powershell.exe'">PowerShell</div>
+        <template v-if="show">
+          <div title="Git Bash" @click="shell = ''">Bash</div>
+          <div title="PowerShell" @click="shell = 'powershell.exe'">PowerShell</div>
+        </template>
         <div class="i-carbon-close-outline" @click="close()"> </div>
       </div>
 
