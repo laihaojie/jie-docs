@@ -9,18 +9,18 @@ import { execCheckCommand } from './config'
 
 export function extensionCodeBlock() {
   if (inBrowser) {
-    waitForElm('.vp-doc').then((elm) => {
-      bindExec(elm)
-      useMutationObserver(elm, () => {
+    function bind() {
+      waitForElm('.vp-doc').then((elm) => {
         bindExec(elm)
-      }, { attributes: true })
-    })
+        useMutationObserver(elm, () => {
+          bindExec(elm)
+        }, { attributes: true })
+      })
+    }
+    bind()
     waitForElm('.VPContent').then((elm) => {
       useMutationObserver(elm, () => {
-        const docDom = elm.querySelector('.vp-doc') as HTMLElement
-        if (docDom) {
-          bindExec(docDom)
-        }
+        bind()
       }, { attributes: true })
     })
   }
