@@ -42,7 +42,7 @@ mv node-v20.0.0-linux-x64 node20
 - 配置环境变量
 
 ```shell
-vim ~/.bashrc
+sudo vim /etc/profile
 ```
 
 - 添加
@@ -54,7 +54,7 @@ export PATH=/home/xxx/node20/bin:$PATH
 - 使配置生效
 
 ```shell
-source ~/.bashrc
+source /etc/profile
 ```
 
 - 检查是否安装成功
