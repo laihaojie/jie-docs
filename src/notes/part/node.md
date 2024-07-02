@@ -14,6 +14,19 @@ pnpm i @djie/eslint-config@latest @djie/vite-plugin-vue-inspector@latest @djie/u
 
 :::
 
+## 递归删除node_modules以及子文件夹所有node_modules
+
+::: code-group
+
+```bash [Windows PowerShell]
+Get-ChildItem -Path . -Recurse -Directory -Filter node_modules | ForEach-Object { Remove-Item -Recurse -Force $_.FullName }
+```
+
+```bash [Linux Mac]
+find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+```
+:::
+
 ## __dirname
 
 ```js
