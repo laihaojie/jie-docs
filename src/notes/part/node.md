@@ -20,10 +20,23 @@ pnpm i @djie/eslint-config@latest @djie/vite-plugin-vue-inspector@latest @djie/u
 
 ```bash [Windows PowerShell]
 Get-ChildItem -Path . -Recurse -Directory -Filter node_modules | ForEach-Object { Remove-Item -Recurse -Force $_.FullName }
+
+# 这个命令的解释如下：
+
+# Get-ChildItem -Path . -Recurse -Directory -Filter node_modules：递归地获取当前目录及其子目录中名为 node_modules 的文件夹。
+# ForEach-Object { Remove-Item -Recurse -Force $_.FullName }：对每个找到的 node_modules 文件夹执行删除操作。
 ```
 
 ```bash [Linux Mac]
 find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+
+# 这个命令的解释如下：
+
+# find .：从当前目录开始查找。
+# -name "node_modules"：查找名称为 node_modules 的目录。
+# -type d：只查找目录（不是文件）。
+# -prune：防止 find 命令递归到 node_modules 目录中，从而提高效率。
+# -exec rm -rf '{}' +：对于每个找到的目录，执行 rm -rf 命令删除该目录及其内容。
 ```
 :::
 
