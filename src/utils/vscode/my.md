@@ -45,7 +45,7 @@
     "<C-v>": false,
     "<C-i>": false,
     "<C-p>": false,
-    "<C-d>": false
+    "<C-d>": false,
   },
   "vim.normalModeKeyBindings": [
     {
@@ -82,7 +82,7 @@
         "5",
         "k"
       ]
-    }
+    },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -173,7 +173,7 @@
         "5",
         "k"
       ]
-    }
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -290,54 +290,66 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  // eslint
-  // Enable the ESlint flat config support
-  "eslint.experimental.useFlatConfig": true,
+  // eslint 
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,
   // Auto fix
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
     {
       "rule": "style/*",
-      "severity": "off"
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "format/*",
+      "severity": "off",
+      "fixable": true
     },
     {
       "rule": "*-indent",
-      "severity": "off"
+      "severity": "off",
+      "fixable": true
     },
     {
       "rule": "*-spacing",
-      "severity": "off"
+      "severity": "off",
+      "fixable": true
     },
     {
       "rule": "*-spaces",
-      "severity": "off"
+      "severity": "off",
+      "fixable": true
     },
     {
       "rule": "*-order",
-      "severity": "off"
+      "severity": "off",
+      "fixable": true
     },
     {
       "rule": "*-dangle",
-      "severity": "off"
+      "severity": "off",
+      "fixable": true
     },
     {
       "rule": "*-newline",
-      "severity": "off"
+      "severity": "off",
+      "fixable": true
     },
     {
       "rule": "*quotes",
-      "severity": "off"
+      "severity": "off",
+      "fixable": true
     },
     {
       "rule": "*semi",
-      "severity": "off"
+      "severity": "off",
+      "fixable": true
     }
   ],
   // Enable eslint for all supported languages
@@ -351,10 +363,18 @@
     "markdown",
     "json",
     "jsonc",
-    "yaml"
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
   ],
-  "explorer.confirmDelete": false,
-  // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   // 打开终端配置
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
@@ -370,7 +390,7 @@
       "icon": "terminal-cmd"
     },
     "Git Bash": {
-      "source": "Git Bash"
+      "source": "Git Bash",
     }
   },
   "terminal.integrated.defaultProfile.windows": "Git Bash",
@@ -416,7 +436,13 @@
   "explorer.compactFolders": false,
   // 改为false即可禁止拖动
   "editor.dragAndDrop": false,
+  "editor.unicodeHighlight.allowedLocales": {
+    "ja": true,
+    "zh-hant": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
   // 如下是被vscode认为是单词分隔符的字符  比如material-icon-theme 会被认为是三个单词
-  "editor.wordSeparators": "`~#!@$%^&*()=+[{]}\\|;:'\",<>/?."
+  // "editor.wordSeparators": "`~#!@$%^&*()=+[{]}\\|;:'\",<>/?."
+  "python.formatting.provider": "black"
 }
 ```
