@@ -45,7 +45,7 @@
     "<C-v>": false,
     "<C-i>": false,
     "<C-p>": false,
-    "<C-d>": false,
+    "<C-d>": false
   },
   "vim.normalModeKeyBindings": [
     {
@@ -82,7 +82,7 @@
         "5",
         "k"
       ]
-    },
+    }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -173,7 +173,7 @@
         "5",
         "k"
       ]
-    },
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -290,7 +290,7 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  // eslint 
+  // eslint
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,
@@ -390,7 +390,7 @@
       "icon": "terminal-cmd"
     },
     "Git Bash": {
-      "source": "Git Bash",
+      "source": "Git Bash"
     }
   },
   "terminal.integrated.defaultProfile.windows": "Git Bash",

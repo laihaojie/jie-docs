@@ -31,7 +31,7 @@
     "@iconify-json/carbon": "^1.1.27",
     "@shikijs/vitepress-twoslash": "^1.2.0",
     "@types/node": "^20.11.0",
-    "eslint": "^9.5.0",
+    "eslint": "^9.8.0",
     "esno": "^4.0.0",
     "fs-extra": "^11.2.0",
     "sass": "^1.69.7",

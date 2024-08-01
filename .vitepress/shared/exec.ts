@@ -3,8 +3,8 @@ import { usePopup } from 'root/hooks/dialog'
 import { waitForElm } from 'root/utils'
 import { inBrowser } from 'vitepress'
 import { h, ref } from 'vue'
-import ExecDom from '../components/exec.vue'
 import { execRequest } from 'root/utils/exec'
+import ExecDom from '../components/exec.vue'
 import { execCheckCommand } from './config'
 
 export function extensionCodeBlock() {

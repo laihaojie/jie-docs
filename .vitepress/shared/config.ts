@@ -1,4 +1,4 @@
-import { useLocalStorage } from "@vueuse/core"
+import { useLocalStorage } from '@vueuse/core'
 
 export const execBaseApi = 'http://127.0.0.1:32677'
 export const execCheckCommand = 'echo hello'

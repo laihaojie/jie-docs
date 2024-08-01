@@ -2,7 +2,7 @@
 import Theme from 'vitepress/theme'
 import { copyText } from 'root/utils'
 import { autoToast } from 'root/utils/autolog'
-import { checkExecConnectionStatus } from 'root/shared/exec';
+import { checkExecConnectionStatus } from 'root/shared/exec'
 
 const info = {
   name: '阿杰',

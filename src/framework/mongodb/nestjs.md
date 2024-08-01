@@ -10,7 +10,7 @@ pnpm i @nestjs/mongoose mongoose
 
 - 在app.module.ts中引入mongodb
 
-```js
+```ts
 import { MongooseModule } from '@nestjs/mongoose'
 
 @Module({
@@ -25,7 +25,7 @@ export class AppModule {}
 
 - 使用装饰器创建
 
-```js
+```ts
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose'
 import { Document } from 'mongoose'
 
@@ -34,13 +34,13 @@ export type CatDocument = Cat & Document
 @Schema()
 export class Cat extends Document {
   @Prop()
-    name: string
+  name: string
 
   @Prop()
-    age: number
+  age: number
 
   @Prop()
-    breed: string
+  breed: string
 }
 
 export const CatSchema = SchemaFactory.createForClass(Cat)
@@ -65,7 +65,7 @@ export const CatSchema = new mongoose.Schema({
 
 - 在cat.module.ts中注入模型
 
-```js
+```ts
 import { Module } from '@nestjs/common'
 import { MongooseModule } from '@nestjs/mongoose'
 import { CatsController } from './cats.controller'
@@ -82,7 +82,7 @@ export class CatsModule {}
 
 - 在cat.service.ts中引入模型
 
-```js
+```ts
 import type { Model } from 'mongoose'
 import { Injectable } from '@nestjs/common'
 import { InjectModel } from '@nestjs/mongoose'

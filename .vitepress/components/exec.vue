@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useEventListener, useLocalStorage } from '@vueuse/core'
-import { execCheckCommand, execShell } from 'root/shared/config';
+import { execCheckCommand, execShell } from 'root/shared/config'
 import { autoToast } from 'root/utils/autolog'
-import { execRequest } from 'root/utils/exec';
-import { type PropType, nextTick, ref, watch, computed } from 'vue'
+import { execRequest } from 'root/utils/exec'
+import { type PropType, computed, nextTick, ref, watch } from 'vue'
 
 const props = defineProps({
   commands: {
@@ -22,6 +22,7 @@ const index = ref(0)
 const show = ref(false)
 const cwd = useLocalStorage('cwd', '')
 const pwdHtml = computed(() => `<span contenteditable="false" class="${execShell.value ? 'c-white' : 'c-#E5E510'} fw-bold"><span class="${execShell.value ? 'c-white' : 'c-#12bc69'}">(${execShell.value ? 'PowerShell' : 'bash'})</span> ${cwd.value}&gt;&nbsp;</span>`)
+const history = ref([] as { command: string, data: string }[])
 
 watch(execShell, () => {
   setInputText()
@@ -41,7 +42,7 @@ useEventListener(divInputDom, 'keydown', (e) => {
 
   if ((e.key === 'Backspace' || e.key === 'Delete')) {
     if (divInputDom.value.innerHTML === pwdHtml.value)
-      e.preventDefault();
+      e.preventDefault()
   }
 
   // 上下键
@@ -58,7 +59,8 @@ useEventListener(divInputDom, 'keydown', (e) => {
     index.value++
     if (index.value === history.value.length) {
       setInputText()
-    } else {
+    }
+    else {
       setInputText(history.value[index.value]?.command)
     }
   }
@@ -91,18 +93,19 @@ watch(show, (v) => {
 
 const isConnecting = ref(false)
 
-
 execRequest({ cmd: execCheckCommand, cwd: cwd.value }).then(async (res) => {
   if (res.code === 1) {
     isConnecting.value = true
-    if (res.data.cwd)
+    if (res.data.cwd) {
       cwd.value = res.data.cwd
-    else
+    }
+    else {
       await execRequest({ cmd: execCheckCommand }).then((r) => {
         if (r.code === 1) {
           cwd.value = r.data.cwd
         }
       })
+    }
   }
   else {
     isConnecting.value = false
@@ -113,8 +116,6 @@ execRequest({ cmd: execCheckCommand, cwd: cwd.value }).then(async (res) => {
   show.value = true
 })
 
-
-const history = ref([] as { command: string, data: string }[])
 function exec() {
   const command = divInputDom.value.innerHTML.replace(pwdHtml.value, '')
   if (!command.trim()) return
@@ -127,10 +128,10 @@ function exec() {
   execRequest({ cmd: command, cwd: cwd.value }).then((r) => {
     if (r.code === 1) {
       // eslint-disable-next-line no-console
-      import.meta.env.MODE === "development" && console.log(r)
+      import.meta.env.MODE === 'development' && console.log(r)
       history.value.push({
         command,
-        data: `${divInputDom.value.innerHTML}\n${r.data.data}\n<br>`
+        data: `${divInputDom.value.innerHTML}\n${r.data.data}\n<br>`,
       })
       if (r.data.cwd)
         cwd.value = r.data.cwd
@@ -140,10 +141,10 @@ function exec() {
       nextTick(() => {
         scrollDom.value.scrollTop = scrollDom.value.scrollHeight
       })
-    } else {
+    }
+    else {
       autoToast(r.data)
     }
-
   }).catch((e) => {
     autoToast(e)
   })
@@ -179,10 +180,14 @@ function handleFocus(e) {
           </div>
 
           <div ref="scrollDom" class="flex-1 h-0 overflow-y-auto overflow-hidden" @click="handleFocus($event)">
-            <pre v-for="i, idx in history" :key="idx" class="text-white whitespace-pre-wrap break-words m-0"
-              v-html="i.data"></pre>
-            <div ref="divInputDom" contenteditable="true"
-              class="outline-none text-white [font-family:var(--vp-font-family-mono)] break-all"></div>
+            <pre
+              v-for="i, idx in history" :key="idx" class="text-white whitespace-pre-wrap break-words m-0"
+              v-html="i.data"
+            ></pre>
+            <div
+              ref="divInputDom" contenteditable="true"
+              class="outline-none text-white [font-family:var(--vp-font-family-mono)] break-all"
+            ></div>
             <div class="h-40"></div>
           </div>
         </template>

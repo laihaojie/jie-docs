@@ -32,6 +32,7 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
       const content = fs.readFileSync(fullPath, 'utf-8')
 
       const fileName = file.split('.')[0].trim()
+      // eslint-disable-next-line regexp/no-super-linear-backtracking
       const title = content.match(/#\s+(.*)$/m)?.[1].trim()
       const note = content.match(/<!--(.*?)-->/)?.[1].trim()
 

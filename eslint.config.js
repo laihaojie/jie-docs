@@ -7,6 +7,8 @@ export default jie(
   {
     ignores: [
       'public',
+      'src/notes/javascript.md',
+      'src/develop/vim/playground.md',
     ],
   },
 )
