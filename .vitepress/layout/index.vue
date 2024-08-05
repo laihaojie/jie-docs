@@ -37,7 +37,8 @@ const execConnection = checkExecConnectionStatus()
           <div class="i-carbon:logo-wechat mx-4 cp" :title="info.wechat" @click="copy(info.wechat)"></div>
         </div>
 
-        <Eye></Eye>
+        <!-- <Eye></Eye> -->
+        <div id="kanBan"></div>
       </div>
     </template>
     <template #aside-ads-after>
