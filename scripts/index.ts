@@ -1,6 +1,6 @@
+import type { DefaultTheme } from 'vitepress'
 import path from 'node:path'
 import fs from 'fs-extra'
-import type { DefaultTheme } from 'vitepress'
 
 const src_path = path.resolve(__dirname, '../src')
 
