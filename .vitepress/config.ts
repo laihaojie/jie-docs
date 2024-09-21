@@ -1,9 +1,9 @@
-import { defineConfig } from 'vitepress'
-import ItKatex from 'markdown-it-katex'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import ItKatex from 'markdown-it-katex'
+import { defineConfig } from 'vitepress'
 import { nav } from './nav'
-import { sidebar } from './sidebar'
 import { customElements } from './shared/customeElements'
+import { sidebar } from './sidebar'
 
 export default defineConfig({
   title: '阿杰',

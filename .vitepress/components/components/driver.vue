@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { driver } from 'driver.js'
-import 'driver.js/dist/driver.css'
-import { nextTick, onMounted } from 'vue'
 import { useLocalStorage } from '@vueuse/core'
+import { driver } from 'driver.js'
+import { nextTick, onMounted } from 'vue'
+import 'driver.js/dist/driver.css'
 
 const isDriver = useLocalStorage('isDriver', false)
 

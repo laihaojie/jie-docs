@@ -1,10 +1,10 @@
+import { presetWeb } from '@djie/unocss'
+
 import {
   defineConfig,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
-
-import { presetWeb } from '@djie/unocss'
 
 export default defineConfig({
   presets: [

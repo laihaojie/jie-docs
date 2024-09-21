@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Climb from './components/climb.vue'
-import Washing from './components/washing.vue'
 import Driver from './components/driver.vue'
+import Washing from './components/washing.vue'
 </script>
 
 <template>

@@ -3,7 +3,7 @@ import { useEventListener, useLocalStorage } from '@vueuse/core'
 import { execCheckCommand, execShell } from 'root/shared/config'
 import { autoToast } from 'root/utils/autolog'
 import { execRequest } from 'root/utils/exec'
-import { type PropType, computed, nextTick, ref, watch } from 'vue'
+import { computed, nextTick, type PropType, ref, watch } from 'vue'
 
 const props = defineProps({
   commands: {
@@ -127,8 +127,9 @@ function exec() {
 
   execRequest({ cmd: command, cwd: cwd.value }).then((r) => {
     if (r.code === 1) {
+      if (import.meta.env.MODE === 'development')
       // eslint-disable-next-line no-console
-      import.meta.env.MODE === 'development' && console.log(r)
+        console.log(r)
       history.value.push({
         command,
         data: `${divInputDom.value.innerHTML}\n${r.data.data}\n<br>`,

@@ -24,11 +24,11 @@
 
 ```vue
 <script setup lang="ts">
+import hljsVuePlugin from '@highlightjs/vue-plugin'
+
 // import 'highlight.js/styles/stackoverflow-light.css'
 import 'highlight.js/styles/androidstudio.min.css'
-
 import 'highlight.js/lib/common'
-import hljsVuePlugin from '@highlightjs/vue-plugin'
 
 const code = ref(`SELECT * FROM table_name;`)
 </script>

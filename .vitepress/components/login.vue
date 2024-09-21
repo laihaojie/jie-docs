@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { useLocalStorage } from '@vueuse/core'
 import { useRouter } from 'vitepress'
 import { computed, nextTick, reactive, ref } from 'vue'
-import { useLocalStorage } from '@vueuse/core'
 
 const router = useRouter()
 const token = useLocalStorage('token', '')

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Theme from 'vitepress/theme'
+import { checkExecConnectionStatus } from 'root/shared/exec'
 import { copyText } from 'root/utils'
 import { autoToast } from 'root/utils/autolog'
-import { checkExecConnectionStatus } from 'root/shared/exec'
+import Theme from 'vitepress/theme'
 
 const info = {
   name: '阿杰',

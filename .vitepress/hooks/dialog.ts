@@ -12,6 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import {
+  createApp,
+  h,
+} from 'vue'
 import type {
   App,
   Component,
@@ -19,10 +23,6 @@ import type {
   MethodOptions,
   VNode,
   VNodeArrayChildren,
-} from 'vue'
-import {
-  createApp,
-  h,
 } from 'vue'
 
 // type Data = Record<string, unknown>

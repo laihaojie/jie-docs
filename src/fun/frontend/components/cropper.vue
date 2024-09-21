@@ -1,9 +1,9 @@
 <!-- eslint-disable no-console -->
 <script setup lang="ts">
-import 'cropperjs/dist/cropper.css'
-import localImg from '/logo.png'
 import Cropper from 'cropperjs'
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import 'cropperjs/dist/cropper.css'
+import localImg from '/logo.png'
 
 const image = ref(null)
 const defaultImg = ref('')

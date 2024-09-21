@@ -83,11 +83,11 @@ export class CatsModule {}
 - 在cat.service.ts中引入模型
 
 ```ts
-import type { Model } from 'mongoose'
 import { Injectable } from '@nestjs/common'
 import { InjectModel } from '@nestjs/mongoose'
-import type { Cat, CatDocument } from './schemas/cat.schema'
+import type { Model } from 'mongoose'
 import type { CreateCatDto } from './dto/create-cat.dto'
+import type { Cat, CatDocument } from './schemas/cat.schema'
 
 @Injectable()
 export class CatsService {

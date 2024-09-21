@@ -2,7 +2,9 @@ import jie from '@djie/eslint-config'
 
 export default jie(
   {
-    rules: {},
+    rules: {
+      'ts/no-unsafe-function-type': 'off',
+    },
   },
   {
     ignores: [
