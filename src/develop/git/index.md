@@ -104,20 +104,6 @@ git branch -m branchname
 
 ```
 
-## 修改已经commit但还没push的描述信息
-
-假如你上次commit描述写错了你可以用这条命令重新修改描述信息
-
-```bash
-git commit --amend --only -m 'xxxxxxx'
-```
-
-## 修改最近commit提交信息(描述信息 + 文件)
-
-```txt
-git commit --amend
-```
-
 ## 版本切换 & 重设 & 撤销
 
 ### checkout相关
