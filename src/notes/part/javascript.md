@@ -261,7 +261,6 @@ fetch(url).then(res => res.blob()).then((blob) => {
 ```
 
 ```ts [Axios]
-// eslint-disable-next-line antfu/no-top-level-await
 const res = await axios.get(url, { params: { kind: kind.value, fileName: row.name }, responseType: 'blob' }) as Blob
 const blob = new Blob([res], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8' })
 const downloadElement = document.createElement('a')
