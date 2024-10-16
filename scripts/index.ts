@@ -4,6 +4,7 @@ import fs from 'fs-extra'
 
 const src_path = path.resolve(__dirname, '../src')
 
+// @ts-expect-error xxx
 // eslint-disable-next-line unused-imports/no-unused-vars
 function readFiles(root_path) {
   const dirs = fs.readdirSync(root_path)
@@ -25,11 +26,11 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
   const dir_path = path.join(src_path, root_path)
   const dirs = fs.readdirSync(dir_path)
 
-  return dirs.map((file) => {
+  const list = dirs.map((file) => {
     const fullPath = path.join(dir_path, file)
     const stats = fs.statSync(fullPath)
     if (!stats.isDirectory()) {
-      const content = fs.readFileSync(fullPath, 'utf-8')
+      const content = fs.readFileSync(fullPath, 'utf-8').trim().match(/^.*/)[0]
 
       const fileName = file.split('.')[0].trim()
       // eslint-disable-next-line regexp/no-super-linear-backtracking
@@ -46,5 +47,6 @@ export function getMds(root_path): DefaultTheme.SidebarItem[] {
       return {}
     }
   }).filter(i => !i.disable || !i.link) as DefaultTheme.SidebarItem[]
+  return list
 }
 // console.log(getMds('/notes/'))
