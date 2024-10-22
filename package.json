@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@djie/eslint-config": "3.0.1",
-    "@djie/unocss": "^1.0.40",
+    "@djie/unocss": "^1.0.46",
     "@iconify-json/carbon": "^1.2.3",
     "@shikijs/vitepress-twoslash": "^1.22.0",
     "@types/node": "^20.11.0",
