@@ -2,12 +2,12 @@ import type { UserConfig } from 'vite'
 import { resolve } from 'node:path'
 import Unocss from 'unocss/vite'
 
-import Inspect from 'vite-plugin-inspect'
+// import Inspect from 'vite-plugin-inspect'
 
 const vite: UserConfig = {
   plugins: [
     Unocss(),
-    Inspect(),
+    // Inspect(),
   ],
   resolve: {
     alias: {
