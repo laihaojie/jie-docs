@@ -5,7 +5,7 @@
 - 发布普通包
 
 ```sh
-npm publish
+npm publish --registry https://registry.npmjs.org
 ```
 
 - 发布组织包
