@@ -1,6 +1,35 @@
 {
-  "commit_url": "https://git.lingman.tech:8888/jp/test/-/commit/6f100fe68504e7f7a0d468f5dd7063fa029cbf60",
-  "commit_user": "卢浩杰",
-  "commit_message": "chore: update ",
-  "content": "603网站"
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "root/*": [
+        "./.vitepress/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ],
+      "~/*": [
+        "./*"
+      ]
+    },
+    "resolveJsonModule": true,
+    "strict": false,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    ".vitepress/**/*"
+  ]
 }

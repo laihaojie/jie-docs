@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import type { PropType } from 'vue'
 import { useEventListener, useLocalStorage } from '@vueuse/core'
 import { execCheckCommand, execShell } from 'root/shared/config'
 import { autoToast } from 'root/utils/autolog'
 import { execRequest } from 'root/utils/exec'
-import { computed, nextTick, type PropType, ref, watch } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 
 const props = defineProps({
   commands: {

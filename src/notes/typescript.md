@@ -130,7 +130,7 @@ new Cat().sayHello()
 - 装饰器工厂
 
 ```ts
-const DecoratorFactory = function (str: string): ClassDecorator {
+function DecoratorFactory(str: string): ClassDecorator {
   return (target: Function) => {
     console.log(target)
     target.prototype.getName = function () {

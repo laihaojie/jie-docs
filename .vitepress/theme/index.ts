@@ -2,7 +2,7 @@ import TwoslashFloatingVue from '@shikijs/vitepress-twoslash/client'
 import Eye from 'root/components/components/eye.vue'
 import DemoContainer from 'root/components/demoContainer.vue'
 import { checkExecConnectionStatus, extensionCodeBlock } from 'root/shared/exec'
-import { setLive2D } from 'root/shared/live2d'
+// import { setLive2D } from 'root/shared/live2d'
 import Theme from 'vitepress/theme'
 import Layout from '../layout/index.vue'
 import { auth } from './auth'
@@ -34,7 +34,7 @@ export default {
     checkExecConnectionStatus()
     extensionCodeBlock()
 
-    await setLive2D()
+    // await setLive2D()
   },
   setup() {
 
