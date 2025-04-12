@@ -9,7 +9,7 @@
     {
       "key": "yyx",
       "description": "尤雨溪",
-      "address": "https://s.laihaojie.com/public/images/rD6eNNb4Tk7N6KC.png"
+      "address": "https://file.tihangstudio.cn/image/yyx.png"
     },
     {
       "key": "xjj",
@@ -369,6 +369,7 @@
     "gql",
     "graphql",
     "astro",
+    "svelte",
     "css",
     "less",
     "scss",
@@ -394,8 +395,6 @@
     }
   },
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  // git commit 插件配置
-  "GitCommitPlugin.MaxSubjectWords": 30,
   // 修改底部状态栏颜色
   "workbench.colorCustomizations": {
     "statusBar.background": "#3C3C3C"
@@ -405,13 +404,13 @@
     "comments": "#6b6b6b"
   },
   "editor.guides.bracketPairs": "active",
-  "dart.flutterCreateOrganization": "com.lingman.xgc",
+  // dart 配置
+  "dart.flutterCreateOrganization": "com.lingman",
   "gitlens.advanced.messages": {
     "suppressLineUncommittedWarning": true
   },
   "dart.debugExternalPackageLibraries": false,
   "dart.debugSdkLibraries": false,
-  // dart 配置
   "dart.lineLength": 800,
   "workbench.startupEditor": "none",
   "explorer.confirmDragAndDrop": false,
@@ -422,7 +421,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
-  "workbench.iconTheme": "material-icon-theme",
   "editor.tabSize": 2,
   "editor.accessibilitySupport": "off",
   "workbench.layoutControl.enabled": false,
@@ -443,6 +441,9 @@
   "github.copilot.editor.enableAutoCompletions": true,
   // 如下是被vscode认为是单词分隔符的字符  比如material-icon-theme 会被认为是三个单词
   // "editor.wordSeparators": "`~#!@$%^&*()=+[{]}\\|;:'\",<>/?."
-  "python.formatting.provider": "black"
+  "python.formatting.provider": "black",
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "vue.codeActions.enabled": false
 }
 ```
