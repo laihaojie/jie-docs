@@ -13,3 +13,4 @@
 - `shadow-[0_0_20px_#16F5FF]` 阴影 0 0 20px #16F5FF
 - `bg-[length:100%_100%]` 背景大小
 - `whitespace-pre-line` div换行符保留
+- `whitespace-nowrap` 文字强行一行展示
